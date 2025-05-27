@@ -4,7 +4,7 @@ import img2 from "../assets/graphic-design.webp"
 import img3 from "../assets/robotic.webp"
 import img4 from "../assets/application.webp"
 import img5 from "../Components/assest2/SEO.webp"
-import center from "../assets/center.webp"
+import center from "../assets/Center.webp"
 import img6  from "../Components/assest2/icons8-java-50.webp"
 import { Link } from 'react-router-dom'
 import gsap from "gsap";
