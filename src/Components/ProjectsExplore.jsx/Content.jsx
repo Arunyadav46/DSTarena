@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import axios from '../Axios/Axios';
 import toast, { Toaster } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
@@ -105,13 +105,15 @@ function Content({setproductID, setCartCount, setTech}) {
 
 //popup buy btn k liye
   const [showPopup, setShowPopup] = useState(false);
+  const navigate = useNavigate();
 
   const togglePopup = () => {
    const isLoggedIn = localStorage.getItem("userId"); // Check login status
-
+ 
   if (!isLoggedIn) {
     toast.error("Please log in.");
-    window.location.href = "/login"; //Redirect to login page
+    navigate("/login")
+    // window.location.href = "/login"; //Redirect to login page
     return;
   }
     setShowPopup(!showPopup);
