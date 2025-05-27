@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import img from "../assest2/Technology.png"
 import { useParams } from 'react-router-dom'
 import axios from '../Axios/Axios';
 import toast, { Toaster } from 'react-hot-toast';
