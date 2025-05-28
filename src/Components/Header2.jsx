@@ -201,12 +201,25 @@ function Header2({ setCartAllProduct , cartCount }) {
       <div className="lg:h-[17vh] bg-red-400 flex  items-center justify-between md:flex md:justify-between  md:items-center md:py-4 bg-white shadow-md p-2 md:px-10 lg:px-20 xl:px-36 bg-red-100">
         <div className="flex items-center justify-between py-3 lg:py-4">
           {/* Logo */}
-          <div className="w-48 flex gap-2 items-center md:w-52 lg:w-56 xl:w-56">
+          {/* <div className="w-48 flex gap-2 items-center md:w-52 lg:w-56 xl:w-56">
             <a href="/">
-              <img src={img} alt="DSTARENA Logo" className="w-full h-auto" />
+              <img src={img} alt="DSTARENA Logo" className="w-full h-full" />
             </a>
             <h2 className="font-semibold text-2xl lg:text-3xl">DSTArena</h2>
-          </div>
+          </div> */}
+          <div className="w-48 flex gap-2 items-center md:w-52 lg:w-56 xl:w-56">
+  <a href="/">
+    <img
+      src={img}
+      alt="DSTARENA Logo"
+      width="224"  // Width in pixels (adjust to your actual logo size)
+      height="56"  // Height in pixels (adjust to your actual logo size)
+      className="w-full h-full"
+    />
+  </a>
+  <h2 className="font-semibold text-2xl lg:text-3xl">DSTArena</h2>
+</div>
+
         </div>
 
         {/* mobile menu */}
