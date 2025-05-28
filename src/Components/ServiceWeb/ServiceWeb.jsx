@@ -1,5 +1,5 @@
 import React from 'react'
-// import Banner from '../ServiceWeb1/Banner'
+import Banner from '../ServiceWeb1/Banner'
 import Contact from '../Node/Contact'
 import Footer from '../Footer'
 import Content from '../ServiceWeb1/Content'
