@@ -221,7 +221,7 @@ function Header2({ setCartAllProduct , cartCount }) {
         <span className="text-[#D2A98E] text-3xl fa fa-phone"></span>
         <div className='leading-relaxed'>
           <h6>9993897203</h6>
-          <p className="text-sm text-[#333333]">Dstinfo@gmail.com</p>
+          <p className="text-sm text-[#333333]">dstarenainfo@gmail.com</p>
         </div>
       </div>
       <div className="flex items-center space-x-4 w-[35%] border-r-2  leading-relaxed">

@@ -5,35 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 function Content2({tech}) {
-    // const services = [
-    //     {
-    //       id: 1,
-    //       name: "Restaurent Base Software",
-    //       delivery: "Online",
-    //       title: "I will translate english to japanese or japanese to e..",
-    //       category: "Translation",
-    //       price: "₹999",
-    //       image: "https://themebing.com/wp/prolancer/wp-content/uploads/2021/09/translate-600x399.jpg", // Replace with actual image
-    //     },
-    //     {
-    //       id: 2,
-    //       name: "Business Purpose Software",
-    //       delivery: "online",
-    //       title: "I will design professional business logo with copyrig..",
-    //       category: "Graphic Designing",
-    //       price: "₹899",
-    //       image: "https://themebing.com/wp/prolancer/wp-content/uploads/2021/09/img-1-600x399.jpg", // Replace with actual image
-    //     },
-    //     {
-    //       id: 3,
-    //       name: "Medical Base Software",
-    //       delivery: "Online",
-    //       title: "I will design 2 modern minimalist logo free vector fi..",
-    //       category: "Graphic Designing",
-    //       price: "₹799",
-    //       image: "https://themebing.com/wp/prolancer/wp-content/uploads/2021/09/img-8-600x399.jpg", // Replace with actual image
-    //     },
-    //   ];
+  
  
     const scrollRef = useRef(null)
 

@@ -10,19 +10,6 @@ import { Link } from 'react-router-dom'
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 
-//bg-[#FFFFFF]
-// function Content({img}) {
-    // const data1 = [
-    //     {img1:img,head:"Matlab Training"},
-    //     {img1:Robo,head:"Website design"},
-    //     {img1:web,head:"Robotics"},
-    // ]
-
-    // const data2 = [
-    //     {img1:androd,head:"Android Training", id:true},
-    //     {img1:seo,head:"SEO Training",id:false},
-    //     {img1:java,head:"JAVA Training",id:true},
-    // ]
 
  const Content = ()=>{
 

@@ -4,7 +4,7 @@ import Contact from '../Node/Contact'
 import Footer from '../Footer'
 import Content from '../Node/Content'
 
-import Testimonal from '../ProjectsExplore.jsx/Testimonal'
+
 import { Helmet } from 'react-helmet'
 
 

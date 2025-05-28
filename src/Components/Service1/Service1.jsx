@@ -1,8 +1,6 @@
 import React from 'react'
 import Banner from '../Service1Detail/Banner'
-import Feature1 from '../Phython/Feature1'
-import Content from '../Service1Detail/Content'
-import Testimonal from '../ProjectsExplore.jsx/Testimonal'
+
 import Footer from '../Footer'
 import Feature from '../Service1Detail/Feature'
 import Contact from '../Node/Contact'

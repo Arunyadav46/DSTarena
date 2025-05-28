@@ -119,35 +119,7 @@ function Content({setproductID, setCartCount, setTech}) {
     setShowPopup(!showPopup);
   };
 
-  //Add Cart Feature k liye
-  // const handleAddToCart = (id)=>{
-  //   toast.success('Product Added Succesfully!');
-  //   // alert('Product Added'+id)
-  //   axios.get(`/API/single_project_details_api.php?id=${id}`).then((ans)=>{
-  //     // console.log(ans);
-  //     setproductID(ans);
-      
-  //   }).catch((err)=>{
-  //     console.log(err);
-  //   })
-  // }
-
-//   const handleAddToCart = (id) => {
-//   toast.success('Product Added Successfully!');
-
-//   axios.get(`/API/single_project_details_api.php?id=${id}`)
-//     .then((ans) => {
-//       // Match your expected structure for mapping: { data: [product] }
-//       const cartItem = {
-//         data: [ans.data],
-//       };
-//       setproductID(cartItem);
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// };
-
+ 
 
 const handleAddToCart = (id) => {
   toast.success("Product Added Successfully!");
@@ -240,17 +212,16 @@ useEffect(() => {
 
 
   return (
-    <div className="w-[100%] xl:px-32 xl:pt-32 p-5  xl:flex  gap-10 ">
+    <div className="w-full xl:px-32 xl:pt-32 p-5 flex flex-col xl:flex-row gap-10">
       <Toaster/>
-    {/* Left Section */}
-     <div className=" xl:w-[60%] p-1">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:flex flex-wrap gap-4 mb-10">
+     <div className="xl:w-[60%] p-1">
+     <div className=" flex justify-center xl:flex flex-wrap gap-4 mb-10">
 
   {/* Instagram Share */}
   <a href={`https://www.instagram.com/`}  target="_blank"  rel="noopener noreferrer"
  className=" xl:w-[30%] mb-4 bg-[#E1E7FF] p-4 rounded-md flex items-center space-x-4 hover:shadow-lg transition"  >
     <span className="text-[15px] xl:text-4xl w-12 h-12"><img src={img2} alt="" /></span>
-    <div>
+    <div className='hidden md:block'>
       <h2>Share on</h2>
       <p className="text-sm font-semibold">Instagram</p>
     </div>
@@ -264,7 +235,7 @@ useEffect(() => {
     className="xl:w-[30%] mb-4 bg-[#CCFBF1] p-4 rounded-md flex items-center space-x-4 hover:shadow-lg transition"
   >
     <span className="text-4xl w-12 h-12"><img src={img3} alt="" /></span>
-    <div>
+    <div className='hidden md:block'>
       <h2>Share on</h2>
       <p className="text-sm font-semibold">WhatsApp</p>
     </div>
@@ -278,144 +249,250 @@ useEffect(() => {
     className="xl:w-[30%] mb-4 bg-[#FFF1CC] p-4 rounded-md flex items-center space-x-4 hover:shadow-lg transition"
   >
     <span className="text-4xl w-12 h-12"><img src={img4} alt="" /></span>
-    <div>
+    <div className='hidden md:block'>
       <h2>Share on</h2>
       <p className="text-sm font-semibold">Twitter</p>
     </div>
   </a>
+  
 
      </div>
 
-        {getDet.map((elem,index)=>{
+    {getDet.map((elem, index) => {
+      const thumbnails = [elem.image, elem.More_Image].filter(
+        (img) => img && img.trim() !== ""
+      );
 
-        // Manually add 3 images
-          const thumbnails = [
-          elem.image,
-          elem.More_Image
-          // "https://projectsarena.com/upload_img/Screenshot 2022-12-16 160137.jpg", // Or add another fallback
-       ];
-          return  <div key={index}>
-            <div className='w-full xl:h-[50vh]'>
-               <img src={selectedImage}  alt="Project Main" className="w-full h-full rounded-lg transition duration-300" />
+      return (
+        <div key={index}>
+          {/* IMAGE */}
+          <div className="w-full xl:h-[50vh]">
+            {selectedImage && selectedImage.trim() !== "" && (
+              <img
+                src={selectedImage}
+                alt="Project"
+                className="w-full h-full rounded-lg transition duration-300"
+              />
+            )}
+          </div>
+
+          {/* THUMBNAILS */}
+          <div className="w-full pt-5 gap-8 flex">
+            {thumbnails.map(
+              (img, i) =>
+                img.trim() !== "" && (
+                  <img
+                    key={i}
+                    src={img}
+                    alt=""
+                    className="w-[25%] md:w-[30%] rounded-md cursor-pointer hover:ring-2 hover:ring-blue-500"
+                    onMouseEnter={() => setSelectedImage(img)}
+                  />
+                )
+            )}
+          </div>
+
+          {/* MOBILE ONLY: RIGHT SECTION CONTENT */}
+          <div className="block xl:hidden mt-10 border-2 space-y-6 p-5 bg-white rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold capitalize">{elem.project_name}</h3>
+
+            <div className="flex mt-5 gap-5">
+              <h2>Language/Technology:</h2>
+              <h2>{elem.language}</h2>
+            </div>
+            <div className="flex gap-10">
+              <h2>Type:</h2>
+              <h2>{elem.project_category}</h2>
             </div>
 
-      <div className="w-full pt-5 gap-8 flex">
-        {thumbnails.map((img, i) => (
-          <img key={i} src={img} alt={`Thumbnail ${i}`}  className="w-[25%] md:w-[30%] rounded-md cursor-pointer hover:ring-2 hover:ring-blue-500"
-           onMouseEnter={() => setSelectedImage(img)}/>
-        ))}
-      </div>
-    
-        <h2 className="text-3xl font-bold mt-16 mb-10">Description</h2>
-        <p className='text-justify text-gray-600'>
-        {cleanDescription(elem.project_description)}
-        <br/>
-        <br/>
+            <h2 className="text-2xl mt-4 mb-4">Price: ₹{elem.sale_price}</h2>
 
-        {/* Mauris sed venenatis libero, Pellentesque elementum ante massa, ac ornare augue molestie ut. Suspendisse lacinia tortor sem, at condimentum nulla auctor in. Sed vulputate euismod risus, eget auctor nulla aliquet sed. */}
-        <br />
-        <br />
-        {/* Nunc consequat quam tincidunt, mattis purus et, euismod eros. Donec sed lobortis nunc. Donec a pretium ipsum. Curabitur pellentesque neque et dictum interdum. Nam eu faucibus augue, id sagittis magna. Aliquam sodales est dolor, non convallis arcu feugiat a. Curabitur dictum dapibus nisl quis convallis. Morbi nec ex vestibulum, tincidunt sapien a, pretium arcu. */}
-        </p>
-        <h2 className='text-4xl mb-10'>Terms & Conditions</h2>
-       <ol className="list-decimal pl-4">
-    {elem.TERMS_CONDITIONS.split('#@').map((point, index) => {
-    const cleaned = point.trim();
-    if (!cleaned) return null;
+            {isCouponApplied ? (
+              <>
+                <h2 className="text-2xl text-green-600 mt-5 mb-4">
+                  Discount: {discount}
+                </h2>
+                <p className="mb-4">
+                  Save Amount: <strong>₹{saveAmount}</strong>
+                </p>
+                <p className="text-xl font-bold">
+                  Total Price: <strong>₹{subTotal}</strong>
+                </p>
+              </>
+            ) : (
+              <p className="text-xl mt-5 font-bold">
+                Total Price: <strong>₹{elem.sale_price}</strong>
+              </p>
+            )}
 
-    // Remove unwanted <li> tag from API if present
-    const noLi = cleaned.replace(/^<li>/, '');
+            <div className="mt-6 border p-4 rounded-lg">
+              <h3 className="text-lg font-semibold mb-2">Apply Coupon</h3>
+              <input
+                type="text"
+                className="border p-2 w-full rounded-md"
+                placeholder="Enter Coupon Code"
+                value={couponCode}
+                onChange={(e) => setCouponCode(e.target.value)}
+              />
+              <button
+                onClick={() => applyCoupon(elem.sale_price)}
+                className="bg-blue-500 text-white px-4 py-2 rounded-md mt-2 w-full"
+              >
+                Apply Coupon
+              </button>
+            </div>
 
-    return (
-      <li key={index} className="mb-2 text-gray-700">
-        {noLi}
-      </li>
-    );
-  })}
-</ol>
+            <div className="flex items-center gap-5 pt-5">
+              <button
+                onClick={togglePopup}
+                className="px-10 py-3 bg-[#FB641B] font-medium text-white rounded-lg mt-4"
+              >
+                Buy
+              </button>
+              <Link
+                to="/cart"
+                onClick={() => {
+                  handleAddToCart(elem.project_id);
+                }}
+                className="px-7 py-3 bg-[#FF9F00] font-medium text-white rounded-lg mt-4"
+              >
+                Add to cart
+              </Link>
+            </div>
 
+            <h2 className="mt-10 text-[#2452A7]">
+              List of the following materials will be provided with combo pack
+            </h2>
+            <ul className="list-disc pl-5 text-sm mt-5">
+              <li>Source code</li>
+              <li>Existing and Proposed Project Comparison</li>
+              <li>Algorithm with Flow chart</li>
+              <li>Report</li>
+              <li>Proposed abstract document</li>
+            </ul>
+            <h2 className="mt-10 text-[#2452A7] mb-10">
+              List of the following materials. You will download software/report
+            </h2>
+            <ul className="list-disc pl-5 text-sm">
+              <li>Source code/Report</li>
+            </ul>
           </div>
-        })}
 
-      <hr />
-    </div>
+          {/* DESCRIPTION & TERMS */}
+          <h2 className="text-3xl font-bold mt-16 mb-10">Description</h2>
+          <p className="text-justify mb-12 text-gray-600">
+            {cleanDescription(elem.project_description)}
+          </p>
+          <h2 className="text-4xl mb-10">Terms & Conditions</h2>
+          <ol className="list-decimal pl-4">
+            {elem.TERMS_CONDITIONS.split("#@").map((point, index) => {
+              const cleaned = point.trim();
+              if (!cleaned) return null;
+              const noLi = cleaned.replace(/^<li>/, "");
+              return (
+                <li key={index} className="mb-2 text-gray-700">
+                  {noLi}
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      );
+    })}
+  </div>
 
-    {/* Right Section */}
-    <div className="w-[110%]  xl:w-[40%] h-[130vh] xl:mt-8 lg:h-[140vh] border-2 space-y-6">
-      {getDet.map((elem,index)=>{
-        return <div key={elem.project_id} className="md:p-20  xl:p-6 xl:w-full xl:h-[150vh] bg-white shadow-lg p-6 rounded-lg">
-        <h3 className="text-2xl font-bold "> {elem.project_name &&
-                       elem.project_name.charAt(0).toUpperCase() +
-                      elem.project_name.slice(1).toLowerCase()} </h3>
-         {/* <h2 className='text-2xl mt-4 mb-4'>₹{elem.sale_price}</h2> */}
-         <div className='flex mt-5 gap-5'>
+  {/* RIGHT SECTION - DESKTOP ONLY */}
+  <div className="hidden xl:block xl:w-[40%] h-[130vh] xl:mt-8 lg:h-[140vh] border-2 space-y-6">
+    {getDet.map((elem) => (
+      <div
+        key={elem.project_id}
+        className="p-6 bg-white shadow-lg rounded-lg xl:h-[150vh]"
+      >
+        <h3 className="text-2xl font-bold capitalize">{elem.project_name}</h3>
+
+        <div className="flex mt-5 gap-5">
           <h2>Language/Technology:</h2>
           <h2>{elem.language}</h2>
-         </div>
-         <div className='flex gap-40'>
+        </div>
+        <div className="flex gap-10">
           <h2>Type:</h2>
           <h2>{elem.project_category}</h2>
-         </div>
-       
-        <h2 className='text-2xl mt-4 mb-4'>Price: ₹{elem.sale_price}</h2>
+        </div>
+
+        <h2 className="text-2xl mt-4 mb-4">Price: ₹{elem.sale_price}</h2>
 
         {isCouponApplied ? (
-      <>
-        <h2 className='text-2xl text-green-600 mt-5 mb-4'>Discount: {discount}</h2>
-        <p className='mb-4'>Save Amount: <strong>₹{saveAmount}</strong></p>
-        <p className='text-xl font-bold'>Total Price: <strong>₹{subTotal}</strong></p>
-      </>
-    ) : (
-      <p className='text-xl mt-5 font-bold'>Total Price: <strong>₹{elem.sale_price}</strong></p>
-    )}
-         {/* Coupon Section */}
-         <div className="mt-6 border p-4 rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">Apply Coupon</h3>
-                <input 
-                  type="text" 
-                  className="border p-2 w-full rounded-md" 
-                  placeholder="Enter Coupon Code" 
-                  value={couponCode}
-                  onChange={(e) => setCouponCode(e.target.value)}
-                />
-                <button 
-                  onClick={() => applyCoupon(elem.sale_price)} 
-                  className="bg-blue-500 text-white px-4 py-2 rounded-md mt-2 w-full"
-                >
-                  Apply Coupon
-                </button>
-         </div>
-         
+          <>
+            <h2 className="text-2xl text-green-600 mt-5 mb-4">
+              Discount: {discount}
+            </h2>
+            <p className="mb-4">
+              Save Amount: <strong>₹{saveAmount}</strong>
+            </p>
+            <p className="text-xl font-bold">
+              Total Price: <strong>₹{subTotal}</strong>
+            </p>
+          </>
+        ) : (
+          <p className="text-xl mt-5 font-bold">
+            Total Price: <strong>₹{elem.sale_price}</strong>
+          </p>
+        )}
 
-
-        <div className='flex items-center gap-5 pt-5'>
-        <button onClick={togglePopup} className="xl:px-20 py-3 bg-[#FB641B] px-10 xl:px-16  font-medium text-white py-2 rounded-lg mt-4">
-          Buy
-        </button>
-        <Link to="/cart" onClick={()=>{handleAddToCart(elem.project_id)}} className="py-4 text-[13px] xl:px-16 xl:py-3 xl:text-[15px] bg-[#FF9F00] px-7 font-medium text-white py-2 rounded-lg  mt-4">
-          Add to cart
-        </Link>
-        {/* <button onClick={()=>{handleAddToCart(elem.project_id)}} className="px-16 py-2 bg-[#FF9F00] font-medium text-white py-2 rounded-lg mt-4">
-          Add to cart
-        </button> */}
+        <div className="mt-6 border p-4 rounded-lg">
+          <h3 className="text-lg font-semibold mb-2">Apply Coupon</h3>
+          <input
+            type="text"
+            className="border p-2 w-full rounded-md"
+            placeholder="Enter Coupon Code"
+            value={couponCode}
+            onChange={(e) => setCouponCode(e.target.value)}
+          />
+          <button
+            onClick={() => applyCoupon(elem.sale_price)}
+            className="bg-blue-500 text-white px-4 py-2 rounded-md mt-2 w-full"
+          >
+            Apply Coupon
+          </button>
         </div>
-        
-        <h2 className='mt-10 text-[#2452A7]'>List of the following materials will be provide with combo pack</h2>
-        <ul  className="list-disc pl-5 text-sm mt-5">
+
+        <div className="flex items-center gap-5 pt-5">
+          <button
+            onClick={togglePopup}
+            className="px-10 py-3 bg-[#FB641B] font-medium text-white rounded-lg mt-4"
+          >
+            Buy
+          </button>
+          <Link
+            to="/cart"
+            onClick={() => {
+              handleAddToCart(elem.project_id);
+            }}
+            className="px-7 py-3 bg-[#FF9F00] font-medium text-white rounded-lg mt-4"
+          >
+            Add to cart
+          </Link>
+        </div>
+
+        <h2 className="mt-10 text-[#2452A7]">
+          List of the following materials will be provided with combo pack
+        </h2>
+        <ul className="list-disc pl-5 text-sm mt-5">
           <li>Source code</li>
           <li>Existing and Proposed Project Comparison</li>
           <li>Algorithm with Flow chart</li>
           <li>Report</li>
           <li>Proposed abstract document</li>
         </ul>
-        <h2 className='mt-10 text-[#2452A7] mb-10'>List of the following materials. You will download software/report</h2>
+        <h2 className="mt-10 text-[#2452A7] mb-10">
+          List of the following materials. You will download software/report
+        </h2>
         <ul className="list-disc pl-5 text-sm">
           <li>Source code/Report</li>
         </ul>
-             </div>
-      })}
-  
-    </div>
+      </div>
+    ))}
+  </div>
 
     {/* popup */}
     {showPopup && (
@@ -480,4 +557,6 @@ useEffect(() => {
 }
 
 export default Content
+
+
 

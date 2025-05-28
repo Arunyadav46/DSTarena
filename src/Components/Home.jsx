@@ -2,7 +2,6 @@ import React from 'react'
 import Header2 from './Header2'
 import Hero2 from './Hero2'
 import Content from './Content'
-import OurCompany from './OurCompany'
 import Content2 from './Content2'
 import Footer from './Footer'
 import Marque from './Marque'
@@ -21,7 +20,7 @@ function Home() {
         {/* <Header2/> */}
         <Hero2/>
         <Marque/>
-        <OurCompany/>
+        {/* <OurCompany/> */}
         <Content img={img}/>
         <Content3/>
         <Content2/>

@@ -1,8 +1,8 @@
 import React from 'react'
-import Banner from '../WebHosting/Banner'
+// import Banner from '../WebHosting/Banner'
 import Contact from '../Node/Contact'
 import Footer from '../Footer'
-import Content from '../WebHosting/Content'
+// import Content from '../WebHosting/Content'
 
 
 
@@ -10,7 +10,7 @@ function Webhos() {
   return (
     <div>
         <Banner/>
-        <Content/>
+        {/* <Content/> */}
         <Contact/>
         <Footer/>
     </div>

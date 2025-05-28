@@ -15,22 +15,17 @@ function Footer() {
             
 
             <ul className="space-y-2 mt-4 text-gray-600">
-              <li>121, Malviya Nagar New Market</li>
-              <li>
-                <a href="mailto:contact@aeroland.com" className="text-blue-600 hover:underline">
-                  dstinfo@gmail.com
-                </a>
+              <li>121, Malviya Nagar New Market
+                <h2>Bhopal-462003</h2>
+                <h2>M.P</h2>
               </li>
+              <li>Ph:9993897203</li>
+              
               <li>
-                <a href="tel:123344556" className="font-bold">
-                  9993897203
-                </a>
+                  dstarenainfo@gmail.com
+                
               </li>
-              <li>
-                <a href="https://hasthemes.com/" className="text-blue-600 hover:underline">
-                  www.onprice.info
-                </a>
-              </li>
+             
             </ul>
           </div>
           
@@ -74,9 +69,8 @@ function Footer() {
           {/* App Store & Google Play */}
           <div>
             <h6 className="font-semibold mb-4">Download</h6>
-            <ul className="space-y-2">
-              <li><a href="#"><img src="assets/images/icons/aeroland-button-google-play.webp" alt="Google Play" /></a></li>
-              <li><a href="#"><img src="assets/images/icons/aeroland-button-app-store.webp" alt="App Store" /></a></li>
+            <ul className="space-y-2 w-24">
+              <li><a href="#"><img src="https://dstarena.com/wp-content/themes/slicetheme/images/msme1.png" alt="Google Play" /></a></li>
             </ul>
           </div>
         </div>
