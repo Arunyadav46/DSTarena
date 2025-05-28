@@ -5,16 +5,9 @@ import Home from './Components/Home'
 import Node from './Components/Training/Node'
 import Header2 from './Components/Header2'
 import Python from './Components/Training/Python'
-import Webhos from './Components/Services/Webhos'
-import Project from './Components/Projects/Project'
 import MBA from './Components/MbaProject/MBA'
-import Blog from './Components/Blog/Blog'
 import Pata from './Components/ContactUs/Pata'
-import BlogMore from './Components/BlogLearnmore/BlogMore'
-import Mpharm from './Components/MPharm/Mpharm'
 import ProLearn from './Components/ProjectsLearn/ProLearn'
-import Training1 from './Components/Training1.jsx/Training1'
-import Service1 from './Components/Service1/Service1'
 import ServiceWeb from './Components/ServiceWeb/ServiceWeb'
 import MbaDet from './Components/MbaDet/MbaDet'
 import About from './Components/AboutUs/About'
@@ -27,7 +20,6 @@ import Java from './Components/Training/Java'
 import Seo from './Components/Training/Seo'
 import Registration from './Components/SignUp/Registration'
 import Login from './Components/Log in/Login'
-import Mpharm1 from './Components/Mpharm1/Mpharm1'
 import Android from './Components/Training/Android'
 import Cart from './Components/Cart/Cart'
 import Dashboard from './Components/Dashboard/Dashboard'
@@ -46,34 +38,6 @@ import Reset from './Components/ResetPassword/Reset'
 
 function App() {
   
-
-  // const[productID,setproductID] = useState([]);
-  // const[cartAllProduct, setCartAllProduct] = useState([])
-  // console.log(productID);
-
-  // useEffect(()=>{
-  //   const IdData = productID;
-  //   setCartAllProduct([...cartAllProduct, IdData]);
-  // },[productID])
-
-//   const [productID, setproductID] = useState([]);
-// const [cartAllProduct, setCartAllProduct] = useState(() => {
-//   // Load from localStorage on first render
-//   const storedCart = localStorage.getItem('cartAllProduct');
-//   return storedCart ? JSON.parse(storedCart) : [];
-// });
-
-// useEffect(() => {
-//   if (productID?.data) {
-//     const updatedCart = [...cartAllProduct, productID];
-
-//     // Update state
-//     setCartAllProduct(updatedCart);
-
-//     // Save to localStorage
-//     localStorage.setItem('cartAllProduct', JSON.stringify(updatedCart));
-//   }
-// }, [productID]);
 
 const [productID, setproductID] = useState([]);
 const [cartAllProduct, setCartAllProduct] = useState([]);
@@ -112,9 +76,8 @@ useEffect(() => {
   <Route path='/' element = {<Home/>}/>
   <Route path='/cart' element={<Cart setCartCount={setCartCount} cartAllProduct={cartAllProduct} setCartAllProduct={setCartAllProduct}/>}/>
   <Route path='/Aboutus' element={<About/>}/>
-  <Route path='/training' element={<Training1/>}/>
+
   <Route path='/training/nodejs' element={<Node/>}/>
-  <Route path='/service' element={<Service1/>}/>
   <Route path='/service/:id' element={<ServiceWeb/>}/>
   <Route path='/training/phython' element={<Python/>}/>
   <Route path="/training/matlab" element={<Matlab/>}/>
@@ -127,16 +90,10 @@ useEffect(() => {
   <Route path="/training/android" element={<Android/>}/>
   <Route path='/signup' element={<Registration/>}/>
   <Route path='/login' element={<Login/>}/>
-  <Route path="/Hoisting" element={<Webhos/>}/>
-  <Route path="/project" element={<Project/>}/>
   <Route path='/project/:id' element={<ProLearn setCartCount={setCartCount} setproductID={setproductID}/>}/>
   <Route path='/MBA/:category' element={<MBA/>}/>
   <Route path='/MBA1/:name' element={<MbaDet/>}/>
-  <Route path='/Blog' element={<Blog/>}/>
   <Route path='/cont' element={<Pata/>}/>
-  <Route path='/Blog/Learnmore' element={<BlogMore/>}/>
-  <Route path="/mpharm" element={<Mpharm/>}/>
-  <Route path='/mpharm/det' element={<Mpharm1/>}/>
   <Route path='/forgotPassword' element={<Forgot/>}/>
   <Route path='/resetpassword' element={<Reset/>}/>
 

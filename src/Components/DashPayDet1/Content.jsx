@@ -146,31 +146,6 @@ function Content() {
     </a> 
     <button className='px-4 py-3 bg-green-600 text-white rounded-md'  onClick={() => setShowPopup(true)}>Request help</button>
     
-      {/* {showPopup && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white rounded-lg p-6 w-[90%] max-w-md shadow-lg">
-            <h2 className="text-xl font-bold mb-4">Need Help with Project Setup?</h2>
-            
-            <textarea
-              rows="4"
-              className="w-full p-2 border border-gray-300 rounded-md mb-4"
-              placeholder="Type your query here..."
-            ></textarea>
-
-            <div className="flex justify-end space-x-2">
-              <button 
-                className="bg-gray-300 text-black px-4 py-2 rounded-md"
-                onClick={() => setShowPopup(false)}
-              >
-                Cancel
-              </button>
-              <button  className="bg-green-600 text-white px-4 py-2 rounded-md"  >
-                Send Request
-              </button>
-            </div>
-          </div>
-        </div>
-      )} */}
      
      { showPopup && (
       <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">

@@ -4,7 +4,6 @@ import Banner from '../Node/Banner'
 import Contact from '../Node/Contact'
 import Footer from '../Footer'
 import Banner1 from '../Phython/Banner1'
-import Feature1 from '../Phython/Feature1'
 import Content from '../Phython/Content'
 
 function Python() {

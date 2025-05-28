@@ -33,10 +33,9 @@ function Banner() {
       
        <div>
         <h2 className='text-3xl md:text-2xl lg:text-3xl xl:text-5xl text-[#002FA6] font-semibold'>{category}</h2>
-        <h4 className='text-center mt-5'>Home/Mba</h4>
+        <h4 className='text-center mt-5'>Home/{category}</h4>
         </div>
         
-
     </div>
   )
 }
