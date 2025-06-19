@@ -38,7 +38,7 @@ function Hero2() {
         <div className="flex flex-col xl:flex-row items-center">
           {/* Text Section */}
           <div className=" md:w-[100%] xl:w-1/2 md:px-5 xl:px-10 text-center md:text-left mt-[40px]">
-            <h6 className="text-lg uppercase tracking-widest">Figure plans out</h6>
+            {/* <h6 className="text-lg uppercase tracking-widest">Figure plans out</h6> */}
             <h3 id="line" ref={textRef} className="text-2xl leading-none h-[20vh] mb-5 md:font-semibold md:text-4xl md:leading-relaxed md:w-[100%] font-semibold mt-4">
               <span className="text-3xl md:text-4xl md:tracking-wide" id="weight">DSTArena</span>{" "}
               <span className="text-3xl  tracking-wide">provides research</span>{" "}
