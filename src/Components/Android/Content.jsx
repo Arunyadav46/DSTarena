@@ -8,112 +8,169 @@ function Content() {
         
           const roadmap = [
             {
-              title: "HTML 4.01 and XHTML 1.1",
-              topics: [
-                "What is Markup Language",
-                "Basic Structure of HTML",
-                "Difference Between HTML and",
-                "XHTML",
-                "Head Section and Elements of Head",
-                "Section",
-                "Meta Tags",
-                "Css Tags",
-                "Script Tag",
-                "Table Tag",
-                "Div Tag",
-                "Header Tags",
-                "Paragraph, Span, Pre Tags",
-                "Object Tag",
-                "Forms"
-              ],
+              title: "Refreshing Java ",
+             topics: [
+  "Java Introduction",
+  "Oops Concepts",
+  "Abstract Class & Interface",
+  "Exception Handling",
+  "Multithreading (Thread and Runnable Interface)"
+                ]
             },
-            { title: "Adobe Dreamweaver", topics: [
-              "Introduction to Adobe Dreamweaver",
-              "Defining a Dreamweaver site",
-              "Insert Toolbar",
-              "Common Tools",
-              "Layout Tools",
-              "Forms Tool",
-              "Spry Tools",
-              "Properties Panel",
-              "Using Snippets panel",
-              "Dreamweaver extensions",
-              "Template Design in DW",
-              "Editable and Non-Editable Regions",
-              "Defining the DWT for project.",
-              "Creating sub pages for project"
+            { title: "Introduction", 
+            topics: [
+  "Installation and Working",
+  "Why Android?",
+  "Android Runtime",
+  "Android Studio",
+  "Introduction of Gradle"
+]
+          },
+
+            { title: "Fundamentals",
+            topics: [
+  "Basic Building Blocks - Activities, Broadcast Receivers & Content Providers",
+  "Components - Views & Notifications",
+  "Components for Communication - Intents & Intent Filters",
+  "Android API Level"
+]
+
+          },
+            { title: "Application Structure", topics: [
+             "Xml",
+             "Uses-permission"
+              
             ] },
-            { title: "HTML5", topics: [
-              ".Introduction to HTML",
-              "Features of HTML.",
-              "HTML5 DocType",
-              "New Structure Tag",
-              "Section",
-              "Article",
-              "Header",
-              "Footer",
-              "Designing a HTML Structure of Page",
-              "New Media Tag",
-              "Audio Tag",
-              "Video Tag"
+            { title: "Emulator Intent", 
+              topics: [
+  "Resources & Java",
+  "Layouts & Drawable Resources",
+  "Activities & Activity Lifecycle",
+  "Emulator",
+  "Launching",
+  "Editing Emulator Setting",
+  "Emulator Shortcuts",
+  "Logcat Usage",
+  "Introduction to Android Device Monitor (ADM)",
+  "File Explorer",
+  "Explicit Intents",
+  "Implicit Intents"
+]
+
+            },
+            { title: "Basic UI design, Styles & Themes", 
+            topics: [
+  "Form Widgets",
+  "Text Fields",
+  "Layouts",
+  "RelativeLayout",
+  "TableLayout",
+  "FrameLayout"
+]
+
+          },
+              { title: "LinearLayout, Nested layouts ", 
+ topics: [
+  "LinearLayout, Nested Layouts",
+  "XML",
+  "Style Attribute in the Layout File",
+  "Applying Themes via Code and Manifest File",
+  "AlertDialogs & Toast",
+  "Time and Date",
+  "Images and Media"
+]
+
+
+          },
+
+
+            { title: "Menu ", 
+              topics: [
+  "LinearLayout, Nested Layouts",
+  "Images and Media",
+  "Context Menu and Contextual Action Mode",
+  "Popup Menu",
+  "Menu from XML",
+  "Menu via Code",
+  "MatchFilter & TransformFilter"
+]
+
+           },
+             { title: "Adapters ",
+            topics: [
+  "LinearLayout, Nested Layouts",
+  "BaseAdapters",
+  "ListView and Its Activity",
+  "GridView Using Adapters",
+  "Gallery Using Adapters",
+  "Android Session and Session Management",
+  "ArrayAdapters"
+]
+
+          },
+                { title: "Content Providers ", topics: [
+              "SQL",
+              "DML & DDL Queries in brief",
+           
             ] },
-            { title: "CSS", topics: [
-              "Introduction to CSS 3",
-              "New CSS 3 Selectors",
-              "Attribute Selectors",
-              "First-of-type",
-              "Last-of-type",
-              "Nth-child",
-              "Element:empty",
-              "New CSS3 Properties",
-              "Custom Fonts",
-              "Text-Shadow Property",
-              "Text-Stroke Property",
-              "Rounded Corners",
-              "Box Shadows",
-              "CSS Gradients",
-              "CSS Multiple backgrounds",
-              "Opacity Property",
-              "Transition effect",
-              "Animation effects",
-              "Css Media Queries",
-              "Using CSS3 in Practical Layout"
-            ] },
-            { title: "Responsive Web Design with Bootsrap", topics: [
-              "Introduction to Responsive Design",
-              "Mobile first design concepts",
-              "Common device dimensions",
-              ".View-port tag",
-              "Using css media queries",
-              "Menu conversion script",
-              "Basic Custom Layout",
-              "Introduction to Bootstrap",
-              "Installation of Bootstrap",
-              "Grid System",
-              "Forms",
-              "Buttons",
-              "Icons Integration",
-              "Using CSS3 in Practical Layout"
-            ] },
-            { title: "Adobe Flash", topics: [
-              "Introduction to Generics",
-              "Introduction to Animation",
-              "Introduction to Adobe Flash",
-              "Tools in Adobe Flash",
-              "Shape Tween and Motion Tween",
-              "Frame Animation",
-              "Various Flash Effects",
-              "Creating Flash Banners",
-              "Creating Flash Intro’s",
-              "Creating Flash Website",
-              "Basics of Action Scripting"
-            ] },
-            { title: "Conclusion", topics: [
+
+                  { title: "SQLite database",
+             topics: [
+  "SQLiteOpenHelper",
+  "Cursor",
+  "SQLite Programming",
+  "Reading and Updating Contacts",
+  "Android Debug Bridge (ADB) Tool",
+  "Broadcast Receivers",
+  "Services"
+]
+
+          },
+                 { title: "Notifications Customize ", 
+                topics: [
+  "SQLiteOpenHelper",
+  "Alarm",
+  "Visa Service",
+  "Toast",
+  "Dialogs",
+  "Tabs",
+  "Animated Popup Panels",
+  "Spinner",
+  "AsyncTask",
+  "XML Parsing",
+  "Android JSON Parsing using Volley",
+  "Android JSON Parsing using Retrofit",
+  "How to Create REST API for Android App using PHP",
+  "MySQL",
+  "Accessing Phone Services (Call, SMS)"
+]
+
+          },
+              { title: "Fragments", 
+             topics: [
+  "SQLiteOpenHelper",
+  "Introduction to Fragments",
+  "Fragments LifeCycle",
+  "Fragments in Activity",
+  "Google Maps V2 using Fragments",
+  "Develop Fragment-based UI Designs (Fragment Tabs, ListView etc)",
+  "GPS",
+  "Geocoding",
+  "Network Connectivity Services",
+  "Sensors (Accelerometer, Gyroscope)",
+  "Google Cloud Messaging for Android",
+  "App Widgets"
+]
+
+           },
+             { title: "Conclusion",
+               topics: [
               "Static Project",
               "We provide Software and E-book",
               "24*7 support during the training program.",
               "Certificate"
-            ] },
+            ] 
+          },
            
           ];
   return (

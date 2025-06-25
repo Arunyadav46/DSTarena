@@ -19,12 +19,18 @@
 }
 @font-face{
   font-family: "Poppins";
-  src: url(../src/Font/Poppins-Regular.ttf);
+  src: url(../src/Font/Poppins-Medium.ttf);
 }
+
+
 @font-face {
   font-family: "Gilroy";
   src: url(../src/Font/Gilroy-Regular.ttf);
 }
+
+#pa{
+  font-family: "Poppins";
+} 
 body{
   font-family: "inter";
 }
@@ -301,6 +307,140 @@ body{
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+.animate-float {
+  animation: float 10s ease-in-out infinite;
+}
+
+/* Apply to the whole page or a specific div */
+::-webkit-scrollbar {
+  width: 10px;             /* Width for vertical scroll */
+  height: 8px;            /* Height for horizontal scroll */
+}
+
+::-webkit-scrollbar-track {
+  background: #97b784;    /* Track color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b19292;       /* Scroll thumb color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9a5454;       /* On hover */
+}
+
+/* .icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.icon-box {
+  width: 100px;
+  height: 120px;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.icon-box:hover {
+  transform: scale(1.1);
+  background-color: #e0f7ff;
+}
+
+.icon-box svg {
+  width: 100px;
+  height: 100px;
+}
+
+.icon-box span {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+} */
+
+/* Animation keyframes */
+
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Default state: fully drawn, visible */
+.icon-box svg path,
+.icon-box svg rect,
+.icon-box svg line,
+.icon-box svg circle,
+.icon-box svg ellipse {
+  stroke: #000;
+  stroke-width: 1.3;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.3s ease;
+  fill-opacity: 1;
+}
+
+/* On hover: reset and animate again */
+.card:hover svg path,
+.card:hover svg rect,
+.card:hover svg line,
+.card:hover svg circle,
+.card:hover svg ellipse {
+  stroke-dashoffset: 1000;
+  animation: draw 25s ease-out forwards;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-40px) translateX(15px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.8;
+  }
+}
+
+.animate-float {
+  animation-name: float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+
+
+
+
+
+
 
 
 

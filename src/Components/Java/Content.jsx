@@ -8,39 +8,119 @@ function Content() {
                 
                   const roadmap = [
                     {
-                      title: "Introduction",
+                      title: "Java Language Environment",
                       topics: [
-                        "What is PHP",
-                        "How PHP better than other",
-                        "Benefits Of Using PHP MYSQL",
-                        "Server Client Environment",
-                        "Web Browse Web Server",
-                        "Installation & Configuration",
+                        " Object Oriented",
+                        "Platform Independent",
+                        "Automatic Memory Management",
+                        "Compiled / Interpreted approach",
+                        "Robust",
+                        "Secure",
+                        "Dynamic Linking",
+                        "Multi-Threaded",
+                        "Built-in Networking"
                       ],
                     },
-                    { title: "Development Concept", topics: [
-                      "What is PHP",
-                      "How PHP better than other",
-                      "Benefits Of Using PHP MYSQL",
-                      "Server Client Environment",
-                      "Web Browse Web Server",
-                      "Installation & Configuration",
+                    { title: "Java Fundamentals", topics: [
+                      "Data types",
+                      "Operators",
+                      "Control Statements",
+                      "Arrays",
+                      "Enhanced for-loop",
+                      "Enumerated types",
+                      "Static import",
+                      "Auto boxing",
+                      "C-style formatted I/O",
+                      "Variable arguments"
                     ] },
-                    { title: "Control Structure", topics: [] },
-                    { title: "Looping Structure", topics: [] },
-                    { title: "Function", topics: [] },
-                    { title: "Array", topics: [] },
-                    { title: "String Function", topics: [] },
-                    { title: "Working with File", topics: [] },
-                    { title: "OOPs Concept", topics: [] },
-                    { title: "State Management", topics: [] },
-                    { title: "Error Handling & Exception", topics: [] },
-                    { title: "File Inclusion", topics: [] },
-                    { title: "Mysql Introduction", topics: [] },
-                    { title: "Working with MYSQL Admin", topics: [] },
-                    { title: "MySQL Function in PHP", topics: [] },
-                    { title: "SQL Queries", topics: [] },
-                    { title: "Conclusion", topics: [] },
+                    { title: "Essentials of Object-Oriented Programming ", topics: [
+                      "Object and Class Definition",
+                      "Using encapsulation to combine methods and data in a single class",
+                      "Inheritance and Polymorphism"
+                    ] },
+                    { title: "Writing Java Classes", topics: [
+                      "Encapsulation",
+                      "Polymorphism",
+                      "Inheritance",
+                      "OOP in Java",
+                      "Class Fundamentals",
+                      "Using Objects",
+                      "Constructor",
+                      "Garbage Collection",
+                      "Method Overloading",
+                      "Method Overriding",
+                      "Static Members",
+                      "Understanding Interface",
+                      "Using Interfaces"
+                    ] },
+                    { title: "Packages", topics: [
+                      "Why packages",
+                      "Understanding Class path",
+                      "Access modifiers & their Scope"
+                    ] },
+                    { title: "Exception Handling", topics: [
+                      "When an exception occurs.",
+                      "Importance of Exception Handling",
+                      "Exception Propagation",
+                      "Exception Types",
+                      "Using try and catch",
+                      "throw, throws, finally",
+                      "Writing User defined Exceptions"
+                    ] },
+                    { title: "I/O Operations in Java", topics: [
+                      "Byte Oriented Streams",
+                      "File Handling",
+                      "Readers and Writers"
+                    ] },
+                    { title: "Multithreaded Programming", topics: [
+                      "Introduction to Multi-Threading",
+                      "Understanding Threads & its States",
+                      "Java Threading Model",
+                      "Thread class & Runnable Interface",
+                      "Thread Priorities",
+                      "Thread Synchronization",
+                      "Interthread Communication",
+                      "Preventing Deadlocks"
+                    ] },
+                    { title: "Collections Framework", topics: [
+                      "Collection & Iterator Interface",
+                      "Enumeration",
+                      "List and ArrayList",
+                      "Vector",
+                      "Comparator",
+                      "Set Interface & SortedSet",
+                      "Hashtable",
+                      "Properties"
+                    ] },
+                    { 
+                      title: "Generics", topics: [
+                      "Introduction to Generics",
+                      "Using Built-in Generics Collections",
+                      "Writing Simple Generic Class",
+                      "Bounded Generics",
+                      ".Wild Card Generics",
+                      "Graphics",
+                      "Color and Font",
+                      "AWT Components/Controls",
+                      "Event Handling & Layouts"
+                    ] },
+                    { title: "Swing Programming", topics: [
+                      "Introduction to Swing & MVC Architecture",
+                      "Light Weight Component",
+                      "Swing Hierarchy",
+                      "Atomic Components e.g. JButton, JList and more",
+                      "Intermediate Container e.g. JPanel, JSplitPane and more",
+                      "Top-Level Container e.g. JFrame and JApplet",
+                      "Swing Related Events"
+                    ] },
+      
+                    { title: "Conclusion", topics: [
+                      "Static Project",
+                      "Dynamic Project",
+                      "We provide Software and E-book",
+                      "24*7 support during the training program.",
+                      "Certificate"
+                    ] },
                   ];
   return (
     <div className="p-4 relative md:p-10 lg:p-24 xl:p-32 2xl:p-40 md:w-[100%] lg:w-[55%] xl:w-[70%] lg:bg-white">

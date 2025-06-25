@@ -50,10 +50,10 @@ function DashHome() {
               <Link to="/dashboard/payment" className='text-2xl'>📁 <span>Buy Projects</span></Link>
               <h2 className='px-4 py-2 bg-blue-400 rounded-full ml-5'>{BuyData.length}</h2>
          </div>
-         <div  className='h-[10vh] flex justify-center items-center rounded-md text-white' style={{ backgroundColor: "#28A745" }}>
+         {/* <div  className='h-[10vh] flex justify-center items-center rounded-md text-white' style={{ backgroundColor: "#28A745" }}>
               <h1 className='text-2xl'><i class="ri-money-rupee-circle-fill"></i> <span>Payment history </span></h1>
               
-         </div>
+         </div> */}
           
         </div>
 

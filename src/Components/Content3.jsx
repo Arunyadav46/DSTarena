@@ -1,9 +1,12 @@
 import axios from '../Components/Axios/Axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
 function Content3() {
+
+  const projectRef = useRef(null); // Step 1
+
   const [product, setProduct] = useState([]);
   const [visibleCards, setVisibleCards] = useState({});
 
@@ -54,16 +57,16 @@ function Content3() {
   });
 
   return (
-    <div className="xl:py-10 xl:px-32 bg-[#F8F8F8]">
+    <div ref={projectRef} className="xl:py-10 xl:px-32 bg-[#F8F8F8]">
       <div className="px-4">
         <div className="text-center mb-20">
           <div className="flex items-center mb-5 justify-center gap-5">
             <img src="https://manfood.in/images/line2.png" alt="" />
-            <h2 className="text-[#0E53BE] text-xl font-semibold">Our Projects</h2>
+            <h2 className="text-[#0E53BE] text-3xl font-semibold">Our Projects</h2>
             <img src="https://manfood.in/images/line1.png" alt="" />
           </div>
           <h3 className="text-3xl font-semibold">
-            Proud projects that <span className="text-blue-600">make us stand out</span>
+            {/* Our <span className="text-blue-600">Projects</span> */}
           </h3>
         </div>
 

@@ -7,42 +7,80 @@ function Content() {
                   const [openSection, setOpenSection] = useState(null);
                   const [expanded, setExpanded] = useState(null);
                 
-                  const roadmap = [
-                    {
-                      title: "Introduction",
-                      topics: [
-                        "What is PHP",
-                        "How PHP better than other",
-                        "Benefits Of Using PHP MYSQL",
-                        "Server Client Environment",
-                        "Web Browse Web Server",
-                        "Installation & Configuration",
-                      ],
-                    },
-                    { title: "Development Concept", topics: [
-                      "What is PHP",
-                      "How PHP better than other",
-                      "Benefits Of Using PHP MYSQL",
-                      "Server Client Environment",
-                      "Web Browse Web Server",
-                      "Installation & Configuration",
-                    ] },
-                    { title: "Control Structure", topics: [] },
-                    { title: "Looping Structure", topics: [] },
-                    { title: "Function", topics: [] },
-                    { title: "Array", topics: [] },
-                    { title: "String Function", topics: [] },
-                    { title: "Working with File", topics: [] },
-                    { title: "OOPs Concept", topics: [] },
-                    { title: "State Management", topics: [] },
-                    { title: "Error Handling & Exception", topics: [] },
-                    { title: "File Inclusion", topics: [] },
-                    { title: "Mysql Introduction", topics: [] },
-                    { title: "Working with MYSQL Admin", topics: [] },
-                    { title: "MySQL Function in PHP", topics: [] },
-                    { title: "SQL Queries", topics: [] },
-                    { title: "Conclusion", topics: [] },
-                  ];
+                const roadmap = [
+  {
+    title: "Introduction",
+    topics: [
+      "What is SEO (Search Engine Optimization)",
+      "Importance of SEO in Website/Project Success",
+      "How SEO Brings Traffic and Visibility",
+      "Real-world Examples of SEO Effectiveness"
+    ]
+  },
+  {
+    title: "Understanding SEO Fundamentals",
+    topics: [
+      "Key Factors Affecting Website Ranking",
+      "Types of SEO: On-page, Off-page, Technical",
+      "Organic vs Paid Search Results"
+    ]
+  },
+  {
+    title: "On-Page & Offline Optimization Techniques",
+    topics: [
+      "Page Title, Meta Description, and Keywords",
+      "Heading Tags, Alt Attributes, Internal Linking",
+      "URL Structure, Page Speed, Responsive Design",
+      "Content Quality and Keyword Placement"
+    ]
+  },
+  {
+    title: "Off-Page & Online Optimization Techniques",
+    topics: [
+      "Link Building Strategies",
+      "Social Media Signals",
+      "Influencer Outreach",
+      "Guest Blogging and Bookmarking"
+    ]
+  },
+  {
+    title: "Tools and Resources",
+    topics: [
+      "SEO Dock and Its Usage",
+      "Google Search Console",
+      "Google Analytics",
+      "Keyword Research Tools (e.g., Ubersuggest, SEMrush)"
+    ]
+  },
+  {
+    title: "SEO for Product Visibility",
+    topics: [
+      "Creating SEO Strategy for Product Promotion",
+      "Optimizing Digital Products for Search",
+      "Case Studies on Product Reach via SEO"
+    ]
+  },
+  {
+    title: "Practical Sessions",
+    topics: [
+      "Live Optimization of Web Pages",
+      "Keyword Analysis and Ranking Reports",
+      "Monitoring Website Traffic using Tools",
+      "Hands-on SEO Practice with Real Projects"
+    ]
+  },
+  {
+    title: "Conclusion",
+    topics: [
+      "Recap of Key SEO Techniques",
+      "Final Assessment/Project Review",
+      "Certificate of Completion",
+      "24×7 Support During and After Training"
+    ]
+  }
+];
+
+                
   return (
     <div className="p-4 relative md:p-10 lg:p-24 xl:p-32 2xl:p-40 md:w-[100%] lg:w-[55%] xl:w-[70%] lg:bg-white">
     {/* Navigation Tabs */}

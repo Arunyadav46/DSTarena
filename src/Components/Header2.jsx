@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import axios from '../Components/Axios/Axios';
+import { FaWhatsapp, FaPhone } from "react-icons/fa";
 
 function Header2({ setCartAllProduct , cartCount }) {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -224,7 +225,7 @@ function Header2({ setCartAllProduct , cartCount }) {
 
         {/* mobile menu */}
         <div className="lg:hidden cursor-pointer" onClick={() => setMenuOpen(true)}>
-            <i className="pr-5 text-2xl fas fa-bars"></i>
+            <i className=" text-2xl fas fa-bars"></i>
           </div>
 
           
@@ -244,13 +245,15 @@ function Header2({ setCartAllProduct , cartCount }) {
           <p className="text-sm text-[#333333]">Bhopal MP</p>
         </div>
       </div>
-      <div className="flex items-center w-[40%]  space-x-4 leading-relaxed">
+      <div className="flex items-center w-[30%] border-r-2   space-x-4 leading-relaxed">
       <i className="text-3xl text-[#D2A98E] ri-message-line"></i>
         <div>
           <h6>Online 24/7</h6>
-          <p className="text-sm text-[#333333]">9993897203</p>
+          {/* <p className="text-sm text-[#333333]">9993897203</p> */}
+          <p>Available</p>
         </div>
       </div>
+
       
       {/* <Link to="/cart" type="button" class="relative inline-flex items-center w-12 h-10 mt-4 px-3 py-0 rounded-full text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
          <i className="text-xl ri-shopping-cart-2-line"></i>
@@ -259,22 +262,66 @@ function Header2({ setCartAllProduct , cartCount }) {
      </Link> */}
     </div>
     {/* Social Links */}
+      {userId &&  user.length > 0 ? (
+  user.map((elem, index) => (
+    <div key={index} className="pr-3 relative group">
+      <h2 className="hidden md:block text-[17px] cursor-pointer flex items-center">
+        Hello {elem.fname} <i className="ri-arrow-drop-down-line"></i>
+      </h2>
 
-    <div className="hidden lg:flex relative md:space-x-4 md:mr-5">
-    <Link to="/cart" type="button" class="absolute left-[-25%] top-[-100%] inline-flex items-center w-12 h-11 mt-4 px-3 py-0 rounded-full text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      <div className="absolute top-full left-0 mt-2 w-40 bg-[#2A4356] text-white rounded shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-50">
+        <Link
+          to="/dashboard/home"
+          className="block px-4 py-2 hover:bg-[#1e2f3a] transition"
+        >
+          Dashboard
+        </Link>
+        <Link
+          to="/dashboard/profile"
+          className="block px-4 py-2 hover:bg-[#1e2f3a] transition"
+        >
+          Profile
+        </Link>
+        <Link
+          to="/dashboard/refer"
+          className="block px-4 py-2 hover:bg-[#1e2f3a] transition"
+        >
+          Referral
+        </Link>
+        <button
+          onClick={handleLogout}
+          className="w-full text-left px-4 py-2 hover:bg-[#1e2f3a] transition"
+        >
+          Logout
+        </button>
+      </div>
+    </div>
+  ))
+) : (
+  <div className="hidden md:block pr-3 relative group">
+    <h2 className="text-[17px]">
+      My Account <i className="ri-arrow-drop-down-line"></i>
+    </h2>
+    <p className="absolute top-full left-0 mt-1 text-white bg-[#2A4356] px-3 py-1 rounded shadow opacity-0 group-hover:opacity-100 transition duration-300">
+      <Link to="/login">Login</Link>
+    </p>
+  </div>
+)}
+
+    <div className="hidden lg:flex relative md:space-x-2 md:mr-5">
+    <Link to="/cart" type="button" class="absolut left-[15%] top-[-100%] inline-flex items-center w-12 h-11 mr-4 px-3 py-0 rounded-full text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
    <i className="text-2xl ri-shopping-cart-2-line"></i>
    <span class="sr-only">Notifications</span>
-  <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">{cartCount}</div>
+  <div class="absolute top-[5% left-[50%] inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">{cartCount}</div>
    </Link>
    
-  {userId &&  user.length > 0 ? (
+  {/* {userId &&  user.length > 0 ? (
   user.map((elem, index) => (
     <div key={index} className="pr-3 relative group">
       <h2 className="text-[15px] cursor-pointer flex items-center">
         Hello {elem.fname} <i className="ri-arrow-drop-down-line"></i>
       </h2>
 
-      {/* Dropdown Menu */}
       <div className="absolute top-full left-0 mt-2 w-40 bg-[#2A4356] text-white rounded shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-50">
         <Link
           to="/dashboard/home"
@@ -312,10 +359,10 @@ function Header2({ setCartAllProduct , cartCount }) {
       <Link to="/login">Login</Link>
     </p>
   </div>
-)}
+)} */}
 
    
-      <a href="https://twitter.com/" target="_blank" className="text-gray-500 hover:text-blue-500">
+      {/* <a href="https://twitter.com/" target="_blank" className="text-gray-500 hover:text-blue-500">
         <i className="fab fa-twitter"></i>
       </a>
       <a href="https://facebook.com/" target="_blank" className="text-gray-500 hover:text-blue-500">
@@ -326,7 +373,7 @@ function Header2({ setCartAllProduct , cartCount }) {
       </a>
       <a href="https://linkedin.com/" target="_blank" className="text-gray-500 hover:text-blue-700">
         <i className="fab fa-linkedin"></i>
-      </a>
+      </a> */}
     </div>
       </div>
 
@@ -703,11 +750,12 @@ function Header2({ setCartAllProduct , cartCount }) {
 )}
 
       {/* Navigation Menu for Desktop */}
-      <nav className="bg-white relative lg:shadow-md lg:rounded-md py-3 px-8 md:px-10 lg:px-20 xl:px-44 hidden lg:block">
+      <nav className="bg-gradient-to-r from-blue-100 to-blue-100 relative lg:shadow-md lg:rounded-md py-3 px-8 md:px-10 lg:px-20 xl:px-44 hidden lg:block
+">
         <ul className="flex items-center justify-between text-[16px]">
           <ul className='text-gray-1000'><Link to="/">Home</Link></ul>
           <li className="relative" onMouseEnter={() => setDropdownOpen(true)} onMouseLeave={() => setDropdownOpen(false)}>
-            <Link>Training</Link>
+            <Link to="/training">Training</Link>
             <i className="ri-arrow-down-s-line"></i>
             {isDropdownOpen && (
               <ul className="absolute  z-50 left-[-90%] w-[1480%] mb-15 mt-2 w-52 mx-[-20px] bg-white grid grid-cols-3 text-gray-900 shadow-lg rounded-md overflow-hidden">
@@ -719,7 +767,7 @@ function Header2({ setCartAllProduct , cartCount }) {
                 <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/training/php">PHP and MySQL</Link></li>
                 <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/training/vlsi">VLSI Design Training</Link></li>
                 <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/training/java">Java Training</Link></li>
-                <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/">Android Training</Link></li>
+                <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/training/android">Android Training</Link></li>
                 <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/training/seo">SEO Training</Link></li>
               </ul>
             )}
@@ -977,6 +1025,28 @@ function Header2({ setCartAllProduct , cartCount }) {
         </ul>
         
       </nav>
+
+      <div className="fixed top-[50%] right-0 z-50 flex flex-col items-center space-y-6 px-2 py-4">
+        
+        <a  href="https://api.whatsapp.com/send?phone=919993897203&text=Hello!%20I%20am%20interested%20in%20knowing%20more%20about%20DSTarena."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center space-x-2">
+        <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-lg relative">
+          <div className="absolute inset-0 rounded-full blur-xl bg-red-300 opacity-40"></div>
+          
+          <FaWhatsapp className="text-green-600 text-xl z-10" />
+        </div>
+        </a>
+      
+       
+        <a href="tel:9993897203">
+        <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-lg relative">
+          <div className="absolute inset-0 rounded-full blur-xl bg-red-300 opacity-40"></div>
+          <FaPhone className="text-green-600 text-xl z-10" />
+        </div>
+        </a>
+      </div>
     </header>
   );
 }

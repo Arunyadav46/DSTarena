@@ -38,7 +38,7 @@ function Contact() {
      <i className="text-5xl ri-mail-line"></i>
             <div>
                 <h2>SAY HELLO</h2>
-                <h4 className='text-2xl md:text-3xl mt-3 text-center text-[#086AD8] font-semibold'>dstinfo@gmail.com</h4>
+                <h4 className='text-2xl md:text-3xl mt-3 text-center text-[#086AD8] font-semibold'>dstarenainfo@gmail.com</h4>
             </div>
      </div>
         

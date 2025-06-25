@@ -31,10 +31,10 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
 
 
 
-<div className='flex gap-2 items-center mb-4 px-3 py-2 rounded-md hover:bg-white hover:text-black'>
+{/* <div className='flex gap-2 items-center mb-4 px-3 py-2 rounded-md hover:bg-white hover:text-black'>
 <i class="ri-download-line"></i>
   <h2>Download Certificate</h2>
-</div>
+</div> */}
 
 <Link to="/dashboard/payment" className='flex gap-2 items-center mb-4 px-3 py-2 rounded-md hover:bg-white hover:text-black'>
   <i className='ri-home-5-line'></i>
@@ -78,11 +78,11 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
       )}
     </div>
 
-
+{/* 
 <div className='flex gap-2 items-center mb-4 px-3 py-2 rounded-md hover:bg-white hover:text-black'>
   <i className='ri-home-5-line'></i>
   <h2>Our Services</h2>
-</div>
+</div> */}
 
   </div>
   )

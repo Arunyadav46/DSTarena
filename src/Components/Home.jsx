@@ -8,6 +8,9 @@ import Marque from './Marque'
 import Content3 from './Content3'
 import img from "./assest2/icons8-matlab.webp"
 import { Helmet } from 'react-helmet'
+import OurCompany from './OurCompany'
+import Plagrism from './Plagrism'
+import Paper from './Paper'
 
 function Home() {
   return (
@@ -22,7 +25,9 @@ function Home() {
         <Marque/>
         {/* <OurCompany/> */}
         <Content img={img}/>
-        <Content3/>
+        <Plagrism/>
+        <Paper/>
+        <Content3/> 
         <Content2/>
         <Footer/>
     </div>

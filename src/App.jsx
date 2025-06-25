@@ -33,6 +33,9 @@ import DashPayDet from './Components/DashPayDet/DashPayDet'
 import Withdraw from './Components/Dashwithdraw/Withdraw'
 import Forgot from './Components/Forgot/Forgot'
 import Reset from './Components/ResetPassword/Reset'
+import Training1 from './Components/Training1/Training1'
+import Pata1 from './Components/ContactUs/Pata1'
+import Robotics from './Components/Training/Robotics'
 
 
 
@@ -67,7 +70,7 @@ useEffect(() => {
   }, []);
 
   return (
-    <div id="main" className='overflow-x-hidden lg:overflow-visible'>
+    <div id="main" className='overflow-x-hidden lg:overflow-visible '>
     {/* <div id="gol" className='visible xl:w-[2%] xl:h-[4vh] xl:border-2 xl:border-[#086AD8] xl:rounded-full xl:z-50 xl:fixed'></div> */}
     
     
@@ -76,6 +79,11 @@ useEffect(() => {
   <Route path='/' element = {<Home/>}/>
   <Route path='/cart' element={<Cart setCartCount={setCartCount} cartAllProduct={cartAllProduct} setCartAllProduct={setCartAllProduct}/>}/>
   <Route path='/Aboutus' element={<About/>}/>
+  {/* <Route path='/cont' element={<Pata/>}/> */}
+  <Route path='/cont' element={<Pata1/>}/>
+
+
+   <Route path='/training' element={<Training1/>}/>
 
   <Route path='/training/nodejs' element={<Node/>}/>
   <Route path='/service/:id' element={<ServiceWeb/>}/>
@@ -87,6 +95,7 @@ useEffect(() => {
   <Route path='/training/vlsi' element={<Vlsi/>}/>
   <Route path='/training/java' element={<Java/>}/>
   <Route path="/training/seo" element={<Seo/>}/>
+  <Route path='/training/robotics' element={<Robotics/>}/>
   <Route path="/training/android" element={<Android/>}/>
   <Route path='/signup' element={<Registration/>}/>
   <Route path='/login' element={<Login/>}/>
