@@ -81,13 +81,16 @@ const WebHostingBhopal = () => {
             <p className="text-gray-600 mb-2"><i className="fas fa-phone-alt text-orange-500 mr-2 px-1 py-2"></i> +91 9993897203</p>
           </div>
           <div className='border-b-2'>
-            <p className="text-gray-600 mb-2"><i className="fas fa-envelope text-orange-500 mr-2 px-1 py-2"></i>dstinfo@gmail.com</p>
+            <p className="text-gray-600 mb-2"><i className="fas fa-envelope text-orange-500 mr-2 px-1 py-2"></i>dstarenainfo@gmail.com</p>
           </div>
           <div className='border-b-2'>
             <p className="text-gray-600 mb-4"><i className="fas fa-map-marker-alt text-orange-500 mr-2 px-1 py-2"></i>121 Malviya Nagar Bhopal, India</p>
           </div>
+          <a href="tel:9993897203">
           <button className="w-full bg-orange-500 text-white py-2 rounded-lg font-semibold hover:bg-orange-600 transition-all">Contact Now</button>
+         </a>
         </div>
+
       </div>
     </div>
   );

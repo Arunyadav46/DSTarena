@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from "../assets/DstLogo.jpeg"
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -125,11 +126,11 @@ function Footer() {
       <div>
         <h3 className="text-lg font-semibold mb-4 text-white">Training</h3>
         <ul className="space-y-2 text-gray-300">
-          <li><a href="#">Career Training</a></li>
-          <li><a href="#">Real Time Program Training</a></li>
-          <li><a href="#">Corporate Training</a></li>
-          <li><a href="#">Internship Training</a></li>
-          <li><a href="#">In-Plant Training</a></li>
+          <li><Link to="/career">Career Training</Link></li>
+          <li><Link to="/real">Real Time Program Training</Link></li>
+          <li><Link to="">Corporate Training</Link></li>
+          <li><Link to="/intern">Internship Training</Link></li>
+          <li><Link to="/plant">In-Plant Training</Link></li>
         </ul>
       </div>
 
@@ -137,10 +138,10 @@ function Footer() {
       <div>
         <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
         <ul className="space-y-2 text-gray-300">
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Quality Policy</a></li>
-          <li><a href="#">Terms & Services</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+           <Link to="/Aboutus">About Us</Link>
+          <li><Link to="/Quality">Quality Policy</Link></li>
+          <li><Link to="/terms">Terms & Services</Link></li>
+          <li><Link to="/privacy">Privacy Policy</Link></li>
    
         </ul>
       </div>
@@ -149,12 +150,11 @@ function Footer() {
       <div>
         <h3 className="text-lg font-semibold mb-4 text-white">Projects</h3>
         <ul className="space-y-2 text-gray-300">
-          <li><a href="#">Embedded Projects</a></li>
-          <li><a href="#">Java Projects</a></li>
-          <li><a href="#">Dot Net Projects</a></li>
-          <li><a href="#">Android Projects</a></li>
-          <li><a href="#">NS2 Projects</a></li>
-          <li><a href="#">VLSI Projects</a></li>
+          <li><Link to="/embedded">Embedded Projects</Link></li>
+          <li><Link to="/javap">Java Projects</Link></li>
+          <li><Link to="/dot">Dot Net Projects</Link></li>
+          <li><Link to="/andro">Android Projects</Link></li>
+          <li><Link to="/vls">VLSI Projects</Link></li>
         </ul>
       </div>
 

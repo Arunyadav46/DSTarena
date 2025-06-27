@@ -36,6 +36,21 @@ import Reset from './Components/ResetPassword/Reset'
 import Training1 from './Components/Training1/Training1'
 import Pata1 from './Components/ContactUs/Pata1'
 import Robotics from './Components/Training/Robotics'
+import Form1 from './Components/Training/Form1'
+import Quality from './Components/Quality-P/Quality'
+import Terms from './Components/Terms/Terms'
+import Privacy from './Components/Privacy/Privacy'
+import Career from './Components/Career/Career'
+import RealTime from './Components/RealTime/RealTime'
+import Corporate from './Components/Corporate/Corporate'
+import Intern from './Components/Intern/Intern'
+import InPlant from './Components/In-plant/InPlant'
+import Embeded from './Components/Embedded/Embeded'
+import Java2 from './Components/Java2/Java2'
+import Dot from './Components/Dot/Dot'
+import Andro from './Components/Andro/Andro'
+import Vls from './Components/VLS/Vls'
+
 
 
 
@@ -77,15 +92,49 @@ useEffect(() => {
   <Header2 cartCount={cartCount} setCartAllProduct={setCartAllProduct}/>
     <Routes>
   <Route path='/' element = {<Home/>}/>
+  
   <Route path='/cart' element={<Cart setCartCount={setCartCount} cartAllProduct={cartAllProduct} setCartAllProduct={setCartAllProduct}/>}/>
+  {/* footer-Navigation */}
   <Route path='/Aboutus' element={<About/>}/>
-  {/* <Route path='/cont' element={<Pata/>}/> */}
+  <Route path='/Quality' element={<Quality/>}/>
+  <Route path='/terms' element={<Terms/>}/>
+  <Route path='/privacy' element={<Privacy/>}/>
+  <Route path='/career' element={<Career/>}/>
+  <Route path='/real' element={<RealTime/>}/>
+  <Route path='/corporate' element={<Corporate/>}/>
+  <Route path='/intern' element={<Intern/>}/>
+  <Route path='/plant' element={<InPlant/>}/>
+  <Route path='/embedded' element={<Embeded/>}/>
+  <Route path='/javap' element={<Java2/>}/>
+  <Route path='/dot' element={<Dot/>}/>
+  <Route path='/andro' element={<Andro/>} />
+  <Route path='/vls' element={<Vls/>}/>
+
+
+  
+  
   <Route path='/cont' element={<Pata1/>}/>
 
 
    <Route path='/training' element={<Training1/>}/>
 
+   <Route path='/Aboutus' element={<About/>}/>
+
   <Route path='/training/nodejs' element={<Node/>}/>
+  <Route path='/training/nodejs/form1' element={<Form1/>}/>
+  <Route path='/training/phython/form1' element={<Form1/>}/>
+  <Route path='/training/matlab/form1' element={<Form1/>}/>
+  <Route path='/training/embedded/form1' element={<Form1/>}/>
+  <Route path='/training/design/form1' element={<Form1/>}/>
+  <Route path='/training/php/form1' element={<Form1/>}/>
+  <Route path='/training/vlsi/form1' element={<Form1/>}/>
+  <Route path='/training/java/form1' element={<Form1/>}/>
+  <Route path='/training/seo/form1' element={<Form1/>}/>
+  <Route path='/training/robotics/form1' element={<Form1/>}/>
+  <Route path='/training/android/form1' element={<Form1/>}/>
+  
+
+
   <Route path='/service/:id' element={<ServiceWeb/>}/>
   <Route path='/training/phython' element={<Python/>}/>
   <Route path="/training/matlab" element={<Matlab/>}/>
@@ -102,6 +151,7 @@ useEffect(() => {
   <Route path='/project/:id' element={<ProLearn setCartCount={setCartCount} setproductID={setproductID}/>}/>
   <Route path='/MBA/:category' element={<MBA/>}/>
   <Route path='/MBA1/:name' element={<MbaDet/>}/>
+  <Route path='/det' element={<MbaDet/>}/>
   <Route path='/cont' element={<Pata/>}/>
   <Route path='/forgotPassword' element={<Forgot/>}/>
   <Route path='/resetpassword' element={<Reset/>}/>

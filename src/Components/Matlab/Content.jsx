@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 
 
 function Content() {
@@ -206,12 +206,27 @@ function Content() {
           <span>🔒 Access</span>
           <span>Lifetime</span>
         </div>
-        <button className="w-full bg-orange-500 text-white py-2 rounded-lg font-semibold">
+        <Link to="/training/matlab/form1" className="absolute xl:mx-32 px-5 bg-orange-500 text-white py-3 rounded-lg font-semibold">
           Apply Now
-        </button>
-        <div className="text-center text-orange-500 font-semibold cursor-pointer">
-          <span>Share This Course 🔗</span>
-        </div>
+        </Link>
+          <div
+  onClick={() => {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Check out this course on DSTarena!',
+        text: 'I found this great course on DSTarena. Have a look!',
+        url: window.location.href, // shares current page URL
+      })
+      .then(() => console.log('Course shared successfully'))
+      .catch((error) => console.error('Error sharing:', error));
+    } else {
+      alert('Sharing not supported on this browser. Copy the link manually.');
+    }
+  }}
+  className="text-center text-orange-500 pt-14 font-semibold cursor-pointer"
+>
+  <span>Share This Course 🔗</span>
+      </div>
       </div>
     </div>
   </div>

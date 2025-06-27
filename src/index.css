@@ -27,6 +27,9 @@
   font-family: "Gilroy";
   src: url(../src/Font/Gilroy-Regular.ttf);
 }
+#text9{
+ font-family: "Poppins";
+}
 
 #pa{
   font-family: "Poppins";
@@ -434,6 +437,38 @@ body{
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
+
+
+
+.marquee-container1 {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  /* height: 100%; */
+  background-color: #f6fafe;
+}
+
+.marquee-content1 {
+  display: flex;
+  gap:2.5rem;
+  animation: scroll-left 35s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-container1:hover .marquee-content1 {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
 
 
 

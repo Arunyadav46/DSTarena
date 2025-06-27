@@ -29,7 +29,7 @@ function Banner() {
                   {Banner.map((elem,index)=>{
                     return  <div key={index}>
                     <h2 className='text-3xl md:text-5xl text-center text-[#002FA6] font-semibold'>{elem.category}</h2>
-                    <h4 className='text-center mt-5'>Home/Development</h4>
+                    <h4 className='text-center mt-5'>Home/{elem.category}</h4>
                     </div>
                   })}
                     

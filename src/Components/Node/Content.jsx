@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 
 function Content() {
@@ -166,7 +167,7 @@ function Content() {
     {/* Course Details Card */}
     <div className="w-full shadow-xl    lg:absolute lg:top-[10%]  lg:right-[-33%] lg:h-[60vh] lg:w-[40%] bg-white shadow-md rounded-lg p-6">
       <div className="space-y-4">
-        <div className="flex justify-between py-4 border-b-2 text-gray-700 font-semibold">
+        <div className="flex justify-between py-4  border-b-2 text-gray-700 font-semibold">
           <span>⏳ Duration</span>
           <span>3/6 Month</span>
         </div>
@@ -174,13 +175,15 @@ function Content() {
           <span>📄 Enrolled</span>
           <span>255 students</span>
         </div>
-        <div className="flex justify-between py-4 border-b-2 text-gray-900 font-semibold">
+        <div className="flex   justify-between py-4 border-b-2 text-gray-900 font-semibold">
           <span>🔒 Access</span>
           <span>Lifetime</span>
         </div>
-        <button className="w-full bg-orange-500 text-white py-2 rounded-lg font-semibold">
+
+
+        <Link to="/training/nodejs/form1" className="absolute px-8 py-3 xl:mx-28 bg-orange-500 text-white py-2 rounded-lg font-semibold">
           Apply Now
-        </button>
+        </Link>
         {/* <div className="text-center text-orange-500 font-semibold cursor-pointer">
           <span>Share This Course 🔗</span>
         </div> */}
@@ -198,10 +201,10 @@ function Content() {
       alert('Sharing not supported on this browser. Copy the link manually.');
     }
   }}
-  className="text-center text-orange-500 font-semibold cursor-pointer"
+  className="text-center text-orange-500 pt-14 font-semibold cursor-pointer"
 >
   <span>Share This Course 🔗</span>
-</div>
+      </div>
 
       </div>
     </div>
