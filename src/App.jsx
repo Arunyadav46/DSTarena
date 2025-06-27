@@ -107,7 +107,7 @@ useEffect(() => {
   <Route path='/embedded' element={<Embeded/>}/>
   <Route path='/javap' element={<Java2/>}/>
   <Route path='/dot' element={<Dot/>}/>
-  <Route path='/andro' element={<Andro/>} />
+  <Route path='/android' element={<Andro/>} />
   <Route path='/vls' element={<Vls/>}/>
 
 
@@ -133,7 +133,6 @@ useEffect(() => {
   <Route path='/training/robotics/form1' element={<Form1/>}/>
   <Route path='/training/android/form1' element={<Form1/>}/>
   
-
 
   <Route path='/service/:id' element={<ServiceWeb/>}/>
   <Route path='/training/phython' element={<Python/>}/>

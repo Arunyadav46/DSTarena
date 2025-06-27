@@ -100,8 +100,8 @@ function Footer() {
       //       <a href="https://linkedin.com/" target="_blank" className="hover:text-blue-500"><i className="fab fa-linkedin"></i></a>
       //     </div>
       //   </div>
-      // </footer>
-      <footer className="w-full bg-[#2F6E86] text-white px-6 md:px-10 xl:px-32 pt-16 pb-10 ">
+      // </footer>   bg-[#2F6E86]
+      <footer className="w-full bg-[#2F6E86]  text-white px-6 md:px-10 xl:px-32 pt-16 pb-10 ">
   <div className="container mx-auto">
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
       
@@ -111,7 +111,7 @@ function Footer() {
           <img src={logo} alt="DSTArena Logo" className="w-14 h-14 rounded-full" />
           <h2 className="text-2xl font-bold">DSTArena</h2>
         </div>
-        <p className="text-gray-300 leading-relaxed mb-4">
+        <p className="text-white leading-relaxed mb-4">
           Superiority rules our thesis writing services to offer you a peaceful research journey.
         </p>
         <h3 className="text-lg font-semibold mt-6 mb-2 text-white">Follow Us</h3>
@@ -125,7 +125,7 @@ function Footer() {
       {/* Training */}
       <div>
         <h3 className="text-lg font-semibold mb-4 text-white">Training</h3>
-        <ul className="space-y-2 text-gray-300">
+        <ul className="space-y-2 text-white">
           <li><Link to="/career">Career Training</Link></li>
           <li><Link to="/real">Real Time Program Training</Link></li>
           <li><Link to="">Corporate Training</Link></li>
@@ -137,7 +137,7 @@ function Footer() {
       {/* Company */}
       <div>
         <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
-        <ul className="space-y-2 text-gray-300">
+        <ul className="space-y-2 text-white">
            <Link to="/Aboutus">About Us</Link>
           <li><Link to="/Quality">Quality Policy</Link></li>
           <li><Link to="/terms">Terms & Services</Link></li>
@@ -149,11 +149,11 @@ function Footer() {
       {/* Projects */}
       <div>
         <h3 className="text-lg font-semibold mb-4 text-white">Projects</h3>
-        <ul className="space-y-2 text-gray-300">
+        <ul className="space-y-2 text-white">
           <li><Link to="/embedded">Embedded Projects</Link></li>
           <li><Link to="/javap">Java Projects</Link></li>
           <li><Link to="/dot">Dot Net Projects</Link></li>
-          <li><Link to="/andro">Android Projects</Link></li>
+          <li><Link to="/android">Android Projects</Link></li>
           <li><Link to="/vls">VLSI Projects</Link></li>
         </ul>
       </div>
@@ -161,7 +161,7 @@ function Footer() {
       {/* Address */}
       <div>
         <h3 className="text-lg font-semibold mb-4 text-white">Company Address</h3>
-        <ul className="space-y-1 text-gray-300 text-sm">
+        <ul className="space-y-1 text-white text-sm">
           {/* <li>Address:</li> */}
           <li>121, Malviya Nagar, New Market</li>
           <li>Bhopal - 462003, MP</li>
