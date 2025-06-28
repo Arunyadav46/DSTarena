@@ -187,7 +187,7 @@ function Hero2() {
   
   {/* Contact Us Button */}
   <Link
-    to="/cont"
+    to="/contact-us"
     className="bg-[#2563EB] text-white py-2 px-8 rounded-full text-lg font-medium hover:bg-[#003EA6] transition-all duration-300 shadow-md"
   >
     Contact Us
@@ -255,17 +255,19 @@ function Hero2() {
               />
               <img className="w-full shadow-pop h-full bg-blue-400 bg-transparent  object-cover" src={img15} alt="Cybersecurity"/>
             </div>
+
             <div className="hidden md:block absolute top-[20%] right-[31%] bg-white shadow-md px-3 py-1 rounded-lg text-sm">
   <p className="text-yellow-500 font-bold">⭐ 5.0</p>
   <p className="text-gray-600">Google Reviews</p>
-</div>
-              <div className="hidden md:block absolute top-[70%] right-[5%] bg-white shadow-md px-4 py-2 rounded-xl text-sm flex items-center gap-2">
-  <span className="text-yellow-500">⭐</span>
+            </div>
+             <div className="hidden md:block absolute top-[70%] right-[5%] bg-white shadow-md px-4 py-2 rounded-xl text-sm flex items-center gap-2">
+  <span className="text-green-600 text-lg font-bold">🏆</span>
   <div>
-    <p className="text-gray-800 font-semibold">4.9</p>
-    <p className="text-gray-500 text-xs">1,000+ reviews</p>
+    <p className="text-gray-800 font-semibold">13+ Years</p>
+    <p className="text-gray-500 text-xs">of Excellence</p>
   </div>
-              </div>
+</div>
+
 
           </div>
 

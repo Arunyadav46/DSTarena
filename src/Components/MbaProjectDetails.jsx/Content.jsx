@@ -42,7 +42,7 @@ function Content() {
 
   return (
     <div className="w-full  bg-[#FFFFFF] p-5 md:p-10 lg:p-5   xl:px-32">
-      <h2 className='text-xl mt-10 mb-10 md:text-2xl lg:text-3xl md:mt-10  xl:text-4xl text-center xl:mt-20 xl:mb-20 font-semibold'>Our {category}  <span className='text-[#002FA6]'>Projects</span></h2>
+      <h2 className='text-xl mt-10 mb-10 md:text-2xl lg:text-3xl md:mt-10  xl:text-4xl text-center xl:mt-20 xl:mb-20 font-semibold'>Projects for  <span className='text-[#002FA6]'>{category} </span></h2>
     {projectName.map((elem,index) => (
       
       <div key={index} className="bg-white  p-2 bg-white rounded-[10px] shadow-lg  border-2 hover:border-[#6787FE]  bg-blue-100 rounded-lg md:px-5 md:py-5 lg:px-8 lg:py-8  xl:px-8 xl:py-2 mb-5 flex justify-between items-center" >

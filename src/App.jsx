@@ -50,6 +50,7 @@ import Java2 from './Components/Java2/Java2'
 import Dot from './Components/Dot/Dot'
 import Andro from './Components/Andro/Andro'
 import Vls from './Components/VLS/Vls'
+import ScrollToTop from './Components/ScrollToTop'
 
 
 
@@ -92,6 +93,9 @@ useEffect(() => {
     
     
   <Header2 cartCount={cartCount} setCartAllProduct={setCartAllProduct}/>
+    
+    <ScrollToTop/>
+
     <Routes>
   <Route path='/' element = {<Home/>}/>
   
@@ -116,7 +120,7 @@ useEffect(() => {
 
   
   
-  <Route path='/cont' element={<Pata1/>}/>
+  <Route path='/contact-us' element={<Pata1/>}/>
 
 
    <Route path='/training' element={<Training1/>}/>
@@ -124,17 +128,17 @@ useEffect(() => {
    <Route path='/Aboutus' element={<About/>}/>
 
   <Route path='/training/nodejs' element={<Node/>}/>
-  <Route path='/training/nodejs/form1' element={<Form1/>}/>
-  <Route path='/training/phython/form1' element={<Form1/>}/>
-  <Route path='/training/matlab/form1' element={<Form1/>}/>
-  <Route path='/training/embedded/form1' element={<Form1/>}/>
-  <Route path='/training/design/form1' element={<Form1/>}/>
-  <Route path='/training/php/form1' element={<Form1/>}/>
-  <Route path='/training/vlsi/form1' element={<Form1/>}/>
-  <Route path='/training/java/form1' element={<Form1/>}/>
-  <Route path='/training/seo/form1' element={<Form1/>}/>
-  <Route path='/training/robotics/form1' element={<Form1/>}/>
-  <Route path='/training/android/form1' element={<Form1/>}/>
+  <Route path='/training/nodejs/register' element={<Form1/>}/>
+  <Route path='/training/phython/register' element={<Form1/>}/>
+  <Route path='/training/matlab/register' element={<Form1/>}/>
+  <Route path='/training/embedded/register' element={<Form1/>}/>
+  <Route path='/training/design/register' element={<Form1/>}/>
+  <Route path='/training/php/register' element={<Form1/>}/>
+  <Route path='/training/vlsi/register' element={<Form1/>}/>
+  <Route path='/training/java/register' element={<Form1/>}/>
+  <Route path='/training/seo/register' element={<Form1/>}/>
+  <Route path='/training/robotics/register' element={<Form1/>}/>
+  <Route path='/training/android/register' element={<Form1/>}/>
   
 
   <Route path='/service/:id' element={<ServiceWeb/>}/>

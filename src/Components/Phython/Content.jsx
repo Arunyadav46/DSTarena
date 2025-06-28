@@ -213,7 +213,7 @@ function Content() {
           <span>🔒 Access</span>
           <span>Lifetime</span>
         </div>
-        <Link to="/training/phython/form1" className="absolute xl:mx-32 px-5 bg-orange-500 text-white py-2 rounded-lg font-semibold">
+        <Link to="/training/phython/register" className="absolute xl:mx-32 px-5 bg-orange-500 text-white py-2 rounded-lg font-semibold">
           Apply Now
         </Link>
            <div

@@ -16,7 +16,7 @@ function Content() {
         </div>
 
         <div className="bg-white p-6 rounded-lg shadow-lg">
-          <form id="contact-form" action="https://htmldemo.net/mitech/assets/php/mail.php" method="post">
+          <form id="contact-form" action="">
             <div className="space-y-4">
               <input
                 name="con_name"

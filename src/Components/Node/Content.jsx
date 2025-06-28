@@ -181,7 +181,7 @@ function Content() {
         </div>
 
 
-        <Link to="/training/nodejs/form1" className="absolute px-8 py-3 xl:mx-28 bg-orange-500 text-white py-2 rounded-lg font-semibold">
+        <Link to="/training/nodejs/register" className="absolute px-8 py-3 xl:mx-28 bg-orange-500 text-white py-2 rounded-lg font-semibold">
           Apply Now
         </Link>
         {/* <div className="text-center text-orange-500 font-semibold cursor-pointer">

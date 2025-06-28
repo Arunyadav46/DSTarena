@@ -41,10 +41,10 @@ function Content() {
         <h2 className="text-2xl font-semibold text-gray-800 mb-2">Duration of Internship</h2>
         <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
           <p className="text-gray-700 mb-2">
-            <span className="font-semibold text-blue-800">Time Period:</span> 3 months
+            <span className="font-semibold text-blue-800">Time Period:</span> 6 months
           </p>
           <p className="text-gray-700">
-            <span className="font-semibold text-blue-800">Working Hours:</span> 10:00 A.M To 6:00 P.M
+            <span className="font-semibold text-blue-800">Working Hours:</span> 9:30 A.M To 7:00 P.M
           </p>
         </div>
       </section>
