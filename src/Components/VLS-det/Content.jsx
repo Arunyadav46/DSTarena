@@ -1,7 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 function Content() {
+  
+  const{category} = useParams()
+  console.log(category)
+
+
   return (
    <div  className='flex flex-col w-full  bg-[#FFFFFF] p-5 md:p-10 lg:p-5   xl:px-32 '>
         <div  className="bg-white  p-2 bg-white rounded-[10px] shadow-lg  border-2 hover:border-[#6787FE]  bg-blue-100 rounded-lg md:px-5 md:py-5 lg:px-8 lg:py-8  xl:px-8 xl:py-8 mb-10 flex justify-between items-center" >

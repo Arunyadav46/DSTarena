@@ -126,11 +126,11 @@ function Footer() {
       <div>
         <h3 className="text-lg font-semibold mb-4 text-white">Training</h3>
         <ul className="space-y-2 text-white">
-          <li><Link to="/career">Career Training</Link></li>
-          <li><Link to="/real">Real Time Program Training</Link></li>
+          <li><Link to="/career-training">Career Training</Link></li>
+          <li><Link to="/intership-information">Real Time Program Training</Link></li>
           <li><Link to="">Corporate Training</Link></li>
-          <li><Link to="/intern">Internship Training</Link></li>
-          <li><Link to="/plant">In-Plant Training</Link></li>
+          <li><Link to="/internship">Internship Training</Link></li>
+          <li><Link to="/Inplant">In-Plant Training</Link></li>
         </ul>
       </div>
 
@@ -139,9 +139,9 @@ function Footer() {
         <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
         <ul className="space-y-2 text-white">
            <Link to="/Aboutus">About Us</Link>
-          <li><Link to="/Quality">Quality Policy</Link></li>
-          <li><Link to="/terms">Terms & Services</Link></li>
-          <li><Link to="/privacy">Privacy Policy</Link></li>
+          <li><Link to="/quality-policy">Quality Policy</Link></li>
+          <li><Link to="/terms-condition">Terms & Services</Link></li>
+          <li><Link to="/privacy-policy">Privacy Policy</Link></li>
    
         </ul>
       </div>
@@ -150,11 +150,11 @@ function Footer() {
       <div>
         <h3 className="text-lg font-semibold mb-4 text-white">Projects</h3>
         <ul className="space-y-2 text-white">
-          <li><Link to="/embedded">Embedded Projects</Link></li>
-          <li><Link to="/javap">Java Projects</Link></li>
-          <li><Link to="/dot">Dot Net Projects</Link></li>
-          <li><Link to="/android">Android Projects</Link></li>
-          <li><Link to="/vls">VLSI Projects</Link></li>
+          <li><Link to="/Embedded">Embedded Projects</Link></li>
+          <li><Link to="/Java">Java Projects</Link></li>
+          <li><Link to="/Dot NET">Dot Net Projects</Link></li>
+          <li><Link to="/Android">Android Projects</Link></li>
+          <li><Link to="/VLSI">VLSI Projects</Link></li>
         </ul>
       </div>
 

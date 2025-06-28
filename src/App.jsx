@@ -54,6 +54,8 @@ import Vls from './Components/VLS/Vls'
 
 
 
+
+
 function App() {
   
 
@@ -96,19 +98,20 @@ useEffect(() => {
   <Route path='/cart' element={<Cart setCartCount={setCartCount} cartAllProduct={cartAllProduct} setCartAllProduct={setCartAllProduct}/>}/>
   {/* footer-Navigation */}
   <Route path='/Aboutus' element={<About/>}/>
-  <Route path='/Quality' element={<Quality/>}/>
-  <Route path='/terms' element={<Terms/>}/>
-  <Route path='/privacy' element={<Privacy/>}/>
-  <Route path='/career' element={<Career/>}/>
-  <Route path='/real' element={<RealTime/>}/>
+  <Route path='/quality-policy' element={<Quality/>}/>
+  <Route path='/terms-condition' element={<Terms/>}/>
+  <Route path='/privacy-policy' element={<Privacy/>}/>
+  <Route path='/career-training' element={<Career/>}/>
+  <Route path="/intership-information" element={<RealTime/>}/>
   <Route path='/corporate' element={<Corporate/>}/>
-  <Route path='/intern' element={<Intern/>}/>
-  <Route path='/plant' element={<InPlant/>}/>
-  <Route path='/embedded' element={<Embeded/>}/>
-  <Route path='/javap' element={<Java2/>}/>
-  <Route path='/dot' element={<Dot/>}/>
-  <Route path='/android' element={<Andro/>} />
-  <Route path='/vls' element={<Vls/>}/>
+  <Route path='/internship' element={<Intern/>}/>
+  <Route path='/Inplant' element={<InPlant/>}/>
+  {/* <Route path='/embedded-projects' element={<Embeded/>}/> */}
+  {/* <Route path='/:category' element={<Java2/>}/> */}
+  {/* <Route path='/:category' element={<Dot/>}/> */}
+  <Route path='/:category' element={<Andro/>} />
+
+  {/* <Route path='/:category' element={<Vls/>}/> */}
 
 
   
@@ -138,7 +141,7 @@ useEffect(() => {
   <Route path='/training/phython' element={<Python/>}/>
   <Route path="/training/matlab" element={<Matlab/>}/>
   <Route path='/training/embedded' element={<Embedded/>}/>
-  <Route path="/training/design" element={<Design/>} />
+  <Route path="/training/design" element={<Design/>}/>
   <Route path="/training/php" element={<PHP/>}/>
   <Route path='/training/vlsi' element={<Vlsi/>}/>
   <Route path='/training/java' element={<Java/>}/>
@@ -148,7 +151,7 @@ useEffect(() => {
   <Route path='/signup' element={<Registration/>}/>
   <Route path='/login' element={<Login/>}/>
   <Route path='/project/:id' element={<ProLearn setCartCount={setCartCount} setproductID={setproductID}/>}/>
-  <Route path='/MBA/:category' element={<MBA/>}/>
+  <Route path='/Projects/:category' element={<MBA/>}/>
   <Route path='/MBA1/:name' element={<MbaDet/>}/>
   <Route path='/det' element={<MbaDet/>}/>
   <Route path='/cont' element={<Pata/>}/>
@@ -172,7 +175,7 @@ useEffect(() => {
   </Route>
   <Route path='/dashboard/refer' element={
      <ProtectedRoute>
-    <DashRefer/>
+      <DashRefer/>
     </ProtectedRoute>
     }/>
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Content() {
   return (
-     <div id="text9" className="max-w-7xl mx-auto px-6 py-12 text-gray-600">
+     <div id="text9" className="max-w-7xl text-justify  mx-auto px-6 py-12 text-gray-600">
       <h1 className="text-4xl font-bold text-center mb-12 text-blue-700 drop-shadow">Career Training</h1>
 
       <div className="bg-white shadow-lg rounded-xl p-8 mb-8">

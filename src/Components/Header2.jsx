@@ -579,7 +579,7 @@ function Header2({ setCartAllProduct , cartCount }) {
     {Mba.map((elem,index)=>{
       return  <li
       className="ml-4 p-2 text-lg border-b-2 border-white hover:bg-red-100"
-      onClick={() => handleMenuClick(`/MBA/${elem.category}`)}
+      onClick={() => handleMenuClick(`/Projects/${elem.category}`)}
     >
       {elem.category}
     </li>
@@ -611,14 +611,37 @@ function Header2({ setCartAllProduct , cartCount }) {
     }`}
   >
 
-    {Nurse.map((elem,index)=>{
+    {/* {Nurse.map((elem,index)=>{
       return  <li
       className="ml-4 p-2 text-lg border-b-2 border-white hover:bg-red-100"
-      onClick={() => handleMenuClick(`/MBA/${elem.category}`)}
+      onClick={() => handleMenuClick(`/Projects/${elem.category}`)}
     >
       {elem.category}
     </li>
-    })}
+    })} */}
+
+    {Nurse.map((elem, index) => {
+  // Safely handle undefined/null and capitalize each word
+  const formatCategory = (str) => {
+    if (!str) return "";
+    return str
+      .toLowerCase()
+      .split(" ")
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  };
+
+  return (
+    <li
+      key={index}
+      className="ml-4 p-2 text-lg border-b-2 border-white hover:bg-red-100"
+      onClick={() => handleMenuClick(`/Projects/${elem.category}`)}
+    >
+      {formatCategory(elem.category)}
+    </li>
+  );
+})}
+
     
   </ul>
 </li>
@@ -649,7 +672,7 @@ function Header2({ setCartAllProduct , cartCount }) {
     {Mtech.map((elem,index)=>{
       return   <li
       className="ml-4 p-2 text-lg border-b-2 border-white hover:bg-red-100"
-      onClick={() => handleMenuClick(`/MBA/${elem.category}`)}
+      onClick={() => handleMenuClick(`/Projects/${elem.category}`)}
     >
       {elem.category}
     </li>
@@ -681,7 +704,7 @@ function Header2({ setCartAllProduct , cartCount }) {
     {Btech.map((elem,index)=>{
       return  <li
       className="ml-4 p-2 text-lg border-b-2 border-white hover:bg-red-100"
-      onClick={() => handleMenuClick(`/MBA/${elem.category}?branch=${elem.branch || ""}`)}
+      onClick={() => handleMenuClick(`/Projects/${elem.category}?branch=${elem.branch || ""}`)}
     >
       {elem.category}
     </li>
@@ -718,7 +741,7 @@ function Header2({ setCartAllProduct , cartCount }) {
     {Mpharm.map((elem,index)=>{
       return   <li
       className="ml-4 p-2 text-lg border-b-2 border-white hover:bg-red-100"
-      onClick={() => handleMenuClick(`/MBA/${elem.category}`)}
+      onClick={() => handleMenuClick(`/Projects/${elem.category}`)}
     >
       {elem.category}
     </li>
@@ -786,7 +809,7 @@ function Header2({ setCartAllProduct , cartCount }) {
       </li>
     ))}
   </div>
-               </li>
+           </li>
 
 
           {/* <li><Link to="/project">Projects</Link></li> */}
@@ -818,7 +841,7 @@ function Header2({ setCartAllProduct , cartCount }) {
   >
     {soft.map((elem, index) => (
       <li key={index} className="px-4 text-[14px] pt-5 py-2 text-gray-700 hover:bg-gray-200">
-        <Link to={`/MBA/${elem.category}`}>{elem.category}</Link>
+        <Link to={`/Projects/${elem.category}`}>{elem.category}</Link>
       </li>
     ))}
   </div>
@@ -848,7 +871,7 @@ function Header2({ setCartAllProduct , cartCount }) {
                isDropdownOpen1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[-10px] pointer-events-none" }`}>
               {Mba.map((elem, index) => (
             <li key={index} className="px-4 text-[14px] pt-5 py-2 text-gray-700 hover:bg-gray-200">
-           <Link to={`/MBA/${elem.category}`}>{elem.category}</Link>
+           <Link to={`/Projects/${elem.category}`}>{elem.category}</Link>
            </li>
                ))}
              </div>
@@ -882,11 +905,23 @@ function Header2({ setCartAllProduct , cartCount }) {
       isDropdownOpen3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[-10px] pointer-events-none"
     }`}
   >
-    {Nurse.map((elem, index) => (
-      <li key={index} className="px-4 text-[14px] pt-5 py-2 text-gray-700 hover:bg-gray-200">
-        <Link to={`/MBA/${elem.category}`}>{elem.category}</Link>
-      </li>
-    ))}
+  {Nurse.map((elem, index) => {
+  const formatCategory = (str) => {
+    if (!str) return "";
+    return str
+      .toLowerCase()
+      .split(" ")
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  };
+
+  return (
+    <li key={index} className="px-4 text-[14px] pt-5 py-2 text-gray-700 hover:bg-gray-200">
+      <Link to={`/Projects/${elem.category}`}>{formatCategory(elem.category)}</Link>
+    </li>
+  );
+})}
+
   </div>
            </li>
 
@@ -918,7 +953,7 @@ function Header2({ setCartAllProduct , cartCount }) {
   >
     {Mtech.map((elem, index) => (
       <li key={index} className="px-4 py-2 mb-4 text-[14px] text-gray-700 hover:bg-gray-200">
-        <Link to={`/MBA/${elem.category}`}>{elem.category}</Link>
+        <Link to={`/Projects/${elem.category}`}>{elem.category}</Link>
       </li>
     ))}
   </div>
@@ -955,7 +990,7 @@ function Header2({ setCartAllProduct , cartCount }) {
   >
     {Btech.map((elem, index) => (
       <li key={index} className="px-4 py-2 mb-2 text-[14px] text-gray-700 hover:bg-gray-200">
-        <Link to={`/MBA/${elem.category}?branch=${elem.branch || ""}`}>{elem.category}</Link>
+        <Link to={`/Projects/${elem.category}?branch=${elem.branch || ""}`}>{elem.category}</Link>
       </li>
     ))}
   </div>
@@ -988,7 +1023,7 @@ function Header2({ setCartAllProduct , cartCount }) {
   >
     {Mpharm.map((elem, index) => (
       <li key={index} className="px-4 py-2 text-[14px] mb-2 text-gray-700 hover:bg-gray-200">
-        <Link to={`/MBA/${elem.category}`}>{elem.category}</Link>
+        <Link to={`/Projects/${elem.category}`}>{elem.category}</Link>
       </li>
     ))}
   </div>

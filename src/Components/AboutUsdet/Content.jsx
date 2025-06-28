@@ -201,32 +201,32 @@ function Content() {
 //   </section>
 
 // </div>
- <div className="bg-white xl:px-32 text-black w-full px-4 md:px-16 py-16 space-y-24">
-  {/* Top Section */}
-  <div className="flex flex-col lg:flex-row items-center gap-10">
-    {/* Left Content */}
-    <div className="lg:w-1/2 space-y-6">
-      <p className="text-blue-600 font-semibold tracking-wide">About Company</p>
-      <h2 className="text-3xl md:text-5xl font-extrabold leading-tight">
-        Make your life easier with help from <span className="text-blue-600">Wiatech</span>
-      </h2>
-      <ul className="space-y-3 pt-4">
-        <li className="flex items-center gap-3 text-lg">
-          <span className="text-blue-600 font-bold">✔</span> Professional Team Member
-        </li>
-        <li className="flex items-center gap-3 text-lg">
-          <span className="text-blue-600 font-bold">✔</span> Awards Winning IT Solutions Company
-        </li>
-        <li className="flex items-center gap-3 text-lg">
-          <span className="text-blue-600 font-bold">✔</span> Dedicated Tech Services
-        </li>
-      </ul>
-      <button className="mt-6 bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300">
-        Read More
-      </button>
-    </div>
 
-    {/* Image Centered */}
+ <div className="bg-white xl:px-32 text-black w-full px-4 md:px-16 py-16 space-y-24">
+
+  <div className="flex flex-col lg:flex-row items-center gap-10">
+   
+<div className="lg:w-[50%] space-y-6">
+  <p className="text-blue-600 font-semibold tracking-wide">About Company</p>
+  <h2 className="text-3xl md:text-3xl font-extrabold leading-tight">
+    Empowering Research & Innovation with <span className="text-blue-600">DSTARENA</span>
+  </h2>
+  <ul className="space-y-3 pt-4">
+    <li className="flex items-center gap-3 text-lg">
+      <span className="text-blue-600 font-bold">✔</span> ISO 9001:2008 Certified Since 2011
+    </li>
+    <li className="flex items-center gap-3 text-lg">
+      <span className="text-blue-600 font-bold">✔</span> 10000+ Students Trained, 2000+ Dissertations Delivered
+    </li>
+    <li className="flex items-center gap-3 text-lg">
+      <span className="text-blue-600 font-bold">✔</span> Research, Training & Project Experts in Central India
+    </li>
+  </ul>
+
+</div>
+
+
+   
     <div className="lg:w-auto flex justify-center items-center">
       <img
         src="https://images.pexels.com/photos/3861959/pexels-photo-3861959.jpeg"
@@ -235,86 +235,104 @@ function Content() {
       />
     </div>
 
-    {/* Right Content */}
+   
     <div className="lg:w-1/2 space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left">
-      <div>
-        <h3 className="text-2xl font-bold">
-          We’ve <span className="text-blue-600">25+ Years</span> Of Experience In Tech Services
-        </h3>
-        <p className="text-gray-600 text-base pt-2">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa inventore
-        </p>
-      </div>
-      <div className="flex gap-12 justify-center lg:justify-start">
-        <div>
-          <p className="text-3xl font-extrabold text-blue-600">56k+</p>
-          <p className="text-gray-700 text-base">Satisfied Customers</p>
-        </div>
-        <div>
-          <p className="text-3xl font-extrabold text-blue-600">56m+</p>
-          <p className="text-gray-700 text-base">Project Complete</p>
-        </div>
-      </div>
+  <div>
+    <h3 className="text-2xl font-bold">
+      We’ve <span className="text-blue-600">12+ Years</span> of Excellence in Research & Training
+    </h3>
+    <p className="text-gray-600 text-base pt-2 text-justify">
+      DSTARENA is an ISO 9001:2008 certified institute that has trained over 10,000+ students and delivered 2000+ M.Tech and Ph.D. dissertations.
+      Recognized with awards like TATA FIRST DOT and Best Education Excellence in Central India.
+    </p>
+  </div>
+  <div className="flex gap-12 justify-center lg:justify-start">
+    <div>
+      <p className="text-3xl font-extrabold text-blue-600">10k+</p>
+      <p className="text-gray-700 text-base">Students Trained</p>
+    </div>
+    <div>
+      <p className="text-3xl font-extrabold text-blue-600">2000+</p>
+      <p className="text-gray-700 text-base">Dissertations Delivered</p>
     </div>
   </div>
+     </div>
 
-  {/* Value Section */}
+  </div>
+
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-    {[
-      { title: "Passionate", icon: "💻" },
-      { title: "Respectful", icon: "🗡️" },
-      { title: "Ownership", icon: "👥" },
-      { title: "Clients Services", icon: "💼" },
-    ].map((item, index) => (
-      <div key={index} className="p-6 border rounded-lg text-center shadow-lg hover:shadow-xl transition duration-300">
-        <div className="text-blue-600 text-4xl mb-3">{item.icon}</div>
-        <h4 className="font-semibold text-xl mb-2">{item.title}</h4>
-        <p className="text-base text-gray-600">
-          Sed ut perspiciatis unde omnis natus voluptatem accusam doloremque
-        </p>
-      </div>
-    ))}
-  </div>
-
-  {/* Testimonial Section */}
+  {[
+    {
+      title: "Research Excellence",
+      icon: "📚",
+      desc: "Delivering 2000+ quality dissertations for M.Tech & Ph.D. scholars.",
+    },
+    {
+      title: "Certified Quality",
+      icon: "✅",
+      desc: "ISO 9001:2008 certified with a commitment to top academic standards.",
+    },
+    {
+      title: "Expert Training",
+      icon: "🧠",
+      desc: "Hands-on training in MATLAB, Java, Python, Embedded & more.",
+    },
+    {
+      title: "Student-Centric",
+      icon: "🎓",
+      desc: "10,000+ students trained with 24×7 support and placement focus.",
+    },
+  ].map((item, index) => (
+    <div
+      key={index}
+      className="p-6 border rounded-lg text-center shadow-lg hover:shadow-xl transition duration-300"
+    >
+      <div className="text-blue-600 text-4xl mb-3">{item.icon}</div>
+      <h4 className="font-semibold text-xl mb-2">{item.title}</h4>
+      <p className="text-base text-gray-600">{item.desc}</p>
+    </div>
+  ))}
+</div>
+ 
   <div className="flex flex-col md:flex-row items-center gap-10">
+  <img
+    src="https://plus.unsplash.com/premium_photo-1677529496297-fd0174d65941?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    alt="DSTARENA Team"
+    className="w-full md:w-[30%] rounded-xl shadow-md object-cover"
+  />
+  <div className="md:w-2/3 space-y-6">
+    <p className="text-2xl md:text-3xl font-medium leading-snug text-blue-900 text-justify">
+      "We are proud to have trained <span className='text-blue-600 font-bold'>10,000+</span> students and delivered <span className='text-blue-600 font-bold'>2000+</span> successful dissertations. At DSTARENA, excellence, innovation, and research go hand in hand."
+    </p>
+    <p className="font-semibold text-gray-700">— Team DSTARENA</p>
     <img
-      src="https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg"
-      alt="Business person"
-      className="w-full md:w-[30%] rounded-xl shadow-md"
+      src=""
+      alt="DSTARENA Logo"
+      className="w-32"
     />
-    <div className="md:w-2/3 space-y-6">
-      <p className="text-2xl md:text-3xl font-medium leading-snug">
-        " Every great dream begins with a dreamer. Always remember, you have within you the strength, the patience, and the passion to reach for the stars to change the world. "
-      </p>
-      <p className="font-semibold text-gray-700">--- Harriet Tubman</p>
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/3/35/Signature_Harriet_Tubman.png"
-        alt="Signature"
-        className="w-32"
-      />
-      <div className="flex items-center gap-4 pt-2">
-        <div className="flex -space-x-2 overflow-hidden">
-          <img
-            className="inline-block h-9 w-9 rounded-full ring-2 ring-white"
-            src="https://randomuser.me/api/portraits/women/44.jpg"
-            alt="User"
-          />
-          <img
-            className="inline-block h-9 w-9 rounded-full ring-2 ring-white"
-            src="https://randomuser.me/api/portraits/men/46.jpg"
-            alt="User"
-          />
-          <img
-            className="inline-block h-9 w-9 rounded-full ring-2 ring-white"
-            src="https://randomuser.me/api/portraits/women/45.jpg"
-            alt="User"
-          />
-        </div>
-        <p className="text-base text-gray-600">10m+ Trusted Global Customers</p>
+    <div className="flex items-center gap-4 pt-2">
+      <div className="flex -space-x-2 overflow-hidden">
+        <img
+          className="inline-block h-9 w-9 rounded-full ring-2 ring-white"
+          src="https://randomuser.me/api/portraits/men/45.jpg"
+          alt="Team"
+        />
+        <img
+          className="inline-block h-9 w-9 rounded-full ring-2 ring-white"
+          src="https://randomuser.me/api/portraits/women/42.jpg"
+          alt="Team"
+        />
+        <img
+          className="inline-block h-9 w-9 rounded-full ring-2 ring-white"
+          src="https://randomuser.me/api/portraits/men/43.jpg"
+          alt="Team"
+        />
       </div>
+      <p className="text-base text-gray-600">Trusted by thousands of scholars across India</p>
     </div>
   </div>
+</div>
+
 </div>
 
 
