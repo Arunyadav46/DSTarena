@@ -175,7 +175,7 @@ const handleAddToCart = (id) => {
     const api = (`/API/single_project_details_api.php?id=${id}`);
     axios.get(api).then((det)=>{
       setgetDet(det.data)
-      console.log(det.data[0]);
+      // console.log(det.data[0]);
       const project = det.data[0]
       if(project.language){
          setTech(project.language.toLowerCase());

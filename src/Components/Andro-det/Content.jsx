@@ -7,7 +7,7 @@ function Content() {
 
 
   const { category } = useParams(); // 'android', 'dot-net', etc.
-  console.log(category)
+  // console.log(category)
   const [projectName, setprojectName] = useState([]);
 
 
@@ -17,7 +17,7 @@ function Content() {
       .get(`/API/header_cat_list_api/pending_pro_list_api.php?id=${category}`)
       .then((res) => {
         setprojectName(res.data || []);
-        console.log(res)
+        // console.log(res)
       })
       .catch((err) => console.log("API Error:", err));
   };

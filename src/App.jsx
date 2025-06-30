@@ -117,8 +117,6 @@ useEffect(() => {
 
   {/* <Route path='/:category' element={<Vls/>}/> */}
 
-
-  
   
   <Route path='/contact-us' element={<Pata1/>}/>
 

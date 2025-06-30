@@ -188,7 +188,7 @@ function Hero2() {
   {/* Contact Us Button */}
   <Link
     to="/contact-us"
-    className="bg-[#2563EB] text-white py-2 px-8 rounded-full text-lg font-medium hover:bg-[#003EA6] transition-all duration-300 shadow-md"
+    className="bg-[#2563EB] text-white py-1 px-4 xl:py-2 xl:px-8 rounded-full text-lg font-medium hover:bg-[#003EA6] transition-all duration-300 shadow-md"
   >
     Contact Us
   </Link>
@@ -201,9 +201,9 @@ function Hero2() {
 >
   <div className="relative rounded-full bg-white p-3 shadow-md">
     <div className="absolute inset-0 rounded-full blur-xl bg-green-300 opacity-50 animate-ping z-[-1]"></div>
-    <FaWhatsapp className="text-green-600 text-2xl" />
+    <FaWhatsapp className="text-green-600 xl:text-2xl" />
   </div>
-  <span className="font-semibold text-gray-800 text-xl">Chat with us</span>
+  <span className="font-semibold text-gray-800 xl:text-xl">Chat with us</span>
 </a>
 
   </div>
