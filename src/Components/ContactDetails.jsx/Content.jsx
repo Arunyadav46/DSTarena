@@ -1,8 +1,13 @@
 import React, { useState } from 'react'
 import axios from '../Axios/Axios';
 import toast, { Toaster } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
+
 
 function Content() {
+ 
+  const navigate = useNavigate()
+
   const [fname, setFname] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
@@ -11,6 +16,14 @@ function Content() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    const user = localStorage.getItem("userId");
+     if (!user) {
+     toast.error("Please login to submit the form");
+     navigate("/login");
+     return;
+    }
+
 
     const formData = new FormData();
     formData.append("fname", fname);

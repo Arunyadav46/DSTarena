@@ -12,6 +12,8 @@ function Content({setproductID, setCartCount, setTech}) {
  
   const userId = localStorage.getItem("userId")
 
+  const navigate = useNavigate();
+
   const[user2,setuser2] = useState([]);
   const getuserData2 = ()=>{
     axios.get(`/API/dashboard/profile_update_api.php?id=${userId}`)
@@ -105,7 +107,7 @@ function Content({setproductID, setCartCount, setTech}) {
 
 //popup buy btn k liye
   const [showPopup, setShowPopup] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const togglePopup = () => {
    const isLoggedIn = localStorage.getItem("userId"); // Check login status
@@ -122,6 +124,15 @@ function Content({setproductID, setCartCount, setTech}) {
  
 
 const handleAddToCart = (id) => {
+  
+
+  const user = localStorage.getItem("userId");
+if (!user) {
+  toast.error("Please login");
+  navigate("/login");
+  return;
+}
+
   toast.success("Product Added Successfully!");
 
   axios.get(`/API/single_project_details_api.php?id=${id}`)

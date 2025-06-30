@@ -1,12 +1,14 @@
 import axios from '../Axios/Axios';
 import React, { useEffect, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
-import { useLocation, useParams } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 
 
 function Content() {
   const{name} = useParams();
-  console.log(name)
+  // console.log(name)
+
+  const navigate = useNavigate()
 
   const [formData, setFormData] = useState({
     fname: '',
@@ -25,26 +27,33 @@ function Content() {
   const handleSubmit = (e) => {
    
     e.preventDefault();
+    const user = localStorage.getItem("userId");
+if (!user) {
+  toast.error("Please login to submit the form");
+  navigate("/login");
+  return;
+}
+
   
   const form = new FormData();
   form.append("fname", formData.fname);
-  console.log(formData.fname)
+  // console.log(formData.fname)
   form.append("email", formData.email);
-  console.log(formData.email)
+  // console.log(formData.email)
   form.append("mobile", formData.mobile);
-  console.log(formData.mobile)
+  // console.log(formData.mobile)
   form.append("query", formData.query);
-  console.log(formData.query)
+  // console.log(formData.query)
 
   // Static values or fetched from elsewhere
   form.append("pro_title", name); // From useParams or props
-  console.log(name)
+  // console.log(name)
   form.append("id", '123');       // You can replace with real ID
   // form.append("data", new Date().toISOString().split('T')[0]);
 
   axios.post("/API/project-request.php", form)
     .then((response) => {
-      console.log("Response:", response.data);
+      // console.log("Response:", response.data);
       if(response.data[0].success==='1')
       toast.success(response.data[0].msg)
       // alert("Request sent successfully");

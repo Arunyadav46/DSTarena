@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
+
 
 function Content() {
 
+ const navigate = useNavigate()
   const [fname, setFname] = useState("");
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
@@ -13,6 +16,15 @@ function Content() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+     // 3️⃣ Check if user is logged in (assuming login sets a token or user object)
+    const user = localStorage.getItem("userId"); // you can also check for "token" etc.
+    console.log(user)
+    if (!user) {
+      toast.error("Please login to submit the form");
+      navigate("/login");
+      return;
+    }
 
     const formData = new FormData();
     formData.append("fname", fname);
