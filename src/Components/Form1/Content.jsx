@@ -1,30 +1,26 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 
 function Content() {
 
- const navigate = useNavigate()
+   const[searchParams] = useSearchParams();
+  const courseFromURL = searchParams.get("course");
+
   const [fname, setFname] = useState("");
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
   const [TraningType, setTraningType] = useState("");
   const [Traningmode, setTraningmode] = useState("");
-  const [CourceName, setCourceName] = useState("");
+  const [CourceName, setCourceName] = useState(courseFromURL || "");
+
+
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-     // 3️⃣ Check if user is logged in (assuming login sets a token or user object)
-    const user = localStorage.getItem("userId"); // you can also check for "token" etc.
-    console.log(user)
-    if (!user) {
-      toast.error("Please login to submit the form");
-      navigate("/login");
-      return;
-    }
 
     const formData = new FormData();
     formData.append("fname", fname);
@@ -140,13 +136,13 @@ function Content() {
 
         {/* Course Name */}
         <div>
-          <label className="font-semibold text-gray-700">
+          {/* <label className="font-semibold text-gray-700">
             Course Name <span className="text-red-600">*</span>
-          </label>
+          </label> */}
           <input
-            type="text"
+            type="hidden"
             value={CourceName}
-            onChange={(e) => setCourceName(e.target.value)}
+          
             placeholder="Your course name"
             className="w-full mt-2 p-3 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300"
             required

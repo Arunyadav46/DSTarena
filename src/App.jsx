@@ -126,9 +126,10 @@ useEffect(() => {
    <Route path='/Aboutus' element={<About/>}/>
 
   <Route path='/training/nodejs' element={<Node/>}/>
-  <Route path='/training/nodejs/register' element={<Form1/>}/>
+  <Route path='/training-form' element={<Form1/>}/>
+  
   <Route path='/training/phython/register' element={<Form1/>}/>
-  <Route path='/training/matlab/register' element={<Form1/>}/>
+  {/* <Route path='/training/matlab/register' element={<Form1/>}/> */}
   <Route path='/training/embedded/register' element={<Form1/>}/>
   <Route path='/training/design/register' element={<Form1/>}/>
   <Route path='/training/php/register' element={<Form1/>}/>

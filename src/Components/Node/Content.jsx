@@ -181,13 +181,11 @@ function Content() {
         </div>
 
 
-        <Link to="/training/nodejs/register" className="absolute px-8 py-3 xl:mx-28 bg-orange-500 text-white py-2 rounded-lg font-semibold">
+        <Link to="/training-form?course=NodeJs" className="absolute px-8 py-3 xl:mx-28 bg-orange-500 text-white py-2 rounded-lg font-semibold">
           Apply Now
         </Link>
+
         
-        {/* <div className="text-center text-orange-500 font-semibold cursor-pointer">
-          <span>Share This Course 🔗</span>
-        </div> */}
         <div
   onClick={() => {
     if (navigator.share) {

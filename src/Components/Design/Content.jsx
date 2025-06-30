@@ -211,7 +211,7 @@ function Content() {
           <span>🔒 Access</span>
           <span>Lifetime</span>
         </div>
-        <Link to="/training/design/register" className="absolute xl:mx-32 px-5 bg-orange-500 text-white py-2 rounded-lg font-semibold">
+        <Link to="/training-form?course=WebsiteDesign" className="absolute xl:mx-32 px-5 bg-orange-500 text-white py-2 rounded-lg font-semibold">
           Apply Now
         </Link>
          <div

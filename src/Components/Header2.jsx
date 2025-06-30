@@ -781,7 +781,7 @@ function Header2({ setCartAllProduct , cartCount }) {
             <Link to="/training">Training</Link>
             <i className="ri-arrow-down-s-line"></i>
             {isDropdownOpen && (
-              <ul className="absolute  z-50 left-[-90%] w-[1480%] mb-15 mt-2 w-52 mx-[-20px] bg-white grid grid-cols-3 text-gray-900 shadow-lg rounded-md overflow-hidden">
+              <ul className="absolute  z-50 left-[-90%] w-[1480%] mb-15 mt-1 w-52 mx-[-20px] bg-white grid grid-cols-3 text-gray-900 shadow-lg rounded-md overflow-hidden">
                 <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="training/nodejs">NodeJs Syllabus</Link></li>
                 <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/training/phython">Python Syllabus</Link></li>
                 <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/training/matlab">Matlab Training</Link></li>
@@ -801,7 +801,7 @@ function Header2({ setCartAllProduct , cartCount }) {
                <Link>Service</Link>
                <i className="ri-arrow-down-s-line"></i>
 
-                <div className={`absolute z-50 left-[-220%] mt-2 w-[1560%] grid grid-cols-2 pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out ${
+                <div className={`absolute z-50 left-[-220%] mt-1 w-[1560%] grid grid-cols-2 pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out ${
                 isDropdownOpen7 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[-10px] pointer-events-none"}`}>
                 {service.map((elem, index) => (
                 <li key={index} className="px-4 text-[14px] pt-5 py-2 text-gray-700 hover:bg-gray-200">
@@ -812,20 +812,6 @@ function Header2({ setCartAllProduct , cartCount }) {
            </li>
 
 
-          {/* <li><Link to="/project">Projects</Link></li> */}
-
-          {/* <li className="relative" onMouseEnter={() => setDropdownOpen5(true)} onMouseLeave={() => setDropdownOpen5(false)}>
-            <Link to="/project">Software</Link>
-            <i className="ri-arrow-down-s-line"></i>
-            {isDropdownOpen5 && (
-              <ul className="absolute z-50 left-[-320%] mt-2 w-[1360%]  grid grid-cols-5 pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden">
-                {soft.map((elem,index)=>{
-                  return   <li className="px-4 text-[14px] pt-5 py-2 text-gray-700 hover:bg-gray-200"><Link to="training/nodejs">{elem.category}</Link></li>
-                })}
-
-              </ul>
-            )}
-          </li> */}
 
 <li
   className="relative"
@@ -835,7 +821,7 @@ function Header2({ setCartAllProduct , cartCount }) {
   <i className="ri-arrow-down-s-line"></i>
 
   <div
-    className={`absolute z-50 left-[-320%] mt-2 w-[1360%] grid grid-cols-5 pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out ${
+    className={`absolute z-50 left-[-320%] mt-1 w-[1360%] grid grid-cols-5 pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out ${
       isDropdownOpen5 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[-10px] pointer-events-none"
     }`}
   >
@@ -848,26 +834,12 @@ function Header2({ setCartAllProduct , cartCount }) {
 </li>
 
 
-          
-          {/* <li><Link to="/MBA">MBA Projects</Link></li> */}
+        
 
-          {/* <li className="relative" onMouseEnter={() => setDropdownOpen1(true)} onMouseLeave={() => setDropdownOpen1(false)}>
-            <Link to="/MBA">MBA</Link>
-            <i className="ri-arrow-down-s-line"></i>
-            {isDropdownOpen1 && (
-              <ul className="absolute z-50 left-[-700%] mt-2 w-[2200%] grid grid-cols-2 pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden">
-                {Mba.map((elem,index)=>{
-                  return   <li className="px-4 text-[14px] pt-5 py-2 text-gray-700 hover:bg-gray-200"><Link to="training/nodejs">{elem.category}</Link></li>
-                })}
-
-              </ul>
-            )}
-          </li> */}
-
-              <li className="relative"onMouseEnter={() => setDropdownOpen1(true)} onMouseLeave={() => setDropdownOpen1(false)}>
+              {/* <li className="relative"onMouseEnter={() => setDropdownOpen1(true)} onMouseLeave={() => setDropdownOpen1(false)}>
               <Link>MBA</Link>
               <i className="ri-arrow-down-s-line"></i>
-              <div className={`absolute z-50 left-[-700%] mt-2 w-[2200%] grid grid-cols-2 pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out ${
+              <div className={`absolute z-50 left-[-700%] mt-2 w-[2200%] grid grid-cols-2 pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden transition-all duration-300  ${
                isDropdownOpen1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[-10px] pointer-events-none" }`}>
               {Mba.map((elem, index) => (
             <li key={index} className="px-4 text-[14px] pt-5 py-2 text-gray-700 hover:bg-gray-200">
@@ -875,22 +847,43 @@ function Header2({ setCartAllProduct , cartCount }) {
            </li>
                ))}
              </div>
-            </li>
+            </li> */}
+
+     <li className="relative">
+  {/* Wrap both trigger and dropdown together */}
+  <div
+    onMouseEnter={() => setDropdownOpen1(true)}
+    onMouseLeave={() => setDropdownOpen1(false)}
+    className="inline-block"
+  >
+    {/* Trigger */}
+    <div className="flex items-center gap-1 cursor-pointer">
+      <Link>MBA</Link>
+      <i className="ri-arrow-down-s-line"></i>
+    </div>
+
+    {/* Dropdown */}
+    {isDropdownOpen1 && (
+      <div
+        className={`absolute z-50 left-[-700%] mt-1 w-[2200%] grid grid-cols-2 pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden transition-all duration-300`}
+      >
+        {Mba.map((elem, index) => (
+          <li
+            key={index}
+            className="px-4 text-[14px] pt-5 py-2 text-gray-700 hover:bg-gray-200"
+          >
+            <Link to={`/Projects/${elem.category}`}>{elem.category}</Link>
+          </li>
+        ))}
+      </div>
+    )}
+  </div>
+</li>
 
 
 
-          {/* <li className="relative" onMouseEnter={() => setDropdownOpen3(true)} onMouseLeave={() => setDropdownOpen3(false)}>
-            <Link to="/">Nursing</Link>
-            <i className="ri-arrow-down-s-line"></i>
-            {isDropdownOpen3 && (
-              <ul className="absolute z-50 left-[-610%] grid grid-cols-2 pl-[30px] mt-2 w-[1500%] pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden">
-                {Nurse.map((elem,index)=>{
-                  return   <li className="px-4 text-[14px] pt-5 py-2 text-gray-700 hover:bg-gray-200"><Link to="training/nodejs">{elem.category}</Link></li>
-                })}
 
-              </ul>
-            )}
-          </li> */}
+
 
             <li
   className="relative"
@@ -901,7 +894,7 @@ function Header2({ setCartAllProduct , cartCount }) {
   <i className="ri-arrow-down-s-line"></i>
 
   <div
-    className={`absolute z-50 left-[-610%] grid grid-cols-2 pl-[30px] mt-2 w-[1500%] pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out ${
+    className={`absolute z-50 left-[-610%] grid grid-cols-2 pl-[30px] mt-1 w-[1500%] pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out ${
       isDropdownOpen3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[-10px] pointer-events-none"
     }`}
   >
@@ -938,26 +931,38 @@ function Header2({ setCartAllProduct , cartCount }) {
             )}
           </li> */}
 
-        <li
-  className="relative"
-  onMouseEnter={() => setDropdownOpen4(true)}
-  onMouseLeave={() => setDropdownOpen4(false)}
->
-  <Link>ME/Mtech</Link>
-  <i className="ri-arrow-down-s-line"></i>
-
+        <li className="relative">
   <div
-    className={`absolute z-50 left-[-590%] mt-5 w-[1200%] grid grid-cols-3 pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out ${
-      isDropdownOpen4 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[-10px] pointer-events-none"
-    }`}
+    onMouseEnter={() => setDropdownOpen4(true)}
+    onMouseLeave={() => setDropdownOpen4(false)}
+    className="inline-block"
   >
-    {Mtech.map((elem, index) => (
-      <li key={index} className="px-4 py-2 mb-4 text-[14px] text-gray-700 hover:bg-gray-200">
-        <Link to={`/Projects/${elem.category}`}>{elem.category}</Link>
-      </li>
-    ))}
-  </div>
+    {/* Trigger */}
+    <div className="flex items-center gap-1 cursor-pointer">
+      <Link>ME/Mtech</Link>
+      <i className="ri-arrow-down-s-line"></i>
+    </div>
+
+    {/* Dropdown */}
+    <div
+      className={`absolute z-50 left-[-590%] mt-1 w-[1200%] grid grid-cols-3 pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out ${
+        isDropdownOpen4
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-[-10px] pointer-events-none"
+      }`}
+    >
+      {Mtech.map((elem, index) => (
+        <li
+          key={index}
+          className="px-4 py-2 mb-4 text-[14px] text-gray-700 hover:bg-gray-200"
+        >
+          <Link to={`/Projects/${elem.category}`}>{elem.category}</Link>
         </li>
+      ))}
+    </div>
+  </div>
+</li>
+
 
 
 
@@ -984,7 +989,7 @@ function Header2({ setCartAllProduct , cartCount }) {
   <i className="ri-arrow-down-s-line"></i>
 
   <div
-    className={`absolute z-50 left-[-800%] mt-5 w-[1350%] grid grid-cols-2 flex flex-col flex-wrap pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out ${
+    className={`absolute z-50 left-[-800%] mt-1 w-[1350%] grid grid-cols-2 flex flex-col flex-wrap pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out ${
       isDropdownOpen6 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[-10px] pointer-events-none"
     }`}
   >
@@ -1017,7 +1022,7 @@ function Header2({ setCartAllProduct , cartCount }) {
   <i className="ri-arrow-down-s-line"></i>
 
   <div
-    className={`absolute z-50 left-[-920%] mt-5 w-[1380%] grid grid-cols-4 pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out ${
+    className={`absolute z-50 left-[-920%] mt-1 w-[1380%] grid grid-cols-4 pb-5 border-b-2 border-b-blue-600 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out ${
       isDropdownOpen2 ?"opacity-100 translate-y-0" : "opacity-0 translate-y-[-10px] pointer-events-none"
     }`}
   >
