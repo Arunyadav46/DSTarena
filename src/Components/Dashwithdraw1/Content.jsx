@@ -22,7 +22,7 @@ useEffect(()=>{
   showrefferal();
 },[])
   return (
-    <div className='w-full min-h-screen relative  bg-[#F8F8F8] flex '>
+    <div className=' min-h-screen overflow-x-auto relative  bg-[#F8F8F8] flex '>
       {/* <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/> */}
       <Sidebar/>
       
@@ -31,8 +31,8 @@ useEffect(()=>{
     Referral Withdrawal History
   </h2>
 
-  <div className="overflow-x-aut">
-    <table className="w-[110%] bg-white border border-gray-300 rounded-md shadow-md">
+  <div className="">
+    <table className="w-[125%] bg-white border border-gray-300 rounded-md shadow-md">
       <thead className="bg-gray-100">
         <tr className="text-sm font-semibold text-gray-700 text-left">
           <th className="p-3 border">#</th>

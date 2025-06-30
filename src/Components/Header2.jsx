@@ -225,7 +225,7 @@ function Header2({ setCartAllProduct , cartCount }) {
 
         {/* mobile menu */}
         <div className="lg:hidden cursor-pointer" onClick={() => setMenuOpen(true)}>
-            <i className=" text-2xl fas fa-bars"></i>
+            <i className=" text-2xl ml-[170px] fas fa-bars"></i>
           </div>
 
           
@@ -648,7 +648,6 @@ function Header2({ setCartAllProduct , cartCount }) {
 
 
 
-
      {/* ME/MTech Dropdown */}
 <li className="cursor-pointer px-4 py-2 text-xl border-b-2 border-indigo-600 relative">
   <div
@@ -833,8 +832,7 @@ function Header2({ setCartAllProduct , cartCount }) {
   </div>
 </li>
 
-
-        
+ 
 
               {/* <li className="relative"onMouseEnter={() => setDropdownOpen1(true)} onMouseLeave={() => setDropdownOpen1(false)}>
               <Link>MBA</Link>

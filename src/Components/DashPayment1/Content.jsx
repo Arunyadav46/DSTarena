@@ -65,7 +65,7 @@ function Content() {
         <p className="text-gray-500 text-center text-xl">No data available.</p>
       ) : (
         <div className="overflow-x-auto">
-          <table className="w-full table-auto border-collapse border border-gray-300 shadow-lg">
+          <table className="w-full  table-auto border-collapse border border-gray-300 shadow-lg">
             <thead>
               <tr className="bg-gray-100 text-gray-700">
                 <th className="p-4 border">Image</th>
@@ -84,7 +84,7 @@ function Content() {
                   </td>
                   <td className="p-4 text-gray-800 font-medium">{item.pro_name}</td>
                   <td className="p-4 text-gray-600">{item.language}</td>
-                  <td className="p-4 text-green-600 font-semibold">₹{item.amount}</td>
+                  <td className="p-4 text-green-600 font-semibold">₹{item.srs_price}</td>
                   <td className="p-4 text-[14px]  text-gray-600">{(() => {
   const [year, month, day] = item.date.split("-");
   return `${day}-${month}-${year}`;
@@ -97,15 +97,24 @@ function Content() {
   )}
 
   {/* Tooltip / Popup */}
-  <div className="absolute w-[150%] left-1/2 -translate-x-1/2 mt-2 bg-gray-800 text-white text-sm px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-all pointer-events-none">
+  <div className="fixed w-[6%] z-50 left-[85%] -translate-x-1/2 mt-2 bg-gray-800 text-white text-sm px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-all pointer-events-none">
     SRS Code
   </div>
 </div>
-                    {item.srs_report && (
-                      <a href={item.srs_report} className="bg-gray-500 mr-3 text-white px-4 py-2 rounded-lg text-center hover:bg-gray-600 transition-all">
-                       <i class="ri-download-line"></i>
-                      </a>
-                    )}
+                 {item.srs_report && (
+  <div className="relative group inline-block mr-3">
+    <a
+      href={item.srs_report}
+      className="bg-gray-500 text-white px-4 py-2 rounded-lg text-center hover:bg-gray-600 transition-all"
+    >
+      <i className="ri-download-line"></i>
+    </a>
+    <div className="fixed left-[50%] left-[90%] -translate-x-1/2 mt-2 bg-black text-white text-xs px-4 py-3 rounded opacity-0 group-hover:opacity-100 transition-all duration-300">
+      SRS Report
+    </div>
+  </div>
+)}
+
                      <Link to="/dashboard/payment/det"><i className="ri-eye-line text-xl"></i></Link> 
                   </td>
                 </tr>

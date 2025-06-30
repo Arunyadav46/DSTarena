@@ -119,8 +119,11 @@ import { useState } from "react";
 import axios from "../Axios/Axios";
 // import { Toaster } from "react-hot-toast";
 import toast, { Toaster } from 'react-hot-toast';
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+
+  const navigate = useNavigate()
   
   const [userData, setUserData] = useState({
     email: "",
@@ -218,6 +221,8 @@ const Register = () => {
         console.log(data)
         if (data.response.success === "1") {
            toast.success("Registration successful!");
+          //  navigate('/')
+           
           // alert("Registration successful!")
          // setResponseMessage("Registration successful!");
         } else if (data.response.msg === "User Already Exist") {

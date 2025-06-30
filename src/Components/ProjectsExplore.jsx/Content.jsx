@@ -11,6 +11,8 @@ import img4 from "../assest2/twitter.png"
 function Content({setproductID, setCartCount, setTech}) {
  
   const userId = localStorage.getItem("userId")
+  console.log(userId);
+  
 
   const navigate = useNavigate();
 
@@ -43,8 +45,8 @@ function Content({setproductID, setCartCount, setTech}) {
     // paymentData.append("contact", 6260524679); // Replace with actual contact
     console.log(user2[0].contact)
     paymentData.append("ProductDetails", project.project_id);
-    // paymentData.append("total_amount", 10);
-    paymentData.append("total_amount", isCouponApplied ? subTotal : project.sale_price);
+    paymentData.append("total_amount", 10);
+    // paymentData.append("total_amount", isCouponApplied ? subTotal : project.sale_price);
     axios.post('/API/payment_api.php', paymentData)
       .then((res) => {
         // console.log(res)

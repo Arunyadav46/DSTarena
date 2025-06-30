@@ -58,7 +58,7 @@ function DashHome() {
         </div>
 
         {/* Cards and Notifications Section */}
-        <div className='grid grid-cols-1 px-20 p-10 md:grid-cols-2 gap-10'>
+        <div className='grid grid-cols-1 xl:px-20 xl:p-10 md:grid-cols-2 gap-10'>
           <div className='md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-10'>
       
               <Link to="/dashboard/refer"  className='flex flex-col items-center justify-center bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 duration-300 p-5'>

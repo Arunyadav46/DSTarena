@@ -140,22 +140,22 @@ useEffect(() => {
 
 
   return (
-    <div className='w-full min-h-screen relative  bg-[#F8F8F8] flex'>
+    <div className='w-full h-auto  bg-[#F8F8F8] flex'>
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/>
 
-<div id="scroll" className='w-full md:w-[77%] mx-5 relative  max-h-[100vh]'>
+<div id="scroll" className='w-full md:w-[77%] mx-5 relative '>
       {/* Header Section */}
-      <div className='h-[30vh] w-[50%] md:w-[20%] mt-5 flex gap-3 items-center'>
+      <div className='h-[20vh] w-[50%] md:w-[15%] mt-5 flex gap-3 items-center'>
         <img className='w-full h-full object-cover rounded-full' src={img} alt='Profile'/>
-        <h2 className='text-3xl md:text-5xl'>Referral</h2>
+        <h2 className='text-3xl md:text-4xl'>Referral</h2>
       </div>
       <button onClick={() => setSidebarOpen(true)} className='md:hidden  text-2xl'>
             <i className='px-3 py-3 bg-blue-200 rounded-md ml-[-10px]  absolute top-[1%] left-[1%] mr-5 ri-menu-fill'></i>
-          </button>
+       </button>
 
-      <div className="w-full px-4 md:px-10 max-w-6xl mx-auto">
+      <div className="w-full xl:px-4 md:px-10 xl:max-w-6xl xl:mx-auto">
   {/* Referral Code Section */}
- <div className="w-[50%] min-h-[20vh] sm:min-h-[22vh] md:min-h-[25vh] lg:h-[18vh] mt-8 sm:mt-10 md:mt-5 rounded-2xl bg-gradient-to-br from-[#6FCF97]/95 to-[#34C759]/85 backdrop-blur-lg shadow-[0_8px_25px_rgba(0,0,0,0.2)] p-4 sm:p-5 md:p-6 transition-all duration-500 hover:shadow-[0_12px_35px_rgba(0,0,0,0.25)] hover:-translate-y-1">
+ <div className="xl:w-[50%] min-h-[20vh] sm:min-h-[22vh] md:min-h-[25vh] lg:h-[18vh] mt-8 sm:mt-10 md:mt-5 rounded-2xl bg-gradient-to-br from-[#6FCF97]/95 to-[#34C759]/85 backdrop-blur-lg shadow-[0_8px_25px_rgba(0,0,0,0.2)] p-4 sm:p-5 md:p-6 transition-all duration-500 hover:shadow-[0_12px_35px_rgba(0,0,0,0.25)] hover:-translate-y-1">
   <h2 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-3xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] animate-gradient">
     Referral Code
   </h2>
@@ -170,8 +170,8 @@ useEffect(() => {
 </div>
 
 
-<div className="w-full h-auto mt-20 bg-gradient-to-br from-white/90 to-gray-50/80 backdrop-blur-xl shadow-[0_12px_40px_rgba(0,0,0,0.15)] p-10 rounded-3xl overflow-x-auto xl:overflow-x-visible transition-all duration-700 hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] hover:-translate-y-1">
-  <h2 className="text-center text-4xl md:text-5xl mb-10 font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 animate-gradient drop-shadow-lg">
+<div className="w-full h-auto mt-10 bg-gradient-to-br from-white/90 to-gray-50/80 backdrop-blur-xl shadow-[0_12px_40px_rgba(0,0,0,0.15)] p-10 rounded-3xl overflow-x-auto xl:overflow-x-visible transition-all duration-700 hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] hover:-translate-y-1">
+  <h2 className="text-center text-4xl md:text-4xl mb-10 font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 animate-gradient drop-shadow-lg">
     Your Referred Users
   </h2>
 

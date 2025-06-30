@@ -38,7 +38,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
 
 <Link to="/dashboard/payment" className='flex gap-2 items-center mb-4 px-3 py-2 rounded-md hover:bg-white hover:text-black'>
   <i className='ri-home-5-line'></i>
-  <h2>Enrolled Course</h2>
+  <h2>Purchased Project</h2>
 </Link>
 
 <Link to="/dashboard/profile" className='flex gap-2 items-center mb-4 px-3 py-2 rounded-md hover:bg-white hover:text-black'>
