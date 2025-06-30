@@ -143,7 +143,7 @@ useEffect(() => {
     <div className='w-full min-h-screen relative  bg-[#F8F8F8] flex'>
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/>
 
-<div id="scroll" className='w-full md:w-[77%] mx-5 relative overflow-y-auto max-h-[100vh]'>
+<div id="scroll" className='w-full md:w-[77%] mx-5 relative  max-h-[100vh]'>
       {/* Header Section */}
       <div className='h-[30vh] w-[50%] md:w-[20%] mt-5 flex gap-3 items-center'>
         <img className='w-full h-full object-cover rounded-full' src={img} alt='Profile'/>
@@ -155,11 +155,11 @@ useEffect(() => {
 
       <div className="w-full px-4 md:px-10 max-w-6xl mx-auto">
   {/* Referral Code Section */}
- <div className="w-full min-h-[20vh] sm:min-h-[22vh] md:min-h-[25vh] lg:min-h-[28vh] mt-8 sm:mt-10 md:mt-12 rounded-2xl bg-gradient-to-br from-[#6FCF97]/95 to-[#34C759]/85 backdrop-blur-lg shadow-[0_8px_25px_rgba(0,0,0,0.2)] p-4 sm:p-5 md:p-6 transition-all duration-500 hover:shadow-[0_12px_35px_rgba(0,0,0,0.25)] hover:-translate-y-1">
-  <h2 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] animate-gradient">
+ <div className="w-[50%] min-h-[20vh] sm:min-h-[22vh] md:min-h-[25vh] lg:h-[18vh] mt-8 sm:mt-10 md:mt-5 rounded-2xl bg-gradient-to-br from-[#6FCF97]/95 to-[#34C759]/85 backdrop-blur-lg shadow-[0_8px_25px_rgba(0,0,0,0.2)] p-4 sm:p-5 md:p-6 transition-all duration-500 hover:shadow-[0_12px_35px_rgba(0,0,0,0.25)] hover:-translate-y-1">
+  <h2 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-3xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] animate-gradient">
     Referral Code
   </h2>
-  <h2 className="text-center text-white my-3 sm:my-4 md:my-5 text-base sm:text-lg md:text-xl lg:text-2xl font-bold drop-shadow-[0_1px_3px_rgba(0,0,0,0.4)] tracking-wide">
+  <h2 className="text-center text-white my-3 sm:my-4 md:my-2 text-base sm:text-lg md:text-xl lg:text-2xl font-bold drop-shadow-[0_1px_3px_rgba(0,0,0,0.4)] tracking-wide">
     Your Code:
   </h2>
   <div className="w-full h-[6vh] sm:h-[6.5vh] md:h-[7vh] flex items-center justify-center bg-white/90 backdrop-blur-md rounded-xl shadow-lg hover:bg-white/100 transition-all duration-300">
@@ -303,7 +303,7 @@ useEffect(() => {
       )}
     </div>
   ) : (
-    <div className="text-center py-16">
+    <div className="text-center py-1">
       <p className="text-3xl text-gray-500 font-bold animate-pulse drop-shadow-md">
         No referrals yet? Invite friends to join the party! 🚀
       </p>

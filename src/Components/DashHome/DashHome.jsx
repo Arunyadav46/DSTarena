@@ -36,17 +36,17 @@ function DashHome() {
         </div>
 
         
-         <div className="bg-[#E9ECEF] p-3 rounded-md mb-8 overflow-hidden h-16">
+         {/* <div className="bg-[#E9ECEF] p-3 rounded-md mb-8 overflow-hidden h-16">
       <div className="marquee-container hover:pause">
         <div className="marquee-content">
           <div>🔔New job recommendation available. 📅 Your interview is scheduled for tomorrow. ✅ Application for Software Engineer was viewed. 🚀 New company hiring in your industry.</div>
         </div>
       </div>
-    </div>
+    </div> */}
     
         {/* Stats Section */}
         <div className='grid grid-cols-1  md:grid-cols-3 gap-5  mb-10'>
-        <div  className='h-[10vh] flex justify-center items-center  rounded-md text-white' style={{ backgroundColor: "#FF5733" }}>
+        <div  className='h-[10vh] xl:mx-10 flex justify-center items-center  rounded-md text-white' style={{ backgroundColor: "#FF5733" }}>
               <Link to="/dashboard/payment" className='text-2xl'>📁 <span>Buy Projects</span></Link>
               <h2 className='px-4 py-2 bg-blue-400 rounded-full ml-5'>{BuyData.length}</h2>
          </div>
@@ -58,25 +58,25 @@ function DashHome() {
         </div>
 
         {/* Cards and Notifications Section */}
-        <div className='grid grid-cols-1 p-10 md:grid-cols-2 gap-10'>
+        <div className='grid grid-cols-1 px-20 p-10 md:grid-cols-2 gap-10'>
           <div className='md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-10'>
       
               <Link to="/dashboard/refer"  className='flex flex-col items-center justify-center bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 duration-300 p-5'>
-                <img className='w-[34%]' src={img}/>
+                <img className='w-[14%]' src={img}/>
                 <h2 className='text-2xl mt-4'>Referral</h2>
               </Link>
 
               <Link to="/dashboard/profile" className='flex flex-col items-center justify-center bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 duration-300 p-5'>
-                <img className='w-[34%]' src={img1}/>
+                <img className='w-[14%]' src={img1}/>
                 <h2 className='text-2xl mt-4'>Profile</h2>
               </Link>
-              <div  className='flex flex-col items-center justify-center bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 duration-300 p-5'>
-                <img className='w-[34%]' src={img2}  />
+              <Link to="/dashboard/payment"  className='flex flex-col items-center justify-center bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 duration-300 p-5'>
+                <img className='w-[14%]' src={img2}/>
                 <h2 className='text-2xl mt-4'>Project</h2>
-              </div>
+              </Link>
 
               <Link to="/dashboard/payment"  className='flex flex-col items-center justify-center bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 duration-300 p-5'>
-                <img className='w-[34%]' src={img3}  />
+                <img className='w-[14%]' src={img3}  />
                 <h2 className='text-2xl mt-4'>Enrolled Course</h2>
               </Link>
           

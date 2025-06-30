@@ -18,12 +18,12 @@ function Content() {
     e.preventDefault();
     
     const user = localStorage.getItem("userId");
+    console.log(user)
      if (!user) {
      toast.error("Please login to submit the form");
      navigate("/login");
      return;
     }
-
 
     const formData = new FormData();
     formData.append("fname", fname);
