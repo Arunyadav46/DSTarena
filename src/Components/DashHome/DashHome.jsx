@@ -45,17 +45,14 @@ function DashHome() {
     </div> */}
     
         {/* Stats Section */}
-        <div className='grid grid-cols-1  md:grid-cols-3 gap-5  mb-10'>
+        {/* <div className='grid grid-cols-1  md:grid-cols-3 gap-5  mb-10'>
         <div  className='h-[10vh] xl:mx-10 flex justify-center items-center  rounded-md text-white' style={{ backgroundColor: "#FF5733" }}>
               <Link to="/dashboard/payment" className='text-2xl'>📁 <span>Buy Projects</span></Link>
               <h2 className='px-4 py-2 bg-blue-400 rounded-full ml-5'>{BuyData.length}</h2>
          </div>
-         {/* <div  className='h-[10vh] flex justify-center items-center rounded-md text-white' style={{ backgroundColor: "#28A745" }}>
-              <h1 className='text-2xl'><i class="ri-money-rupee-circle-fill"></i> <span>Payment history </span></h1>
-              
-         </div> */}
+       
           
-        </div>
+        </div> */}
 
         {/* Cards and Notifications Section */}
         <div className='grid grid-cols-1 xl:px-20 xl:p-10 md:grid-cols-2 gap-10'>
@@ -76,7 +73,7 @@ function DashHome() {
               </Link>
 
               <Link to="/dashboard/payment"  className='flex flex-col items-center justify-center bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 duration-300 p-5'>
-                <img className='w-[14%]' src={img3}  />
+                <img className='w-[14%]' src={img3}/>
                 <h2 className='text-2xl mt-4'>Enrolled Course</h2>
               </Link>
           

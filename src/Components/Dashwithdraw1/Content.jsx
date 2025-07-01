@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Sidebar from '../Dashboard1/Sidebar'
 import axios from '../Axios/Axios';
+import { Link } from 'react-router-dom';
+
 
 
 function Content() {
@@ -25,8 +27,16 @@ useEffect(()=>{
     <div className=' min-h-screen overflow-x-auto relative  bg-[#F8F8F8] flex '>
       {/* <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/> */}
       <Sidebar/>
+
       
- <div className="p-6">
+ <div className="p-2">
+       <div className="mt-5 mx-1 bg-gray-100 p-3 rounded-lg shadow-sm text-sm flex items-center gap-2">
+  <Link to="/dashboard/home" className="flex items-center gap-1 text-blue-600 font-medium hover:underline">
+    <i className="ri-home-4-line"></i> Home
+  </Link>
+  <i className="ri-arrow-right-s-line text-gray-500 text-lg"></i>
+  <span className="text-gray-800 font-semibold">Referral withdrawal</span>
+</div>
   <h2 className="text-2xl font-bold mb-10 mt-4 text-center text-gray-800">
     Referral Withdrawal History
   </h2>

@@ -4,6 +4,8 @@ import img from "../assest2/1.jpg"
 import { useEffect } from 'react';
 import axios from '../Axios/Axios';
 import toast, { Toaster } from 'react-hot-toast';
+import { Link } from 'react-router-dom';
+
 
 
 function Content() {
@@ -200,6 +202,15 @@ function Content() {
     >
       <i className='px-3 py-3 bg-blue-500 text-white rounded-full shadow-md ri-menu-fill'></i>
     </button>
+
+    <div className="mt-5 mx-10 bg-gray-100 p-3 rounded-lg shadow-sm text-sm flex items-center gap-2">
+  <Link to="/dashboard/home" className="flex items-center gap-1 text-blue-600 font-medium hover:underline">
+    <i className="ri-home-4-line"></i> Home
+  </Link>
+  <i className="ri-arrow-right-s-line text-gray-500 text-lg"></i>
+  <span className="text-gray-800 font-semibold">ProjectsDetails</span>
+</div>
+
 
     {BuyData1.map((elem, index) => (
       <div key={index} className='flex flex-col md:flex-row gap-6 bg-white rounded-lg p-4 shadow-md'>

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Sidebar from '../Dashboard1/Sidebar';
 import img from "../assest2/1.jpg"
 import axios from '../Axios/Axios';
+import { Link } from 'react-router-dom';
+
 
 
 function Refer() {
@@ -145,17 +147,49 @@ useEffect(() => {
 
 <div id="scroll" className='w-full md:w-[77%] mx-5 relative '>
       {/* Header Section */}
-      <div className='h-[20vh] w-[50%] md:w-[15%] mt-5 flex gap-3 items-center'>
+      <div className='h-[12vh] w-[50%] md:w-[15%] mt-5 flex gap-3 items-center'>
         <img className='w-full h-full object-cover rounded-full' src={img} alt='Profile'/>
         <h2 className='text-3xl md:text-4xl'>Referral</h2>
       </div>
-      <button onClick={() => setSidebarOpen(true)} className='md:hidden  text-2xl'>
+    
+    {/* <div className='mt-5 mx-10 text-[18px]'>
+      <h2> <Link to="/dashboard/home">Home </Link><i class="ri-arrow-right-s-line"></i> <span>Referrel</span></h2>
+    </div> */}
+
+    <div className="mt-5 mx-10 bg-gray-100 p-3 rounded-lg shadow-sm text-sm flex items-center gap-2">
+  <Link to="/dashboard/home" className="flex items-center gap-1 text-blue-600 font-medium hover:underline">
+    <i className="ri-home-4-line"></i> Home
+  </Link>
+  <i className="ri-arrow-right-s-line text-gray-500 text-lg"></i>
+  <span className="text-gray-800 font-semibold">Referral</span>
+</div>
+
+
+      <button onClick={() => setSidebarOpen(true)} className='md:hidden text-2xl'>
             <i className='px-3 py-3 bg-blue-200 rounded-md ml-[-10px]  absolute top-[1%] left-[1%] mr-5 ri-menu-fill'></i>
        </button>
 
+
       <div className="w-full xl:px-4 md:px-10 xl:max-w-6xl xl:mx-auto">
   {/* Referral Code Section */}
- <div className="xl:w-[50%] min-h-[20vh] sm:min-h-[22vh] md:min-h-[25vh] lg:h-[18vh] mt-8 sm:mt-10 md:mt-5 rounded-2xl bg-gradient-to-br from-[#6FCF97]/95 to-[#34C759]/85 backdrop-blur-lg shadow-[0_8px_25px_rgba(0,0,0,0.2)] p-4 sm:p-5 md:p-6 transition-all duration-500 hover:shadow-[0_12px_35px_rgba(0,0,0,0.25)] hover:-translate-y-1">
+  {/* <h2 className='text-3xl mt-16 mx-2 text-red-600'> Referral Code {referralCode}</h2> */}
+  <div className="mt-8 mx-2 bg-white border border-red-200 shadow-md rounded-xl p-6 flex items-center justify-between">
+  <div className="flex items-center gap-3">
+    <i className="ri-gift-line text-3xl text-red-500"></i>
+    <h2 className="text-2xl font-semibold text-gray-800">
+      Referral Code: <span className="text-red-600 font-bold">{referralCode}</span>
+    </h2>
+  </div>
+  
+  <button
+    onClick={() => navigator.clipboard.writeText(referralCode)}
+    className="bg-red-100 hover:bg-red-200 text-red-600 font-medium px-4 py-2 rounded-lg flex items-center gap-2 transition"
+  >
+    <i className="ri-file-copy-line text-xl"></i> Copy
+  </button>
+</div>
+
+ {/* <div className="xl:w-[50%] min-h-[20vh] sm:min-h-[22vh] md:min-h-[25vh] lg:h-[18vh] mt-8 sm:mt-10 md:mt-5 rounded-2xl bg-gradient-to-br from-[#6FCF97]/95 to-[#34C759]/85 backdrop-blur-lg shadow-[0_8px_25px_rgba(0,0,0,0.2)] p-4 sm:p-5 md:p-6 transition-all duration-500 hover:shadow-[0_12px_35px_rgba(0,0,0,0.25)] hover:-translate-y-1">
   <h2 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-3xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] animate-gradient">
     Referral Code
   </h2>
@@ -167,7 +201,8 @@ useEffect(() => {
       {referralCode}
     </h2>
   </div>
-</div>
+</div> */}
+
 
 
 <div className="w-full h-auto mt-10 bg-gradient-to-br from-white/90 to-gray-50/80 backdrop-blur-xl shadow-[0_12px_40px_rgba(0,0,0,0.15)] p-10 rounded-3xl overflow-x-auto xl:overflow-x-visible transition-all duration-700 hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] hover:-translate-y-1">
