@@ -307,7 +307,7 @@ function Content1() {
     <div>
       
       
-    <div className='w-full h-[110vh] xl:h-auto flex'>
+    <div className='w-full h-auto xl:h-auto flex'>
 
       {/* Sidebar */}
       {/* <div
@@ -331,7 +331,7 @@ function Content1() {
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/>
 
       {/* Main Content */}
-      <div id="scroll" className='w-full md:w-[77%] ml-auto bg-[#F6FAFE] relative  p-5 h-screen'>
+      <div id="scroll" className='w-full md:w-[77%] ml-auto bg-[#F6FAFE] relative  p-5 h-auto'>
       <button onClick={() => setSidebarOpen(true)} className='md:hidden   text-2xl'>
             <i className='px-3 py-3 bg-blue-200 absolute top-[7%] rounded-md ml-[-10px] mr-5 ri-menu-fill'></i>
           </button>
