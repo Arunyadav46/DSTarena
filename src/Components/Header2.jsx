@@ -225,7 +225,7 @@ function Header2({ setCartAllProduct , cartCount }) {
 
         {/* mobile menu */}
         <div className="lg:hidden cursor-pointer" onClick={() => setMenuOpen(true)}>
-            <i className=" text-2xl ml-[170px] fas fa-bars"></i>
+            <i className=" text-2xl ml-[120px] fas fa-bars"></i>
           </div>
 
           
