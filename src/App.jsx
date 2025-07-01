@@ -128,16 +128,16 @@ useEffect(() => {
   <Route path='/training/nodejs' element={<Node/>}/>
   <Route path='/training-form' element={<Form1/>}/>
   
-  <Route path='/training/phython/register' element={<Form1/>}/>
+  {/* <Route path='/training/phython/register' element={<Form1/>}/> */}
   {/* <Route path='/training/matlab/register' element={<Form1/>}/> */}
-  <Route path='/training/embedded/register' element={<Form1/>}/>
+  {/* <Route path='/training/embedded/register' element={<Form1/>}/>
   <Route path='/training/design/register' element={<Form1/>}/>
   <Route path='/training/php/register' element={<Form1/>}/>
   <Route path='/training/vlsi/register' element={<Form1/>}/>
   <Route path='/training/java/register' element={<Form1/>}/>
   <Route path='/training/seo/register' element={<Form1/>}/>
   <Route path='/training/robotics/register' element={<Form1/>}/>
-  <Route path='/training/android/register' element={<Form1/>}/>
+  <Route path='/training/android/register' element={<Form1/>}/> */}
   
 
   <Route path='/service/:id' element={<ServiceWeb/>}/>

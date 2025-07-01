@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import Sidebar from '../Dashboard1/Sidebar';
 import axios from '../Axios/Axios';
 import { Link } from 'react-router-dom';
+import img2  from "../assest2/project.webp"
 
 
 function Content() {
@@ -56,6 +57,10 @@ function Content() {
     
 
 <div className="container mx-auto  bg-gray-50 pt-10 min-h-screen">
+    <div className='flex items-center mb-10 gap-5'>
+                  <img className='w-[8%]' src={img2}/>
+                  <h2 className='text-4xl'>Projects</h2>
+     </div>
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-3xl font-bold text-gray-800">Projects List</h2>
         <div className="text-lg text-gray-600">Total Projects: <span className="font-semibold">{BuyData.length}</span></div>
@@ -114,7 +119,6 @@ function Content() {
     </div>
   </div>
 )}
-
                      <Link to="/dashboard/payment/det"><i className="ri-eye-line text-xl"></i></Link> 
                   </td>
                 </tr>

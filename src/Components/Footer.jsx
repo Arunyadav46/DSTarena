@@ -139,6 +139,7 @@ function Footer() {
         <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
         <ul className="space-y-2 text-white">
            <Link to="/Aboutus">About Us</Link>
+         <li><Link to="/Contact-us">Contact Us</Link></li>  
           <li><Link to="/quality-policy">Quality Policy</Link></li>
           <li><Link to="/terms-condition">Terms & Services</Link></li>
           <li><Link to="/privacy-policy">Privacy Policy</Link></li>

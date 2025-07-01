@@ -48,8 +48,8 @@ function Content({setproductID, setCartCount, setTech}) {
 
     console.log(user2[0].contact)
     paymentData.append("ProductDetails", project.project_id);
-    paymentData.append("total_amount", 10);
-    // paymentData.append("total_amount", isCouponApplied ? subTotal : project.sale_price);
+    // paymentData.append("total_amount", 10);
+    paymentData.append("total_amount", isCouponApplied ? subTotal : project.sale_price);
     axios.post('/API/payment_api.php', paymentData)
       .then((res) => {
         // console.log(res)

@@ -2,6 +2,7 @@
 import Sidebar from '../Dashboard1/Sidebar'
 import React, { useEffect, useState } from 'react';
 import axios from '../Axios/Axios';
+import img1 from "../assest2/profile.webp"
 
 function Content() {
 
@@ -93,6 +94,11 @@ data.append("user_id", userId);
   <button onClick={() => setSidebarOpen(true)} className='md:hidden text-2xl mb-4'>
     <i className='px-3 py-3 bg-blue-200 rounded-md ri-menu-fill'></i>
   </button>
+
+   <div className='flex gap-5 items-center mb-10'>
+                <img className='w-[8%]' src={img1}/>
+                <h2 className='text-2xl'>Profile</h2>
+     </div>
 
   <h1 className='text-3xl font-semibold mb-6'>Update Profile</h1>
 

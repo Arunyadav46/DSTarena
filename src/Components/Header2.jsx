@@ -15,6 +15,7 @@ function Header2({ setCartAllProduct , cartCount }) {
   const [isDropdownOpen5, setDropdownOpen5] = useState(false);
   const [isDropdownOpen6, setDropdownOpen6] = useState(false);
   const [isDropdownOpen7, setDropdownOpen7] = useState(false);
+  const [isDropdownOpen8, setDropdownOpen8] = useState(false);
 
   //menu bar vale dropdown hai ye 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,9 +26,6 @@ function Header2({ setCartAllProduct , cartCount }) {
   const [mtechDropdownOpen, setMtechDropdownOpen] = useState(false);
   const [btechDropdownOpen, setBtechDropdownOpen] = useState(false);
   const [mpharmDropdownOpen, setMpharmDropdownOpen] = useState(false);
-
-
-
 
 
   const navigate = useNavigate();
@@ -199,15 +197,9 @@ function Header2({ setCartAllProduct , cartCount }) {
   return (
     <header>
       {/* Top Bar */}
-      <div className="lg:h-[17vh] bg-red-400 flex  items-center justify-between md:flex md:justify-between  md:items-center md:py-4 bg-white shadow-md p-2 md:px-10 lg:px-20 xl:px-36 bg-red-100">
-        <div className="flex items-center justify-between py-3 lg:py-4">
-          {/* Logo */}
-          {/* <div className="w-48 flex gap-2 items-center md:w-52 lg:w-56 xl:w-56">
-            <a href="/">
-              <img src={img} alt="DSTARENA Logo" className="w-full h-full" />
-            </a>
-            <h2 className="font-semibold text-2xl lg:text-3xl">DSTArena</h2>
-          </div> */}
+      <div className="lg:h-[17vh]  bg-red-400 flex  items-center justify-between md:flex md:justify-between  md:items-center md:py-4 bg-white shadow-md p-2 md:px-10 lg:px-20 xl:px-36 bg-red-100">
+        <div className="flex items-center justify-between gap-[132px] py-3 lg:py-4">
+       
           <div className="w-48 flex gap-2 items-center md:w-52 lg:w-56 xl:w-56">
   <a href="/">
     <img
@@ -219,14 +211,15 @@ function Header2({ setCartAllProduct , cartCount }) {
     />
   </a>
   <h2 className="font-semibold text-2xl lg:text-3xl">DSTArena</h2>
-</div>
-
+          </div>
+        
+         {/* mobile menu */}
+        <div className="lg:hidden  cursor-pointer" onClick={() => setMenuOpen(true)}>
+            <i className=" text-2xl fas fa-bars"></i>
+          </div>
         </div>
 
-        {/* mobile menu */}
-        <div className="lg:hidden cursor-pointer" onClick={() => setMenuOpen(true)}>
-            <i className=" text-2xl ml-[120px] fas fa-bars"></i>
-          </div>
+       
 
           
         {/* Contact Info */}
@@ -747,7 +740,43 @@ function Header2({ setCartAllProduct , cartCount }) {
     })}
    
   </ul>
+
+
 </li>
+
+<li className="cursor-pointer px-4 py-2 text-xl border-b-2 border-indigo-600 relative">
+  <div
+    className="flex justify-between items-center"
+    onClick={() => setDropdownOpen8(!isDropdownOpen8)}
+  >
+    <span>Software</span>
+    <i
+      className={`fas fa-chevron-down transition-transform duration-300 ${
+        isDropdownOpen8 ? "rotate-180" : ""
+      }`}
+    ></i>
+  </div>
+
+  {/* Dropdown links */}
+  <ul
+    className={`overflow-hidden transition-all duration-300 ${
+      isDropdownOpen8 ? "max-h-auto mt-2 space-y-2" : "max-h-0"
+    }`}
+  >
+    {soft.map((elem, index) => (
+      <li
+        key={index}
+        className="ml-4 p-2 text-lg border-b-2 border-white hover:bg-red-100"
+        onClick={() => handleMenuClick(`/Projects/${elem.category}`)}
+      >
+        {elem.category}
+      </li>
+    ))}
+  </ul>
+</li>
+
+
+
 
 <li
           className="cursor-pointer px-4 py-2 text-xl border-b-2 border-indigo-500"
