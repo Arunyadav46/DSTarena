@@ -31,18 +31,21 @@ function Content({setproductID, setCartCount, setTech}) {
   },[userId])
 
   //payment GateWay
-  const handlePayment = (project) => {
+  const handlePayment = (project,type) => {
+      // console.log(project)
     const paymentData = new FormData();
     paymentData.append("usersesid", userId); // Replace with actual session ID
     paymentData.append("vender_id", project.vender_id); // Replace with actual vendor ID
     paymentData.append("couponCodeValue", couponCode); // Apply if available
     paymentData.append("amount_array", JSON.stringify([project.sale_price]));
     paymentData.append("pro_id", project.project_id);
-    paymentData.append("name", user2[0].fname); // Replace with actual user name
+    paymentData.append("name", type); 
+    console.log("Name sent to API:", type);
+    // console.log(project.project_name)
     paymentData.append("email", user2[0].email);// Replace with actual email
    
     paymentData.append("contact", user2[0].contact); // Replace with actual contact
-    // paymentData.append("contact", 6260524679); // Replace with actual contact
+
     console.log(user2[0].contact)
     paymentData.append("ProductDetails", project.project_id);
     paymentData.append("total_amount", 10);
@@ -537,18 +540,18 @@ useEffect(() => {
           <div className='mb-6'>
             <p className='mb-2 flex justify-between items-center border-2 py-3 rounded-md px-2 xl:mb-5'>
               <div className='flex flex-col items-center xl:px-4 xl:py-2 bg-blue-500  text-white rounded-lg shadow-md'>
-                   <button onClick={()=>handlePayment(elem)} className='px-4 xl:px-2 text-[15px] '>Combo </button>
+                   <button onClick={()=>handlePayment(elem,"Combo Pack")} className='px-4 xl:px-2 text-[15px] '>Combo</button>
                     <span className='text-[12px]'>(code/SRS)</span>
               </div>
            
               <span className='xl:text-xl font-semibold text-gray-800'>₹{isCouponApplied ? subTotal : elem.sale_price}</span>
             </p>
             <p className='flex justify-between items-center mb-5 border-2 py-4 rounded-md px-2'>
-              <span className='px-2 text-[15px] py-1 xl:px-4 xl:py-2 bg-blue-500 text-white rounded-lg shadow-md'>SRS</span>
+              <button onClick={() => handlePayment(elem, "Report")} className='px-2 text-[15px] py-1 xl:px-4 xl:py-2 bg-blue-500 text-white rounded-lg shadow-md'>SRS</button>
               <span className='px-2 text-[10px] xl:text-[15px] py-1 xl:px-4 xl:py-2 bg-red-500 text-[14px] text-white rounded-lg shadow-md'>Request For Synopsis</span>
             </p>
             <p className='flex justify-between items-center border-2 py-4 rounded-md px-2'>
-              <span className='px-2 text-[11px]  xl:text-[15px]  py-1 xl:px-4 xl:py-2 bg-blue-500 text-white rounded-lg shadow-md'>Project</span>
+              <button onClick={() => handlePayment(elem, "Project")} className='px-2 text-[11px]  xl:text-[15px]  py-1 xl:px-4 xl:py-2 bg-blue-500 text-white rounded-lg shadow-md'>Project</button>
               <span className='px-2 text-[10px] xl:text-[15px] py-1 xl:px-4 xl:py-2 bg-red-500 text-[14px] text-white rounded-lg shadow-md'>Request For Software</span>
             </p>
             <hr className='xl:my-6 border-gray-300'/>

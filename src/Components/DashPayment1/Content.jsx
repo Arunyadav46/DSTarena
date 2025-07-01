@@ -84,7 +84,7 @@ function Content() {
                   </td>
                   <td className="p-4 text-gray-800 font-medium">{item.pro_name}</td>
                   <td className="p-4 text-gray-600">{item.language}</td>
-                  <td className="p-4 text-green-600 font-semibold">₹{item.srs_price}</td>
+                  <td className="p-4 text-green-600 font-semibold">₹{item.project_amount}</td>
                   <td className="p-4 text-[14px]  text-gray-600">{(() => {
   const [year, month, day] = item.date.split("-");
   return `${day}-${month}-${year}`;

@@ -213,7 +213,7 @@ function Content() {
             />
           </div>
 
-          <div className='flex flex-wrap gap-2'>
+          {/* <div className='flex flex-wrap gap-2'>
             {[elem.more_img,   elem.Image, "https://mitech.thememove.com/wp-content/uploads/2019/03/case-study-01-480x298.jpg"].map((imgUrl, i) => (
               <img
                 key={i}
@@ -222,15 +222,17 @@ function Content() {
                 alt={`More ${i}`}
               />
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Details Section */}
         <div className='w-full md:w-1/2 p-2 space-y-4'>
           <h2 className='text-2xl font-bold text-gray-800'>{elem.pro_name}</h2>
 
-          <div className='text-xl text-green-600 font-semibold'>
-            ₹{elem.project_amount || elem.srs_price}
+          <div className='text-xl  font-semibold'>
+            <span>Project Amount:</span>  <span className='ml-2 mb-4' >₹{elem.project_amount}</span> 
+            <h2>srs_price:  <span className='ml-2 mb-4' >₹{elem.srs_price}</span>  </h2>
+            <h2>sw_price:  <span  className='ml-2'>₹{elem.sw_price}</span>  </h2>
           </div>
 
           <div className='space-y-2'>
