@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import axios from '../Axios/Axios';
 import img1 from "../assest2/profile.webp"
 import { Link } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 
 function Content() {
 
@@ -72,9 +73,12 @@ data.append("user_id", userId);
         // const data = response.data;
   
         if (response.data[0].success === "1") {
-          alert("Profile updated successfully!");
+          // alert("Profile updated successfully!");
+          toast.success("Profile updated successfully!")
         } else {
-          alert(response.data[0].msg);
+          // alert(response.data[0].msg);
+          toast.error(response.data[0].msg)
+
         }
       })
       .catch((error) => {
@@ -90,6 +94,7 @@ data.append("user_id", userId);
   <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
   <div className='lg:w-[77%] p-10 overflow-y-auto shadow-lg'>
+    <Toaster/>
 
     <div className='flex items-center'>
       <button onClick={() => setSidebarOpen(true)} className='md:hidden text-2xl mb-4'>
