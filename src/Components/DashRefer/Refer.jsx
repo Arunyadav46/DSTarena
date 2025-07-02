@@ -150,9 +150,9 @@ useEffect(() => {
 
        <div id="scroll" className='w-full md:w-[77%] mx-5 relative '>
       {/* Header Section */}
-      <div className='h-[12vh] w-[50%] md:w-[15%] mt-5 flex gap-3 items-center'>
+      <div className='h-[12vh] w-[50%] md:w-[15%] mt-5 flex  items-center'>
         <img className='hidden md:block w-full h-full object-cover rounded-full' src={img} alt='Profile'/>
-        <h2 className='text-3xl mt-[-30px] ml-[60px] md:ml-0 xl:mt-0 md:text-4xl'>Referral</h2>
+        <h2 className='text-3xl  ml-[60px] md:ml-0 xl:mt-0 md:text-4xl'>Referral</h2>
       </div>
     
     
