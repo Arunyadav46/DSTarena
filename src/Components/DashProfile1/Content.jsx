@@ -86,102 +86,103 @@ data.append("user_id", userId);
 
   return (  
 
-<div className='flex w-full bg-[#F8F8F8]  min-h-screen'>
+<div className='flex w-full bg-[#F8F8F8] min-h-screen'>
+  <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
-<Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+  <div className='lg:w-[77%] p-10 overflow-y-auto shadow-lg'>
 
-<div className='lg:w-[77%] p-10 overflow-y-auto shadow-lg'>
-  
-  <div className='flex items-center'>
+    <div className='flex items-center'>
       <button onClick={() => setSidebarOpen(true)} className='md:hidden text-2xl mb-4'>
-    <i className='px-3 py-3 bg-blue-200 rounded-md ri-menu-fill'></i>
-  </button>
+        <i className='px-3 py-3 bg-blue-200 rounded-md ri-menu-fill'></i>
+      </button>
 
-   <div className='flex gap-5 items-center mb-8'>
-                <img className='hidden md:block w-[6%]' src={img1}/>
-                <h2 className='text-3xl ml-[20px] mt-4 xl:mt-0 xl:ml-0 xl:text-3xl'>Profile</h2>
-    </div>
-  </div>
-
-
-  {/* <h1 className='mb-8 mx-5'><span>Home<i class="ri-arrow-right-s-line"></i></span> <span>Update Profile </span> </h1> */}
-<div className="mb-8  mx- bg-gray-100 p-3 rounded-lg shadow-sm text-sm flex items-center gap-2">
-  <Link to="/dashboard/home" className="flex items-center gap-1 text-blue-600 font-medium">
-    <i className="ri-home-4-line"></i> Home
-  </Link>
-  <i className="ri-arrow-right-s-line text-gray-500 text-lg"></i>
-  <span className="text-gray-800 font-semibold">Update Profile</span>
-</div>
-
-
-
-  <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-    {[
-      { label: 'First Name', name: 'fname' },
-      { label: 'Last Name', name: 'lname' },
-      { label: 'Email', name: 'email', type: 'email' },
-      { label: 'Mobile Number', name: 'number'},
-      { label: 'Branch', name: 'branch' },
-      { label: 'Course', name: 'course' },
-      { label: 'Address', name: 'adrs' },
-      { label: 'University / College', name: 'clg' },
-    ].map((field, index) => (
-      <div key={index}>
-        <label className='block text-gray-600 mb-2'>{field.label}</label>
-        <input
-          type={field.type || 'text'}
-          name={field.name}
-          value={formData[field.name] || ''}
-          onChange={handleChange}
-          className='w-full text-gray-700 p-3 border rounded-lg'
-        />
+      <div className='flex gap-5 items-center mb-8'>
+        <img className='hidden md:block w-[6%]' src={img1} />
+        <h2 className='text-3xl ml-[20px] mt-4 xl:mt-0 xl:ml-0 xl:text-3xl'>Profile</h2>
       </div>
-    ))}
-
- 
-    <div>
-      <label className='block text-gray-600 mb-2'>Gender</label>
-      <select 
-        name='gender' 
-        value={formData.gender || ''} 
-        onChange={handleChange} 
-        className='w-full p-3 text-gray-700 border rounded-lg'
-      >
-        <option value=''>Select Gender</option>
-        <option value='Male'>Male</option>
-        <option value='Female'>Female</option>
-      </select>
     </div>
-  </div>
 
- 
-  <h2 className='col-span-2 text-2xl font-semibold mt-6'>Bank Detail</h2>
+    <div className="mb-8 bg-gray-100 p-3 rounded-lg shadow-sm text-sm flex items-center gap-2">
+      <Link to="/dashboard/home" className="flex items-center gap-1 text-blue-600 font-medium">
+        <i className="ri-home-4-line"></i> Home
+      </Link>
+      <i className="ri-arrow-right-s-line text-gray-500 text-lg"></i>
+      <span className="text-gray-800 font-semibold">Update Profile</span>
+    </div>
 
-  <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-    {[
-      { label: 'Bank Holder Name', name: 'bankholder' },
-      { label: 'IFSC Code', name: 'ifsc' },
-      { label: 'Account Number', name: 'accountNumber' },
-      { label: 'Branch Name', name: 'branchName' },
-    ].map((field, index) => (
-      <div key={index}>
-        <label className='block text-gray-600 mb-2'>{field.label}</label>
-        <input
-          type='text'
-          name={field.name}
-          value={formData[field.name] || ''}
-          onChange={handleChange}
-          className='w-full text-gray-700 p-3 border rounded-lg'
-        />
+    {/* ✅ Card starts here */}
+    <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+        {[
+          { label: 'First Name', name: 'fname' },
+          { label: 'Last Name', name: 'lname' },
+          { label: 'Email', name: 'email', type: 'email' },
+          { label: 'Mobile Number', name: 'number' },
+          { label: 'Branch', name: 'branch' },
+          { label: 'Course', name: 'course' },
+          { label: 'Address', name: 'adrs' },
+          { label: 'University / College', name: 'clg' },
+        ].map((field, index) => (
+          <div key={index}>
+            <label className='block text-gray-600 mb-2'>{field.label}</label>
+            <input
+              type={field.type || 'text'}
+              name={field.name}
+              value={formData[field.name] || ''}
+              onChange={handleChange}
+              className='w-full text-gray-700 p-3 border rounded-lg'
+            />
+          </div>
+        ))}
+
+        <div>
+          <label className='block text-gray-600 mb-2'>Gender</label>
+          <select
+            name='gender'
+            value={formData.gender || ''}
+            onChange={handleChange}
+            className='w-full p-3 text-gray-700 border rounded-lg'
+          >
+            <option value=''>Select Gender</option>
+            <option value='Male'>Male</option>
+            <option value='Female'>Female</option>
+          </select>
+        </div>
       </div>
-    ))}
-  </div>
 
-  <button onClick={handleSubmit} className='mt-6 w-full md:w-auto bg-blue-500 text-white px-6 py-3 rounded-lg'>
-    Update
-  </button>
+      <h2 className='col-span-2 text-2xl font-semibold mt-8 mb-4'>Bank Detail</h2>
+
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+        {[
+          { label: 'Bank Holder Name', name: 'bankholder' },
+          { label: 'IFSC Code', name: 'ifsc' },
+          { label: 'Account Number', name: 'accountNumber' },
+          { label: 'Branch Name', name: 'branchName' },
+        ].map((field, index) => (
+          <div key={index}>
+            <label className='block text-gray-600 mb-2'>{field.label}</label>
+            <input
+              type='text'
+              name={field.name}
+              value={formData[field.name] || ''}
+              onChange={handleChange}
+              className='w-full text-gray-700 p-3 border rounded-lg'
+            />
+          </div>
+        ))}
+      </div>
+
+      <button onClick={handleSubmit} className='mt-8 w-full md:w-auto bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition'>
+        Update
+      </button>
+    </div>
+    {/* ✅ Card ends here */}
+
+  </div>
 </div>
-</div>
+
+
   );
 }
 
