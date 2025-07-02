@@ -141,7 +141,7 @@ function Content() {
 <div className='flex w-full bg-[#F8F8F8] min-h-screen'>
   <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
-  <div className='lg:w-[77%] p-8 overflow-y-auto shadow-lg'>
+  <div className='w-[100%] lg:w-[77%] p-4 xl:p-8 overflow-y-auto shadow-lg'>
 
     <button onClick={() => setSidebarOpen(true)} className='md:hidden text-2xl mb-4'>
       <i className='px-3 py-3 bg-blue-200 rounded-md ri-menu-fill'></i>

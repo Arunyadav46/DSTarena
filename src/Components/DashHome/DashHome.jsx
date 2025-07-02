@@ -33,10 +33,10 @@ function DashHome() {
   return (
     <div>
          <div className='flex items-center justify-cente '>
-         
+          
          <div>
           <h1 className='text-3xl md:text-6xl ml-16 xl:mx-4 mt-12 mt-3 mb-10'>Welcome to the Dashboard</h1>
-             <div className="mb-10 xl:w-[140%] bg-gray-100 p-3 rounded-lg shadow-sm text-sm flex items-center gap-2">
+             <div className="mb-10 mx-0 xl:mb-0  xl:mx-16 xl:w-[120%] bg-gray-100 p-3 rounded-lg  shadow-sm text-sm flex items-center gap-2">
       <Link
         to="/dashboard/home"
         className="flex items-center gap-1 text-blue-600 font-medium"

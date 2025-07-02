@@ -93,7 +93,7 @@ data.append("user_id", userId);
 <div className='flex w-full bg-[#F8F8F8] min-h-screen'>
   <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
-  <div className='lg:w-[77%] p-10 overflow-y-auto shadow-lg'>
+  <div className='w-[100%] lg:w-[77%] p-2 xl:p-10 overflow-y-auto shadow-lg'>
     <Toaster/>
 
     <div className='flex items-center'>

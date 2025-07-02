@@ -144,37 +144,32 @@ useEffect(() => {
   return (
     <div className='w-full h-auto  bg-[#F8F8F8] flex'>
 
-
-   
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/>
 
-       <div id="scroll" className='w-full md:w-[77%] mx-5 relative '>
+       <div id="scroll" className='w-[100%] md:w-[77%] p-2 xl:mx-4 xl:mx-5 relative '>
       {/* Header Section */}
-      <div className='h-[12vh] w-[50%] md:w-[15%] mt-5 flex  items-center'>
+      <div className='h-[12vh] w-[50%] md:w-[15%] xl:mt-5 flex   items-center'>
         <img className='hidden md:block w-full h-full object-cover rounded-full' src={img} alt='Profile'/>
-        <h2 className='text-3xl  ml-[60px] md:ml-0 xl:mt-0 md:text-4xl'>Referral</h2>
+        <h2 className='text-3xl ml-[70px]   md:ml-0 xl:mt-0 md:text-4xl'>Referral</h2>
       </div>
     
-    
-
     <div className="xl:mt-5 xl:mx-[20px] bg-gray-100 p-3 rounded-lg shadow-sm text-sm flex items-center gap-2">
   <Link to="/dashboard/home" className="flex items-center gap-1 text-blue-600 font-medium hover:underline">
     <i className="ri-home-4-line"></i> Home
   </Link>
   <i className="ri-arrow-right-s-line text-gray-500 text-lg"></i>
-  <span className="text-gray-800 font-semibold">Referral</span>
+  <span className="text-gray-800  font-semibold">Referral</span>
 </div>
 
 
       <button onClick={() => setSidebarOpen(true)} className='md:hidden text-2xl'>
-            <i className='px-3 py-3 bg-blue-200 rounded-md ml-[-10px]  absolute top-[5%] left-[1%] mr-5 ri-menu-fill'></i>
+            <i className='px-3 py-3 bg-blue-200 rounded-md ml-[-10px]  absolute top-[2%] left-[5%] mr-5 ri-menu-fill'></i>
        </button>
 
 
       <div className="w-full xl:px-4 md:px-10 xl:max-w-6xl xl:mx-auto">
-  {/* Referral Code Section */}
-  {/* <h2 className='text-3xl mt-16 mx-2 text-red-600'> Referral Code {referralCode}</h2> */}
-  <div className="mt-8 mx-2 bg-white border border-red-200 shadow-md rounded-xl p-6 flex items-center justify-between">
+ 
+  <div className="xl:mt-8 mx-2 bg-white border border-red-200 shadow-md rounded-xl p-6 flex items-center justify-between">
   <div className="flex items-center gap-3">
     <i className="ri-gift-line text-3xl text-red-500"></i>
     <h2 className="text-2xl font-semibold text-gray-800">
