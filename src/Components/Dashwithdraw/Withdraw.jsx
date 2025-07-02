@@ -4,7 +4,7 @@ import Footer from '../Footer'
 
 function Withdraw() {
   return (
-    <div>
+    <div className='w-full'>
         <Content/>
         <Footer/>
     </div>

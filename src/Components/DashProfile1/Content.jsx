@@ -90,19 +90,22 @@ data.append("user_id", userId);
 
 <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
-<div className='lg:w-[77%] p-8 overflow-y-auto shadow-lg'>
+<div className='lg:w-[77%] p-10 overflow-y-auto shadow-lg'>
   
-  <button onClick={() => setSidebarOpen(true)} className='md:hidden text-2xl mb-4'>
+  <div className='flex items-center'>
+      <button onClick={() => setSidebarOpen(true)} className='md:hidden text-2xl mb-4'>
     <i className='px-3 py-3 bg-blue-200 rounded-md ri-menu-fill'></i>
   </button>
 
    <div className='flex gap-5 items-center mb-8'>
-                <img className='w-[6%]' src={img1}/>
-                <h2 className='text-3xl'>Profile</h2>
+                <img className='hidden md:block w-[6%]' src={img1}/>
+                <h2 className='text-3xl ml-[20px] mt-4 xl:mt-0 xl:ml-0 xl:text-3xl'>Profile</h2>
     </div>
+  </div>
+
 
   {/* <h1 className='mb-8 mx-5'><span>Home<i class="ri-arrow-right-s-line"></i></span> <span>Update Profile </span> </h1> */}
-<div className="mb-8 mx-5 bg-gray-100 p-3 rounded-lg shadow-sm text-sm flex items-center gap-2">
+<div className="mb-8  mx- bg-gray-100 p-3 rounded-lg shadow-sm text-sm flex items-center gap-2">
   <Link to="/dashboard/home" className="flex items-center gap-1 text-blue-600 font-medium">
     <i className="ri-home-4-line"></i> Home
   </Link>

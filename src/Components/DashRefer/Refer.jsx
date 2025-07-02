@@ -143,20 +143,21 @@ useEffect(() => {
 
   return (
     <div className='w-full h-auto  bg-[#F8F8F8] flex'>
+
+
+   
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/>
 
-<div id="scroll" className='w-full md:w-[77%] mx-5 relative '>
+       <div id="scroll" className='w-full md:w-[77%] mx-5 relative '>
       {/* Header Section */}
       <div className='h-[12vh] w-[50%] md:w-[15%] mt-5 flex gap-3 items-center'>
-        <img className='w-full h-full object-cover rounded-full' src={img} alt='Profile'/>
-        <h2 className='text-3xl md:text-4xl'>Referral</h2>
+        <img className='hidden md:block w-full h-full object-cover rounded-full' src={img} alt='Profile'/>
+        <h2 className='text-3xl mt-[-30px] ml-[60px] md:ml-0 xl:mt-0 md:text-4xl'>Referral</h2>
       </div>
     
-    {/* <div className='mt-5 mx-10 text-[18px]'>
-      <h2> <Link to="/dashboard/home">Home </Link><i class="ri-arrow-right-s-line"></i> <span>Referrel</span></h2>
-    </div> */}
+    
 
-    <div className="mt-5 mx-10 bg-gray-100 p-3 rounded-lg shadow-sm text-sm flex items-center gap-2">
+    <div className="xl:mt-5 xl:mx-[20px] bg-gray-100 p-3 rounded-lg shadow-sm text-sm flex items-center gap-2">
   <Link to="/dashboard/home" className="flex items-center gap-1 text-blue-600 font-medium hover:underline">
     <i className="ri-home-4-line"></i> Home
   </Link>
@@ -166,7 +167,7 @@ useEffect(() => {
 
 
       <button onClick={() => setSidebarOpen(true)} className='md:hidden text-2xl'>
-            <i className='px-3 py-3 bg-blue-200 rounded-md ml-[-10px]  absolute top-[1%] left-[1%] mr-5 ri-menu-fill'></i>
+            <i className='px-3 py-3 bg-blue-200 rounded-md ml-[-10px]  absolute top-[5%] left-[1%] mr-5 ri-menu-fill'></i>
        </button>
 
 

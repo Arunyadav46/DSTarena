@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import img from "../assest2/referal.webp"
 import img1 from "../assest2/profile.webp"
 import img2 from "../assest2/project.webp"
@@ -8,7 +8,9 @@ import axios from '../Axios/Axios'
 
 
 
+
 function DashHome() {
+ const{slug} =  useParams()
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     const userId = localStorage.getItem('userId');
@@ -32,7 +34,22 @@ function DashHome() {
     <div>
          <div className='flex items-center justify-cente '>
          
-          <h1 className='text-3xl md:text-6xl mx-12 xl:mx-4 mt-12 mt-3 mb-10'>Welcome to the Dashboard</h1>
+         <div>
+          <h1 className='text-3xl md:text-6xl ml-16 xl:mx-4 mt-12 mt-3 mb-10'>Welcome to the Dashboard</h1>
+             <div className="mb-10 xl:w-[140%] bg-gray-100 p-3 rounded-lg shadow-sm text-sm flex items-center gap-2">
+      <Link
+        to="/dashboard/home"
+        className="flex items-center gap-1 text-blue-600 font-medium"
+      >
+        <i className="ri-home-4-line"></i> Home
+      </Link>
+      <i className="ri-arrow-right-s-line text-gray-500 text-lg"></i>
+      <span className="text-gray-800 font-semibold capitalize">
+        {slug}
+      </span>
+             </div>
+             </div>
+
         </div>
 
         
