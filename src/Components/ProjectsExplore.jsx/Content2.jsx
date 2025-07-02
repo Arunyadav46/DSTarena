@@ -23,7 +23,7 @@ function Content2({tech}) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-    console.log(tech)
+    // console.log(tech)
     const [relatedProjects, setRelatedProjects] = useState([]);
      useEffect(() => {
     if (tech) {

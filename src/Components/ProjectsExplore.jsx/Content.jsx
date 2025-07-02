@@ -20,7 +20,7 @@ function Content({setproductID, setCartCount, setTech}) {
   const getuserData2 = ()=>{
     axios.get(`/API/dashboard/profile_update_api.php?id=${userId}`)
     .then((data)=>{
-      // console.log(data)
+      console.log(data.data)
       setuser2(data.data || [])
     }).catch((err)=>{
       console.log(err)
@@ -29,6 +29,7 @@ function Content({setproductID, setCartCount, setTech}) {
   useEffect(()=>{
     getuserData2();
   },[userId])
+  console.log(user2)
 
   //payment GateWay
   const handlePayment = (project,type) => {
@@ -43,6 +44,7 @@ function Content({setproductID, setCartCount, setTech}) {
     console.log("Name sent to API:", type);
     // console.log(project.project_name)
     paymentData.append("email", user2[0].email);// Replace with actual email
+    console.log(user2[0].email)
    
     paymentData.append("contact", user2[0].contact); // Replace with actual contact
 
@@ -52,8 +54,8 @@ function Content({setproductID, setCartCount, setTech}) {
     paymentData.append("total_amount", isCouponApplied ? subTotal : project.sale_price);
     axios.post('/API/payment_api.php', paymentData)
       .then((res) => {
-        // console.log(res)
-        // console.log(res.data[0].success)
+        console.log(res)
+        console.log(res.data[0].success)
         if (res.data[0].success==='1') {
           window.location.href = res.data[0].responce; // Redirect to Instamojo
         } else {

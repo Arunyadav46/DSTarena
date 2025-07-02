@@ -19,7 +19,7 @@ function Content() {
   const getuserData2 = ()=>{
     axios.get(`/API/dashboard/profile_update_api.php?id=${userId}`)
     .then((data)=>{
-      console.log(data)
+      // console.log(data)
       setuser2(data.data || [])
     }).catch((err)=>{
       console.log(err)
@@ -82,7 +82,7 @@ function Content() {
       getProjectBuyData1()  
     },[userId])
   
-    console.log(BuyData1)
+    // console.log(BuyData1)
 
   return (
 //     <div className='w-full min-h-screen bg-[#F8F8F8] flex'>

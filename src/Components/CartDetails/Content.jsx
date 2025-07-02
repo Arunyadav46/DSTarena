@@ -3,7 +3,7 @@ import axios from '../Axios/Axios';
 import toast, { Toaster } from 'react-hot-toast';
 
 function Content({cartAllProduct, setCartAllProduct, setCartCount}) {
-    console.log(cartAllProduct)
+    // console.log(cartAllProduct)
 
 
 const calculateSubtotal = () => {
@@ -72,7 +72,7 @@ const calculateSubtotal = () => {
     const getuserData2 = ()=>{
     axios.get(`/API/dashboard/profile_update_api.php?id=${userId}`)
     .then((data)=>{
-      console.log(data)
+      // console.log(data)
       setuser2(data.data || [])
     }).catch((err)=>{
       console.log(err)
@@ -82,37 +82,38 @@ const calculateSubtotal = () => {
     getuserData2();
   },[userId])
 
-    const handlePayment = (project) => {
-      const paymentData = new FormData();
-      paymentData.append("usersesid", userId); // Replace with actual session ID
-      paymentData.append("vender_id", project.vender_id); // Replace with actual vendor ID
-      paymentData.append("couponCodeValue", ""); // Apply if available
-      paymentData.append("amount_array", JSON.stringify([project.sale_price]));
-      paymentData.append("pro_id", project.project_id);
-      paymentData.append("name", user2[0].fname); // Replace with actual user name
-      paymentData.append("email", user2[0].email);// Replace with actual email
-      paymentData.append("contact", user2[0].contact); // Replace with actual contact
-      // paymentData.append("contact", 6260524679); // Replace with actual contact
-      console.log(user2[0].contact)
-      paymentData.append("ProductDetails", project.project_id);
-      // paymentData.append("total_amount", 10);
-     paymentData.append("total_amount", isCouponApplied ? subTotal : calculateSubtotal());
-      axios.post('/API/payment_api.php', paymentData)
-        .then((res) => {
-          console.log(res)
-          console.log(res.data[0].success)
-          console.log(res.data[0].warning)
-          if (res.data[0].success==='1') {
-            window.location.href = res.data[0].responce; // Redirect to Instamojo
-          } else {
-            toast.error('Payment initiation failed!');
-          }
-        })
-        .catch((err) =>{
-          console.error(err);
-          toast.error('Error processing payment');
-        });
-    };
+      const handlePayment = (project) => {
+        const paymentData = new FormData();
+        paymentData.append("usersesid", userId); // Replace with actual session ID
+        paymentData.append("vender_id", project.vender_id); // Replace with actual vendor ID
+        paymentData.append("couponCodeValue", ""); // Apply if available
+        paymentData.append("amount_array", JSON.stringify([project.sale_price]));
+        paymentData.append("pro_id", project.project_id);
+        paymentData.append("name", user2[0].fname); // Replace with actual user name
+        paymentData.append("email", user2[0].email);// Replace with actual email
+        paymentData.append("contact", user2[0].contact); // Replace with actual contact
+        console.log(user2[0].contact)
+        // paymentData.append("contact", 6260524679); // Replace with actual contact
+        // console.log(user2[0].contact)
+        paymentData.append("ProductDetails", project.project_id);
+        // paymentData.append("total_amount", 10);
+      paymentData.append("total_amount", isCouponApplied ? subTotal : calculateSubtotal());
+        axios.post('/API/payment_api.php', paymentData)
+          .then((res) => {
+            console.log(res)
+            console.log(res.data[0].success)
+            console.log(res.data[0].warning)
+            if (res.data[0].success==='1') {
+              window.location.href = res.data[0].responce; // Redirect to Instamojo
+            } else {
+              toast.error('Payment initiation failed!');
+            }
+          })
+          .catch((err) =>{
+            console.error(err);
+            toast.error('Error processing payment');
+          });
+      };
 
     // const handleDeleteItem = (id) => {
     //     setCartAllProduct((prevCart) => {

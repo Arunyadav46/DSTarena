@@ -248,10 +248,10 @@ function Header2({ setCartAllProduct , cartCount }) {
       </div>
 
       
-      {/* <Link to="/cart" type="button" class="relative inline-flex items-center w-12 h-10 mt-4 px-3 py-0 rounded-full text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      {/* <Link to="/cart" type="button" className="relative inline-flex items-center w-12 h-10 mt-4 px-3 py-0 rounded-full text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
          <i className="text-xl ri-shopping-cart-2-line"></i>
-        <span class="sr-only">Notifications</span>
-        <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">2</div>
+        <span className="sr-only">Notifications</span>
+        <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">2</div>
      </Link> */}
     </div>
     {/* Social Links */}
@@ -302,10 +302,10 @@ function Header2({ setCartAllProduct , cartCount }) {
 )}
 
     <div className="hidden lg:flex relative md:space-x-2 md:mr-5">
-    <Link to="/cart" type="button" class="absolut left-[15%] top-[-100%] inline-flex items-center w-12 h-11 mr-4 px-3 py-0 rounded-full text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+    <Link to="/cart" type="button" className="absolut left-[15%] top-[-100%] inline-flex items-center w-12 h-11 mr-4 px-3 py-0 rounded-full text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
    <i className="text-2xl ri-shopping-cart-2-line"></i>
-   <span class="sr-only">Notifications</span>
-  <div class="absolute top-[5% left-[50%] inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">{cartCount}</div>
+   <span className="sr-only">Notifications</span>
+  <div className="absolute top-[5% left-[50%] inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">{cartCount}</div>
    </Link>
    
   {/* {userId &&  user.length > 0 ? (
@@ -1068,10 +1068,10 @@ function Header2({ setCartAllProduct , cartCount }) {
          
           {/* <li className="px-4 py-2 bg-gray-300 rounded-full"><Link to="/cart"> <i className="text-xl ri-shopping-cart-2-line"></i></Link></li> */}
           
-     {/* <Link to="/cart" type="button" class="relative inline-flex items-center px-3 py-2 rounded-full text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+     {/* <Link to="/cart" type="button" className="relative inline-flex items-center px-3 py-2 rounded-full text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
 < i className="text-xl ri-shopping-cart-2-line"></i>
-<span class="sr-only">Notifications</span>
-  <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">2</div>
+<span className="sr-only">Notifications</span>
+  <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">2</div>
 </Link> */}
 
          {/* </div> */}
@@ -1154,7 +1154,7 @@ export default Header2
         </div>
       </div>
       <div className="flex items-center w-[40%]   space-x-4 leading-relaxed">
-      <i class="text-3xl text-[#D2A98E] ri-message-line"></i>
+      <i className="text-3xl text-[#D2A98E] ri-message-line"></i>
         <div>
           <h6>Online 24/7</h6>
           <p className="text-sm text-[#333333]">9993897203</p>
@@ -1195,7 +1195,7 @@ export default Header2
                    >
                     <div className='flex items-center gap-1 hover:text-blue-500'>
                     <Link to="/training">Training</Link>
-                    <i class="ri-arrow-down-s-line"></i>
+                    <i className="ri-arrow-down-s-line"></i>
                     </div>
                      
                     {isDropdownOpen && (
@@ -1226,7 +1226,7 @@ export default Header2
                     onMouseLeave={() => setDropdownOpen1(false)}>
                     <div className='hover:text-blue-500'>
                     <Link to="/service">Service</Link>
-                    <i class="ri-arrow-down-s-line"></i>
+                    <i className="ri-arrow-down-s-line"></i>
                     </div>
                     {isDropdownOpen1 && (
                       <ul className="absolute  left-[-5%]  mt-2 w-52 mx-[-20px] bg-white text-gray-900 shadow-lg rounded-md overflow-hidden">

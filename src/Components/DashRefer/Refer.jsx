@@ -70,7 +70,7 @@ const handleWithdraw = () => {
 
   axios.post("/API/dashboard/referral_amound_widthraw_api.php", formDataToSend)
     .then((response) => {
-      console.log("API Response:", response.data);
+      // console.log("API Response:", response.data);
       // console.log(response.data[0].success)
       if (response.data[0].success === "1") {
         alert(response.data[0].msg||"Withdrawal request sent successfully!");

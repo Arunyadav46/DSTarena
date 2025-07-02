@@ -52,7 +52,7 @@ useEffect(()=>{
     Referral Withdrawal History
   </h2>
 
-  <div className="w-full">
+  <div className="w-full overflow-x-auto">
     <table className="w-full bg-white border border-gray-300 rounded-md shadow-md">
       <thead className="bg-gray-100 ">
         <tr className="text-sm font-semibold  text-gray-700 text-left">

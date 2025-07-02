@@ -216,7 +216,7 @@ const Register = () => {
 
     axios.post("/API/User_register_api.php", formData)
       .then((response) => {
-        console.log("API Response:", response.data);
+        // console.log("API Response:", response.data);
         const data = response.data;
         console.log(data)
         if (data.response.success === "1") {

@@ -31,7 +31,7 @@ function Content() {
 
       axios.post("/API/Login_Auth_api.php", formData,)
       .then((response) => {
-        console.log("API Response:", response.data);
+        // console.log("API Response:", response.data);
         if (response.data[0].success === "1") {
           localStorage.setItem("userId", response.data[0].id); 
         //  localStorage.setItem("referral_code", response.data[0].Referral_code);
