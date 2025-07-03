@@ -33,14 +33,18 @@ function Content({setproductID, setCartCount, setTech}) {
 
   //payment GateWay
   const handlePayment = (project,type) => {
-      // console.log(project)
+     console.log(project)
     const paymentData = new FormData();
     paymentData.append("usersesid", userId); // Replace with actual session ID
     paymentData.append("vender_id", project.vender_id); // Replace with actual vendor ID
+    // console.log("vendor",project.vender_id)
+    // console.log("Amount",JSON.stringify([project.sale_price]))
     paymentData.append("couponCodeValue", couponCode); // Apply if available
     paymentData.append("amount_array", JSON.stringify([project.sale_price]));
+    console.log(JSON.stringify([project.sale_price]))
     paymentData.append("pro_id", project.project_id);
-    paymentData.append("name", type); 
+    console.log(project.project_id)
+    paymentData.append("name", type);   
     console.log("Name sent to API:", type);
     // console.log(project.project_name)
     paymentData.append("email", user2[0].email);// Replace with actual email
@@ -50,6 +54,9 @@ function Content({setproductID, setCartCount, setTech}) {
 
     console.log(user2[0].contact)
     paymentData.append("ProductDetails", project.project_id);
+   paymentData.append("productinfo", type);
+   console.log("productinfo",type)
+    
     // paymentData.append("total_amount", 10);
     paymentData.append("total_amount", isCouponApplied ? subTotal : project.sale_price);
     axios.post('/API/payment_api.php', paymentData)
@@ -218,8 +225,6 @@ if (!user) {
     return doc.body.textContent || ''; // Extract clean text
   };
 
-
-  
   const [selectedImage, setSelectedImage] = useState(""); // Initially empty
 
 useEffect(() => {

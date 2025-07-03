@@ -3,7 +3,7 @@ import axios from '../Axios/Axios';
 import toast, { Toaster } from 'react-hot-toast';
 
 function Content({cartAllProduct, setCartAllProduct, setCartCount}) {
-    // console.log(cartAllProduct)
+    console.log(cartAllProduct)
 
 
 const calculateSubtotal = () => {
@@ -45,7 +45,7 @@ const calculateSubtotal = () => {
     .then((res) => {
       console.log(res)
       if (res.data[0].success) {
-       
+
         setDiscount(res.data[0].Off);
         setSaveAmount(parseFloat(res.data[0].Save_amount));
         setSubTotal(parseFloat(res.data[0].Subtotal));
@@ -83,17 +83,32 @@ const calculateSubtotal = () => {
   },[userId])
 
       const handlePayment = (project) => {
+        console.log(project)
         const paymentData = new FormData();
+         // Collect data from all projects
+           const prices = project.map(p => p.sale_price);
+           const vendorIds = project.map(p => p.vender_id);
+           const projectIds = project.map(p => p.project_id);
+
         paymentData.append("usersesid", userId); // Replace with actual session ID
-        paymentData.append("vender_id", project.vender_id); // Replace with actual vendor ID
+        // paymentData.append("vender_id", project.vender_id); // Replace with actual vendor ID
+        paymentData.append("vender_id", vendorIds.join(',')); // Replace with actual vendor ID
+        console.log(vendorIds.join(','))
         paymentData.append("couponCodeValue", ""); // Apply if available
-        paymentData.append("amount_array", JSON.stringify([project.sale_price]));
+        // paymentData.append("amount_array", JSON.stringify([project.sale_price]));
+        paymentData.append("amount_array", prices.join(','));
+        console.log(prices.join(','))
+        // paymentData.append("amount_array[]",100,200);
+        
+        // console.log(JSON.stringify([project.sale_price]))
         paymentData.append("pro_id", project.project_id);
+        paymentData.append("pro_id", projectIds.join(','));
+        console.log(projectIds.join(','))
         paymentData.append("name", user2[0].fname); // Replace with actual user name
         paymentData.append("email", user2[0].email);// Replace with actual email
         paymentData.append("contact", user2[0].contact); // Replace with actual contact
         console.log(user2[0].contact)
-        // paymentData.append("contact", 6260524679); // Replace with actual contact
+        
         // console.log(user2[0].contact)
         paymentData.append("ProductDetails", project.project_id);
         // paymentData.append("total_amount", 10);
@@ -115,24 +130,8 @@ const calculateSubtotal = () => {
           });
       };
 
-    // const handleDeleteItem = (id) => {
-    //     setCartAllProduct((prevCart) => {
-    //       if (!prevCart || prevCart.length === 0) return prevCart; // Prevent updates on empty state
-      
-    //       const updatedCart = prevCart
-    //         .map((cartItem) => {
-    //           if (!cartItem || !cartItem.data || !Array.isArray(cartItem.data)) return cartItem;
-      
-    //           const filteredData = cartItem.data.filter((elem) => elem.project_id !== id);
-              
-    //           // If there are no items left in `data`, return null, otherwise return updated cartItem
-    //           return filteredData.length > 0 ? { ...cartItem, data: filteredData } : null;
-    //         })
-    //         .filter(Boolean); // Removes `null` values to keep cart clean
-    //       return updatedCart;
-    //     });
-    //   };
-const handleDeleteItem = (projectId) => {
+ 
+  const handleDeleteItem = (projectId) => {
   const userId = localStorage.getItem("userId");
   const existingCart = JSON.parse(localStorage.getItem("cartItems")) || [];
 
@@ -266,12 +265,28 @@ const handleDeleteItem = (projectId) => {
           <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">
             Grand total: <span>₹{isCouponApplied ? subTotal : calculateSubtotal()}</span>
           </h2>
-          <div
-            onClick={handlePayment}
+          {/* <div
+            onClick={()=>handlePayment()}
             className="w-full sm:w-auto px-6 py-2 bg-[#F08C04] text-white text-center mt-4 rounded-md hover:bg-[#d47a03]"
           >
             <button>Check out</button>
-          </div>
+          </div> */}
+   
+          <div
+ onClick={() => {
+  const allProjects = cartAllProduct.flatMap(cart => cart.data); // ✅ this is an array
+  handlePayment(allProjects);
+}}
+  className="w-full sm:w-auto px-6 py-2 bg-[#F08C04] text-white text-center mt-4 rounded-md hover:bg-[#d47a03]"
+>
+  <button>Check out</button>
+</div>
+
+
+
+     
+
+
         </div>
       </div>
     </div>

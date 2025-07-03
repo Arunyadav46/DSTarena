@@ -113,6 +113,7 @@ useEffect(() => {
   {/* <Route path='/embedded-projects' element={<Embeded/>}/> */}
   {/* <Route path='/:category' element={<Java2/>}/> */}
   {/* <Route path='/:category' element={<Dot/>}/> */}
+  
   <Route path='/:category' element={<Andro/>} />
 
   {/* <Route path='/:category' element={<Vls/>}/> */}
