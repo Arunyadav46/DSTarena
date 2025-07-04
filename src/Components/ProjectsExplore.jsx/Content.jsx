@@ -32,33 +32,36 @@ function Content({setproductID, setCartCount, setTech}) {
   console.log(user2)
 
   //payment GateWay
-  const handlePayment = (project,type) => {
-     console.log(project)
+  const handlePayment = (project,type,popprice) => {
+    //  console.log(project)
     const paymentData = new FormData();
     paymentData.append("usersesid", userId); // Replace with actual session ID
     paymentData.append("vender_id", project.vender_id); // Replace with actual vendor ID
     // console.log("vendor",project.vender_id)
     // console.log("Amount",JSON.stringify([project.sale_price]))
     paymentData.append("couponCodeValue", couponCode); // Apply if available
-    paymentData.append("amount_array", JSON.stringify([project.sale_price]));
-    console.log(JSON.stringify([project.sale_price]))
+    // paymentData.append("amount_array", JSON.stringify([project.sale_price]));
+    paymentData.append("amount_array", popprice);
+    // console.log(popprice)
+    // console.log(JSON.stringify([project.sale_price]))
     paymentData.append("pro_id", project.project_id);
-    console.log(project.project_id)
-    paymentData.append("name", type);   
-    console.log("Name sent to API:", type);
+    // console.log(project.project_id)
+    paymentData.append("name", user2[0].fname);  
+    // console.log(user2[0].fname) 
+    // console.log("Name sent to API:", type);
     // console.log(project.project_name)
     paymentData.append("email", user2[0].email);// Replace with actual email
-    console.log(user2[0].email)
+    // console.log(user2[0].email)
    
     paymentData.append("contact", user2[0].contact); // Replace with actual contact
 
-    console.log(user2[0].contact)
-    paymentData.append("ProductDetails", project.project_id);
-   paymentData.append("productinfo", type);
-   console.log("productinfo",type)
+    // console.log(user2[0].contact)
+    paymentData.append("ProductDetails", type);
+  //  paymentData.append("productinfo", type);
+  //  console.log("productinfo",type)
     
     // paymentData.append("total_amount", 10);
-    paymentData.append("total_amount", isCouponApplied ? subTotal : project.sale_price);
+    paymentData.append("total_amount", isCouponApplied ? subTotal : popprice);
     axios.post('/API/payment_api.php', paymentData)
       .then((res) => {
         console.log(res)
@@ -119,21 +122,60 @@ function Content({setproductID, setCartCount, setTech}) {
     // .catch(() => toast.error("Something went wrong. Try again!"));
   };
 
+  //  hide karne k liye
+  const closePopup = () => {
+  setShowPopup(false);
+  // setProjectPrices([]); // Optional: reset if needed
+  // setSelectedProjectID(null); // Optional: reset if needed
+};
 //popup buy btn k liye
   const [showPopup, setShowPopup] = useState(false);
   // const navigate = useNavigate();
 
-  const togglePopup = () => {
-   const isLoggedIn = localStorage.getItem("userId"); // Check login status
- 
-  if (!isLoggedIn) {
+   const [selectedProjectID, setSelectedProjectID] = useState(null);
+  const [projectPrices, setProjectPrices] = useState([]);
+  const togglePopup = (projectID) => {
+  const userId = localStorage.getItem("userId");
+
+  if (!userId) {
     toast.error("Please log in.");
-    navigate("/login")
-    // window.location.href = "/login"; //Redirect to login page
+    navigate("/login");
     return;
   }
-    setShowPopup(!showPopup);
-  };
+  console.log("Fetching for Project ID:", projectID);
+   setSelectedProjectID(projectID); // 👈 update project ID
+  axios
+    .get(`/API/inr_modal_show_api.php?id=${projectID}`)
+    .then((res) => {
+      console.log(res)
+      
+    if (res.data[0].success === '1') {
+      setProjectPrices(res.data); // Store the pricing object
+      setShowPopup(true);
+    } else {
+      toast.error("No pricing found for this project.");
+    }
+    })
+    .catch((err) => {
+      console.error("Error fetching pricing:", err);
+      toast.error("Something went wrong. Please try again.");
+    });
+};
+
+console.log(projectPrices)
+
+  // const togglePopup = (projectID) => {
+  //   console.log(projectID)
+  //  const isLoggedIn = localStorage.getItem("userId"); // Check login status
+ 
+  // if (!isLoggedIn) {
+  //   toast.error("Please log in.");
+  //   navigate("/login")
+  //   // window.location.href = "/login"; //Redirect to login page
+  //   return;
+  // }
+  //   setShowPopup(!showPopup);
+  // };
 
  
 
@@ -215,7 +257,7 @@ if (!user) {
     getDetails()
   },[id])
 
-  // console.log(getDet);
+  console.log(getDet);
   //Description Paragraph k unnecessary symbol ko hatana
 
   const cleanDescription = (description) => {
@@ -328,7 +370,7 @@ useEffect(() => {
               <h2>{elem.project_category}</h2>
             </div>
 
-            <h2 className="text-2xl mt-4 mb-4">Price: ₹{elem.sale_price}</h2>
+            <h2 className="text-2xl mt-4 mb-4"> ₹{elem.sale_price} <span className='mx-5 line-through'>₹{elem.base_price}</span></h2>
 
             {isCouponApplied ? (
               <>
@@ -367,7 +409,7 @@ useEffect(() => {
 
             <div className="flex items-center gap-5 pt-5">
               <button
-                onClick={togglePopup}
+                onClick={()=>togglePopup(elem.project_id)}
                 className="px-10 py-3 bg-[#FB641B] font-medium text-white rounded-lg mt-4"
               >
                 Buy
@@ -383,22 +425,21 @@ useEffect(() => {
               </Link>
             </div>
 
-            <h2 className="mt-10 text-[#2452A7]">
-              List of the following materials will be provided with combo pack
-            </h2>
-            <ul className="list-disc pl-5 text-sm mt-5">
-              <li>Source code</li>
-              <li>Existing and Proposed Project Comparison</li>
-              <li>Algorithm with Flow chart</li>
-              <li>Report</li>
-              <li>Proposed abstract document</li>
-            </ul>
-            <h2 className="mt-10 text-[#2452A7] mb-10">
-              List of the following materials. You will download software/report
-            </h2>
-            <ul className="list-disc pl-5 text-sm">
-              <li>Source code/Report</li>
-            </ul>
+                    {elem.materials_provice && (
+  <>
+    <h2 className="mt-10 text-[#2452A7]">
+      List of the following materials will be provided:
+    </h2>
+    <ul className="list-disc pl-5 text-sm mt-5">
+      {elem.materials_provice
+        .split("#@")
+        .map((item, index) => (
+          <li key={index}>{item.trim()}</li>
+        ))}
+    </ul>
+  </>
+)}
+
           </div>
 
           {/* DESCRIPTION & TERMS */}
@@ -442,7 +483,7 @@ useEffect(() => {
           <h2>{elem.project_category}</h2>
         </div>
 
-        <h2 className="text-2xl mt-4 mb-4">Price: ₹{elem.sale_price}</h2>
+        <h2 className="text-2xl mt-4 mb-4"> ₹{elem.sale_price} <span className='mx-5 text-[20px] text-gray-600 line-through'>₹{elem.base_price}</span></h2>
 
         {isCouponApplied ? (
           <>
@@ -457,9 +498,10 @@ useEffect(() => {
             </p>
           </>
         ) : (
-          <p className="text-xl mt-5 font-bold">
-            Total Price: <strong>₹{elem.sale_price}</strong>
-          </p>
+          // <p className="text-xl mt-5 font-bold">
+          //   Total Price: <strong>₹{elem.sale_price}</strong>
+          // </p>
+          ""
         )}
 
         <div className="mt-6 border p-4 rounded-lg">
@@ -481,7 +523,7 @@ useEffect(() => {
 
         <div className="flex items-center gap-5 pt-5">
           <button
-            onClick={togglePopup}
+            onClick={()=>togglePopup(elem.project_id)}
             className="px-10 py-3 bg-[#FB641B] font-medium text-white rounded-lg mt-4"
           >
             Buy
@@ -497,7 +539,25 @@ useEffect(() => {
           </Link>
         </div>
 
-        <h2 className="mt-10 text-[#2452A7]">
+        {elem.materials_provice && (
+  <>
+    <h2 className="mt-10 text-[#2452A7]">
+      List of the following materials will be provided:
+    </h2>
+    <ul className="list-disc pl-5 text-sm mt-5">
+      {elem.materials_provice
+        .split("#@")
+        .map((item, index) => (
+          <li key={index}>{item.trim()}</li>
+        ))}
+    </ul>
+  </>
+)}
+
+   
+   {/* <p>{elem.materials_provice}</p> */}
+      
+        {/* <h2 className="mt-10 text-[#2452A7]">
           List of the following materials will be provided with combo pack
         </h2>
         <ul className="list-disc pl-5 text-sm mt-5">
@@ -512,7 +572,8 @@ useEffect(() => {
         </h2>
         <ul className="list-disc pl-5 text-sm">
           <li>Source code/Report</li>
-        </ul>
+        </ul> */}
+
       </div>
     ))}
   </div>
@@ -536,13 +597,15 @@ useEffect(() => {
               </div>
               <div>
                 <h3 className='font-medium text-gray-700'>Contact Us</h3>
-                <p className='text-gray-500'>dstinfo@gmail.com</p>
+                <p className='text-gray-500'>dstarenainfo@gmail.com</p>
               </div>
             </div>
           </div>
         </div>
         {/* Right Section - Payment Details */}
-        <div className='xl:w-[45%]   xl:h-[65vh] bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500'>
+        {/* {projectPrices.map((price,index)=>{
+          console.log(price)
+          return  <div className='xl:w-[45%]   xl:h-[65vh] bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500'>
           <h2 className='xl:text-3xl font-bold mb-2 xl:mb-8 text-gray-800'>Payment Details</h2>
           <div className='mb-6'>
             <p className='mb-2 flex justify-between items-center border-2 py-3 rounded-md px-2 xl:mb-5'>
@@ -550,25 +613,93 @@ useEffect(() => {
                    <button onClick={()=>handlePayment(elem,"Combo Pack")} className='px-4 xl:px-2 text-[15px] '>Combo</button>
                     <span className='text-[12px]'>(code/SRS)</span>
               </div>
-           
+            <span>{price.Compbo_pack}</span>
               <span className='xl:text-xl font-semibold text-gray-800'>₹{isCouponApplied ? subTotal : elem.sale_price}</span>
             </p>
             <p className='flex justify-between items-center mb-5 border-2 py-4 rounded-md px-2'>
               <button onClick={() => handlePayment(elem, "Report")} className='px-2 text-[15px] py-1 xl:px-4 xl:py-2 bg-blue-500 text-white rounded-lg shadow-md'>SRS</button>
+             <span>{price.Report_price}</span>
               <span className='px-2 text-[10px] xl:text-[15px] py-1 xl:px-4 xl:py-2 bg-red-500 text-[14px] text-white rounded-lg shadow-md'>Request For Synopsis</span>
             </p>
             <p className='flex justify-between items-center border-2 py-4 rounded-md px-2'>
               <button onClick={() => handlePayment(elem, "Project")} className='px-2 text-[11px]  xl:text-[15px]  py-1 xl:px-4 xl:py-2 bg-blue-500 text-white rounded-lg shadow-md'>Project</button>
+              <span>{price.software_price}</span>
               <span className='px-2 text-[10px] xl:text-[15px] py-1 xl:px-4 xl:py-2 bg-red-500 text-[14px] text-white rounded-lg shadow-md'>Request For Software</span>
             </p>
             <hr className='xl:my-6 border-gray-300'/>
           </div>
 
           <div className="flex justify-end space-x-4">
-            <button onClick={togglePopup} className="bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition duration-300">Cancel</button>
+            <button onClick={closePopup} className="bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition duration-300">Cancel</button>
             <button className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition duration-300">Confirm</button>
           </div>
         </div>
+        })} */}
+
+         {projectPrices.map((price, index) => (
+  <div key={index} className='xl:w-[45%] xl:h-[65vh] bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500'>
+    <h2 className='xl:text-3xl font-bold mb-2 xl:mb-8 text-gray-800'>Payment Details</h2>
+    <div className='mb-6'>
+
+      {/* Combo Pack */}
+      <div className='mb-5 flex justify-between items-center border-2 py-3 rounded-md px-2'>
+        {price.Compbo_pack==='null'? (
+          <>
+          ""
+          {/* <span className='text-[14px] bg-red-500 text-white px-4 py-2 rounded-lg shadow-md'>Request for Combo Pack</span> */}
+          </>
+        ) : (
+          <>
+            <div className='flex flex-col items-center xl:px-4 xl:py-2 bg-blue-500 text-white rounded-lg shadow-md'>
+               {/* <span className='text-[14px] bg-red-500 text-white px-4 py-2 rounded-lg shadow-md'>Request for Combo Pack</span> */}
+              <button onClick={() => handlePayment(elem, "Combo Pack",price.Compbo_pack)} className='px-4 xl:px-2 text-[15px]'>Combo</button>
+              <span className='text-[12px]'>(code/SRS)</span>
+            </div>
+            <span>₹{price.Compbo_pack}</span>
+          </>
+          
+        )}
+      </div>
+
+      {/* Report Price */}
+      <div className='mb-5 flex justify-between items-center border-2 py-4 rounded-md px-2'>
+        {price.Report_price ==="null" ? (
+          //  <span className='px-4 py-2 bg-red-500 text-white rounded-lg shadow-md'>Request For Synopsis</span>
+          ""
+         
+        ) : (
+           <>
+            <button onClick={() => handlePayment(elem, "Report",price.Report_price)} className='px-2 text-[15px] py-1 xl:px-4 xl:py-2 bg-blue-500 text-white rounded-lg shadow-md'>SRS</button>
+            <span>₹{price.Report_price}</span>
+          </>
+        )}
+      </div>
+
+      {/* Software Price */}
+      <div className='flex justify-between items-center border-2 py-4 rounded-md px-2'>
+        {price.software_price === 'null' ? (
+          // <span className='px-4 py-2 bg-red-500 text-white rounded-lg shadow-md'>Request For Software</span>
+          ""
+         
+        ) : (
+            <>
+            <button onClick={() => handlePayment(elem, "Project",price.software_price)} className='px-2 text-[11px] xl:text-[15px] py-1 xl:px-4 xl:py-2 bg-blue-500 text-white rounded-lg shadow-md'>Project</button>
+            <span>₹{price.software_price}</span>
+          </>
+        )}
+      </div>
+
+      <hr className='xl:my-6 border-gray-300'/>
+    </div>
+
+    <div className="flex justify-end space-x-4">
+      <button onClick={closePopup} className="bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition duration-300">Cancel</button>
+    </div>
+  </div>
+))}
+
+
+        
       </div>
      })}
 

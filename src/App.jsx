@@ -51,6 +51,7 @@ import Dot from './Components/Dot/Dot'
 import Andro from './Components/Andro/Andro'
 import Vls from './Components/VLS/Vls'
 import ScrollToTop from './Components/ScrollToTop'
+import Category from './Components/Category/Category'
 
 
 
@@ -161,6 +162,7 @@ useEffect(() => {
   <Route path='/cont' element={<Pata/>}/>
   <Route path='/forgotPassword' element={<Forgot/>}/>
   <Route path='/resetpassword' element={<Reset/>}/>
+  <Route path='/productlist/:category' element={<Category/>}/>
 
    {/* Protected Dashboard Routes */}
 

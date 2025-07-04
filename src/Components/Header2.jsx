@@ -855,7 +855,7 @@ function Header2({ setCartAllProduct , cartCount }) {
   >
     {soft.map((elem, index) => (
       <li key={index} className="px-4 text-[14px] pt-5 py-2 text-gray-700 hover:bg-gray-200">
-        <Link to={`/Projects/${elem.category}`}>{elem.category}</Link>
+        <Link to={`/productlist/${elem.category}`}>{elem.category}</Link>
       </li>
     ))}
   </div>

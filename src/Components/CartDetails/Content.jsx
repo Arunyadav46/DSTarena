@@ -101,16 +101,16 @@ const calculateSubtotal = () => {
         // paymentData.append("amount_array[]",100,200);
         
         // console.log(JSON.stringify([project.sale_price]))
-        paymentData.append("pro_id", project.project_id);
+        // paymentData.append("pro_id", project.project_id);
         paymentData.append("pro_id", projectIds.join(','));
         console.log(projectIds.join(','))
         paymentData.append("name", user2[0].fname); // Replace with actual user name
         paymentData.append("email", user2[0].email);// Replace with actual email
         paymentData.append("contact", user2[0].contact); // Replace with actual contact
-        console.log(user2[0].contact)
+        // console.log(user2[0].contact)
         
         // console.log(user2[0].contact)
-        paymentData.append("ProductDetails", project.project_id);
+        paymentData.append("ProductDetails", "Combo Pack");
         // paymentData.append("total_amount", 10);
       paymentData.append("total_amount", isCouponApplied ? subTotal : calculateSubtotal());
         axios.post('/API/payment_api.php', paymentData)
