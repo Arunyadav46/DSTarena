@@ -54,10 +54,6 @@ import ScrollToTop from './Components/ScrollToTop'
 import Category from './Components/Category/Category'
 
 
-
-
-
-
 function App() {
   
 

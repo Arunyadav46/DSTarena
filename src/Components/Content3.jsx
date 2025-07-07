@@ -79,7 +79,9 @@ function Content3() {
             <div className="grid relative grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-16">
               {groupedProjects[branch].projects.slice(0, visibleCards[branch] || 6).map((elem, index) => (
                 <div id='img6' key={index} className="bg-white min-h-[50vh] shadow-lg rounded-lg overflow-hidden transform hover:scale-100 transition duration-300 ease-in-out">
+                <Link to={`/project/${elem.project_id}`}>
                   <img id='img7' src={elem.image} alt={elem.project_name} className="w-full h-[30vh] transition duration-300 ease-in-ou" />
+                 </Link>
                   <div className="p-4">
                     <p className="text-sm text-gray-500 mb-2 font-semibold">
                       <span className="line-through mr-5">₹{elem.base_price}</span> ₹{elem.sale_price}
