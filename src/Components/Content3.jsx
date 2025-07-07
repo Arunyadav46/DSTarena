@@ -1,11 +1,14 @@
 import axios from '../Components/Axios/Axios';
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import Loading from './Loading';
 
 
 function Content3() {
 
   const projectRef = useRef(null); // Step 1
+
+ const[loading,setloading] =  useState(true)
 
   const [product, setProduct] = useState([]);
   const [visibleCards, setVisibleCards] = useState({});
@@ -17,9 +20,11 @@ function Content3() {
       .then((data) => {
         // console.log(data.data);
         setProduct(data.data);
+        setloading(false)
       })
       .catch((err) => {
         console.log(err);
+        setloading(false)
       });
   };
 
@@ -55,6 +60,10 @@ function Content3() {
       groupedProjects[currentBranch].projects.push(item);
     }
   });
+
+  if(loading){
+    return <Loading/>
+  }
 
   return (
     <div ref={projectRef} className="xl:py-10 xl:px-32 bg-[#F8F8F8]">

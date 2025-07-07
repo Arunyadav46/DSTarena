@@ -1,6 +1,7 @@
 import axios from '../Axios/Axios';
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
+import Loading from '../Loading';
 
 
 
@@ -32,21 +33,16 @@ function Content() {
     fetchProjects();
   }, [projects]);   
 
-     if (loading) return <p>Loading...</p>;
+     if (loading) return <Loading/>;
   return (
      <div className="p-5 xl:mx-32 xl:p-10 grid relative grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-16">
       {projects.map((elem, index) => (
-        <div
-          id="img6"
-          key={index}
-          className="bg-white min-h-[50vh] shadow-lg rounded-lg overflow-hidden transform hover:scale-100 transition duration-300 ease-in-out"
-        >
-          <img
-            id="img7"
-            src={elem.image}
-            alt={elem.project_name}
-            className="w-full h-[30vh] object-cover transition duration-300 ease-in-out"
+        <div id="img6" key={index} className="bg-white min-h-[50vh] shadow-lg rounded-lg overflow-hidden transform hover:scale-100 transition duration-300 ease-in-out" >
+         <Link to={`/project/${elem.id}`}>
+          <img id="img7" src={elem.image} alt={elem.project_name}
+           className="w-full h-[30vh] object-cover transition duration-300 ease-in-out"
           />
+          </Link>
           <div className="p-4">
             <p className="text-sm text-gray-500 mb-2 font-semibold">
               <span className="line-through mr-5">₹{elem.base}</span> ₹{elem.sale_price}

@@ -7,12 +7,14 @@ import DOMPurify from 'dompurify';
 import img2 from "../assest2/instagram.png"
 import img3 from "../assest2/whats.png"
 import img4 from "../assest2/twitter.png"
+import Loading from '../Loading';
 
 function Content({setproductID, setCartCount, setTech}) {
  
   const userId = localStorage.getItem("userId")
   console.log(userId);
   
+ const[loading,setloading] = useState(true)
 
   const navigate = useNavigate();
 
@@ -21,9 +23,11 @@ function Content({setproductID, setCartCount, setTech}) {
     axios.get(`/API/dashboard/profile_update_api.php?id=${userId}`)
     .then((data)=>{
       console.log(data.data)
+      setloading(false)
       setuser2(data.data || [])
     }).catch((err)=>{
       console.log(err)
+      setloading(false)
     })
   }
   useEffect(()=>{
@@ -148,6 +152,7 @@ function Content({setproductID, setCartCount, setTech}) {
     .get(`/API/inr_modal_show_api.php?id=${projectID}`)
     .then((res) => {
       console.log(res)
+      setloading(false)
       
     if (res.data[0].success === '1') {
       setProjectPrices(res.data); // Store the pricing object
@@ -275,6 +280,9 @@ useEffect(() => {
   }
 }, [getDet]);
 
+if(loading){
+  return <Loading/>
+}
 
   return (
     <div className="w-full xl:px-32 xl:pt-32 p-5 flex flex-col xl:flex-row gap-10">
@@ -425,7 +433,7 @@ useEffect(() => {
               </Link>
             </div>
 
-                    {elem.materials_provice && (
+{elem.materials_provice && ( 
   <>
     <h2 className="mt-10 text-[#2452A7]">
       List of the following materials will be provided:
@@ -433,18 +441,21 @@ useEffect(() => {
     <ul className="list-disc pl-5 text-sm mt-5">
       {elem.materials_provice
         .split("#@")
-        .map((item, index) => (
-          <li key={index}>{item.trim()}</li>
-        ))}
+        .map((item, index) => {
+          const cleanedItem = item.replace(/<\/?[^>]+(>|$)/g, "").trim();
+          if (!cleanedItem) return null; // Skip empty items
+          return <li className='text-gray-800 text-[15px]' key={index}>{cleanedItem}</li>;
+        })}
     </ul>
   </>
 )}
+
 
           </div>
 
           {/* DESCRIPTION & TERMS */}
           <h2 className="text-3xl font-bold mt-16 mb-10">Description</h2>
-          <p className="text-justify mb-12 text-gray-600">
+          <p className="text-justify mb-12 text-gray-700">
             {cleanDescription(elem.project_description)}
           </p>
           <h2 className="text-4xl mb-10">Terms & Conditions</h2>
@@ -454,7 +465,7 @@ useEffect(() => {
               if (!cleaned) return null;
               const noLi = cleaned.replace(/^<li>/, "");
               return (
-                <li key={index} className="mb-2 text-gray-700">
+                <li key={index} className="mb-2 text-gray-800">
                   {noLi}
                 </li>
               );
@@ -539,7 +550,10 @@ useEffect(() => {
           </Link>
         </div>
 
-        {elem.materials_provice && (
+
+
+   
+{elem.materials_provice && ( 
   <>
     <h2 className="mt-10 text-[#2452A7]">
       List of the following materials will be provided:
@@ -547,32 +561,15 @@ useEffect(() => {
     <ul className="list-disc pl-5 text-sm mt-5">
       {elem.materials_provice
         .split("#@")
-        .map((item, index) => (
-          <li key={index}>{item.trim()}</li>
-        ))}
+        .map((item, index) => {
+          const cleanedItem = item.replace(/<\/?[^>]+(>|$)/g, "").trim();
+          if (!cleanedItem) return null; // Skip empty items
+          return <li className='text-gray-800 text-[15px]' key={index}>{cleanedItem}</li>;
+        })}
     </ul>
   </>
 )}
 
-   
-   {/* <p>{elem.materials_provice}</p> */}
-      
-        {/* <h2 className="mt-10 text-[#2452A7]">
-          List of the following materials will be provided with combo pack
-        </h2>
-        <ul className="list-disc pl-5 text-sm mt-5">
-          <li>Source code</li>
-          <li>Existing and Proposed Project Comparison</li>
-          <li>Algorithm with Flow chart</li>
-          <li>Report</li>
-          <li>Proposed abstract document</li>
-        </ul>
-        <h2 className="mt-10 text-[#2452A7] mb-10">
-          List of the following materials. You will download software/report
-        </h2>
-        <ul className="list-disc pl-5 text-sm">
-          <li>Source code/Report</li>
-        </ul> */}
 
       </div>
     ))}

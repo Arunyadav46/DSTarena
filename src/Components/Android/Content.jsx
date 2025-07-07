@@ -269,7 +269,7 @@ function Content() {
           <span>🔒 Access</span>
           <span>Lifetime</span>
         </div>
-        <Link to="/training-form?course=Android" className="xl:mx-32 px-5 bg-orange-500 text-white py-3 rounded-lg font-semibold">
+        <Link to="/training-form?course=Android" className="absolute xl:mx-32 px-5 bg-orange-500 text-white py-3 rounded-lg font-semibold">
           Apply Now
         </Link>
           <div

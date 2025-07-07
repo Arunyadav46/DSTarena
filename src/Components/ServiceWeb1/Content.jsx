@@ -4,22 +4,28 @@ import axios from '../Axios/Axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import DOMPurify from 'dompurify';
+import Loading from '../Loading';
 
 const WebHostingBhopal = () => {
 
   const { id } = useParams();
   // console.log(id);
+ 
 
   const [detservice, setdetservice] = useState([]);
+
+  const[loading,setloading] = useState(true)
 
   const getServiceDet = () => {
     axios.get(`/API/services.php?id=${id}`)
       .then((data) => {
         // console.log(data);
         setdetservice(data.data);
+        setloading(false)
       })
       .catch((err) => {
         console.log(err);
+        setloading(false)
       });
   };
 
@@ -57,6 +63,10 @@ const WebHostingBhopal = () => {
 
     fetchData();
   }, []);
+
+  if(loading){
+    return <Loading/>
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col md:flex-row justify-center py-10 px-4 md:px-20 lg:px-32 gap-10">

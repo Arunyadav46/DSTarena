@@ -767,16 +767,13 @@ function Header2({ setCartAllProduct , cartCount }) {
       <li
         key={index}
         className="ml-4 p-2 text-lg border-b-2 border-white hover:bg-red-100"
-        onClick={() => handleMenuClick(`/Projects/${elem.category}`)}
+        onClick={() => handleMenuClick(`/productlist/${elem.category}`)}
       >
         {elem.category}
       </li>
     ))}
   </ul>
 </li>
-
-
-
 
 <li
           className="cursor-pointer px-4 py-2 text-xl border-b-2 border-indigo-500"

@@ -57,11 +57,13 @@ function Content2({tech}) {
         className="w-[280px] h-[390px] bg-white shadow-md rounded-xl p-4 flex-shrink-0 hover:shadow-xl transition duration-300"
         onClick={() => handleCardClick(project.project_id)}
       >
+        <Link to={`/project/${project.project_id}`}>
         <img
           src={project.image}
           alt={project.project_name}
           className="w-full h-[170px] object-cover rounded-md"
         />
+        </Link>
         <div className="mt-3 flex flex-col justify-between h-[170px]">
           <h3 className="text-md font-semibold line-clamp-2">
             {project.project_name}

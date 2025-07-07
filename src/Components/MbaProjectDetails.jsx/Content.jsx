@@ -1,6 +1,7 @@
 import axios from '../Axios/Axios';
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation, useParams } from 'react-router-dom';
+import Loading from '../Loading';
 
 
 function Content() {
@@ -10,6 +11,8 @@ function Content() {
   
   // console.log(category)
   const location = useLocation();
+
+  const[loading,setloading] = useState(true)
 
   const[projectName, setprojectName] = useState([])
   const [branch, setBranch] = useState(""); // Add this state to manage branch
@@ -30,8 +33,10 @@ function Content() {
     .then((data)=>{
       // console.log(data.data)
       setprojectName(data.data||[])
+      setloading(false)
     }).catch((err)=>{
       console.log(err)
+      setloading(false)
     })
   }
   useEffect(()=>{
@@ -39,8 +44,11 @@ function Content() {
   },[projectName,branch])
   // console.log(projectName)
 
+if(loading){
+  return <Loading/>
+}
 
-  return (
+  return  (
     <div className="w-full  bg-[#FFFFFF] p-5 md:p-10 lg:p-5   xl:px-32">
       <h2 className='text-xl mt-10 mb-10 md:text-2xl lg:text-3xl md:mt-10  xl:text-4xl text-center xl:mt-20 xl:mb-20 font-semibold'>Projects for  <span className='text-[#002FA6]'>{category} </span></h2>
     {/* {projectName.map((elem,index) => (
