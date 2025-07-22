@@ -97,9 +97,10 @@ function Content() {
             </p>
             <p>
               Don't have an account?{" "}
-              <a href="#" className="text-blue-600">
+              <Link to='/signup'>
                 Sign up
-              </a>
+                </Link>
+             
             </p>
           </div>
         </form>
