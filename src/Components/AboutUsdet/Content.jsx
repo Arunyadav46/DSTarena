@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import img from "../assest2/Mission.webp"
 import img2 from "../assest2/Vision.webp"
+import logo from "../../assets/DstLogo.webp"
 
 
 function Content() {
@@ -239,7 +240,7 @@ function Content() {
     <div className="lg:w-1/2 space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left">
   <div>
     <h3 className="text-2xl font-bold">
-      We’ve <span className="text-blue-600">12+ Years</span> of Excellence in Research & Training
+      We’ve <span className="text-blue-600">14+ Years</span> of Excellence in Research & Training
     </h3>
     <p className="text-gray-600 text-base pt-2 text-justify">
       DSTARENA is an ISO 9001:2008 certified institute that has trained over 10,000+ students and delivered 2000+ M.Tech and Ph.D. dissertations.
@@ -306,9 +307,9 @@ function Content() {
     </p>
     <p className="font-semibold text-gray-700">— Team DSTARENA</p>
     <img
-      src=""
+      src={logo}
       alt="DSTARENA Logo"
-      className="w-32"
+      className="w-12"
     />
     <div className="flex items-center gap-4 pt-2">
       <div className="flex -space-x-2 overflow-hidden">

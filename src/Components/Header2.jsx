@@ -197,8 +197,8 @@ function Header2({ setCartAllProduct , cartCount }) {
   return (
     <header>
       {/* Top Bar */}
-      <div className="lg:h-[17vh]  bg-red-400 flex  items-center justify-between md:flex md:justify-between  md:items-center md:py-4 bg-white shadow-md p-2 md:px-10 lg:px-20 xl:px-36 bg-red-100">
-        <div className="flex items-center justify-between gap-[132px] py-3 lg:py-4">
+      <div className="lg:h-[17vh]  bg-red-400 xl:flex  xl:items-center xl:justify-between md:flex md:justify-between  md:items-center md:py-4 bg-white shadow-md p-2 md:px-10 lg:px-20 xl:px-36 bg-red-100">
+        <div className="flex items-center justify-between p-1  py-3 lg:py-4">
        
           <div className="w-48 flex gap-2 items-center md:w-52 lg:w-56 xl:w-56">
   <a href="/">
@@ -214,7 +214,7 @@ function Header2({ setCartAllProduct , cartCount }) {
           </div>
         
          {/* mobile menu */}
-        <div className="lg:hidden  cursor-pointer" onClick={() => setMenuOpen(true)}>
+        <div className="lg:hidden flex   cursor-pointer" onClick={() => setMenuOpen(true)}>
             <i className=" text-2xl fas fa-bars"></i>
           </div>
         </div>
@@ -403,7 +403,7 @@ function Header2({ setCartAllProduct , cartCount }) {
 
       {/* Mobile Menu */}
    {menuOpen && (
-  <div className="fixed inset-0 bg-black bg-opacity-50 z-50">
+  <div className="fixed inset-0 bg-black bg-opacity-50 z-[100]">
     <div className="w-full bg-blue-600 h-full">
       {/* Close Button */}
       <div className="p-5 bg-white flex justify-between items-center mb-5">
@@ -418,7 +418,7 @@ function Header2({ setCartAllProduct , cartCount }) {
 
       {/* Menu Items */}
       <div
-       className="max-h-[70vh] overflow-y-auto -webkit-overflow-scrolling-touch  text-white"
+       className="max-h-[70vh]  overflow-y-auto -webkit-overflow-scrolling-touch  text-white"
        style={{ WebkitOverflowScrolling: "touch" }} // for iOS smooth scroll
 >
       <ul className="text-white px-5  space-y-4">

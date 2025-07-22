@@ -52,6 +52,7 @@ import Andro from './Components/Andro/Andro'
 import Vls from './Components/VLS/Vls'
 import ScrollToTop from './Components/ScrollToTop'
 import Category from './Components/Category/Category'
+import Plagrismdet from './Components/Plagrism-det/Plagrismdet'
 
 
 function App() {
@@ -159,6 +160,8 @@ useEffect(() => {
   <Route path='/forgotPassword' element={<Forgot/>}/>
   <Route path='/resetpassword' element={<Reset/>}/>
   <Route path='/productlist/:category' element={<Category/>}/>
+
+  <Route path='/plagrism' element ={<Plagrismdet/>}/>
 
    {/* Protected Dashboard Routes */}
 

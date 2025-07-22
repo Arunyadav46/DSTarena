@@ -18,7 +18,7 @@ function Paper() {
   },
   {
     icon: <FaHandshake size={30} className="text-orange-500" />,
-    title: "Competitively Priced",
+    title: "Competitively Price",
     desc: "We offer value-driven pricing tailored for students, with added perks at no extra cost."
   },
   {

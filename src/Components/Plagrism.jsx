@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaInfinity, FaStar, FaFileAlt, FaListAlt, FaFileSignature, FaFont } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Plagrism() {
  const features = [
@@ -48,11 +49,11 @@ function Plagrism() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, idx) => (
-            <div key={idx} className="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
+            <Link to="/plagrism" key={idx} className="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
               <div className="mb-4">{feature.icon}</div>
               <h3 className="text-lg font-semibold font-bold text-blue-900">{feature.title}</h3>
               <p className="text-gray-900 font-bold mt-2 text-lg">{feature.tag}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
