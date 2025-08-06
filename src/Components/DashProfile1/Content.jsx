@@ -50,7 +50,8 @@ data.append("clg", formData?.clg || '');
 data.append("branch", formData?.branch || '');
 data.append("Course", formData?.course || '');
 data.append("number", formData?.number || '');
-data.append("adrs", formData?.adrs || '');
+data.append("adrs", formData?.adrs);
+
 data.append("pass", formData?.pass || '');
 data.append("bankholder", formData?.bankholder || '');
 data.append("ifsc", formData?.ifsc || '');
@@ -69,8 +70,9 @@ data.append("user_id", userId);
       },
     })
       .then((response) => {
-        // console.log("API Response:", response.data);
-        // const data = response.data;
+        // console.log(response)
+        console.log("API Response:", response.data);
+        const data = response.data;
   
         if (response.data[0].success === "1") {
           // alert("Profile updated successfully!");
@@ -126,7 +128,7 @@ data.append("user_id", userId);
           { label: 'Mobile Number', name: 'number' },
           { label: 'Branch', name: 'branch' },
           { label: 'Course', name: 'course' },
-          { label: 'Address', name: 'adrs' },
+          { label: 'Address', name: 'adrs'},
           { label: 'University / College', name: 'clg' },
         ].map((field, index) => (
           <div key={index}>

@@ -14,7 +14,7 @@ function Marque() {
   return (
     <div id="marque" className='marquee-container1  w-full bg-[#F6FAFE]   md:h-[15vh] flex  gap-10 items-center '>
    <div className="marquee-content1 gap-10">
-
+    
     <div  className='elem h-[5%] w-[40%] mt-10 xl:mt-1 md:w-[15%] md:h-[90%] shrink-0 flex items-center gap-2 justify-center'>
          <img className='w-[20%] h-[30%] rounded-full' src="https://plus.unsplash.com/premium_photo-1736165168647-e216dcd23720?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
          <h2 className='md:text-2xl font-semibold'>Thesis</h2>

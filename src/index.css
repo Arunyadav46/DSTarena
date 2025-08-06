@@ -439,20 +439,14 @@ body{
 }
 
 
-
 .marquee-container1 {
   overflow: hidden;
   position: relative;
-  width: 100%;
-  /* height: 100%; */
-  background-color: #f6fafe;
 }
 
 .marquee-content1 {
   display: flex;
-  gap:2.5rem;
-  animation: scroll-left 35s linear infinite;
-  white-space: nowrap;
+  animation: scroll-left 20s linear infinite;
 }
 
 .marquee-container1:hover .marquee-content1 {
@@ -461,12 +455,14 @@ body{
 
 @keyframes scroll-left {
   0% {
-    transform: translateX(30%);
+    transform: translateX(100%);
   }
+
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
+
 
 
 

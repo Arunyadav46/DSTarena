@@ -37,12 +37,12 @@ function Content2() {
 
             {/* Button */}
             <div className="px-2 py-5 bg-[#0E53BE] relative rounded-full mt-4">
-              <Link
+              <a href='#projects'
                 className="text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                  to="/"
               >
                 Learn About
-              </Link>
+              </a>
             </div>
           </div>
           <div

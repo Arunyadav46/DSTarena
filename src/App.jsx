@@ -53,6 +53,20 @@ import Vls from './Components/VLS/Vls'
 import ScrollToTop from './Components/ScrollToTop'
 import Category from './Components/Category/Category'
 import Plagrismdet from './Components/Plagrism-det/Plagrismdet'
+import Proposel from './Components/Proposel/Proposel'
+import Expert from './Components/Expert/Expert'
+import Unlimited from './Components/Unlimited/Unlimited'
+import Customize from './Components/Customize/Customize'
+import Unrevision from './Components/Unrevision/Unrevision'
+import Researchpaper from './Components/researchpaper/researchpaper'
+import Review from './Components/Review/Review'
+import Conference from './Components/Conference/Conference'
+import Literature from './Components/Literature/Literature'
+import Thesis from './Components/Thesis/Thesis'
+import Synopsis from './Components/Synopsis/Synopsis'
+import Researchpro from './Components/Researchpro/Researchpro'
+import Internal from './Components/Internal/Internal'
+import Resume from './Components/Resume/Resume'
 
 
 function App() {
@@ -162,6 +176,21 @@ useEffect(() => {
   <Route path='/productlist/:category' element={<Category/>}/>
 
   <Route path='/plagrism' element ={<Plagrismdet/>}/>
+  <Route path='/proposel' element ={<Proposel/>}/>
+  <Route path='/expert' element={<Expert/>}/>
+  <Route path='/unlimited' element={<Unlimited/>}/>
+  <Route path='/customize' element={<Customize/>}/>
+  <Route path='/revision' element={<Unrevision/>}/>
+  <Route path='/research' element={<Researchpaper/>}/>
+  <Route path='/review' element={<Review/>}/>
+  <Route path='/conference' element={<Conference/>}/>
+  <Route path='/literature' element={<Literature/>}/>
+  <Route path='/Thesis' element={<Thesis/>}/>
+  <Route path='/synopsis' element={<Synopsis/>}/>
+  <Route path='/researchproposel' element={<Researchpro/>}/>
+  <Route path='/internal' element={<Internal/>}/>
+  <Route path='/resume' element={<Resume/>}/>
+
 
    {/* Protected Dashboard Routes */}
 

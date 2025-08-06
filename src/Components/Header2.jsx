@@ -16,6 +16,7 @@ function Header2({ setCartAllProduct , cartCount }) {
   const [isDropdownOpen6, setDropdownOpen6] = useState(false);
   const [isDropdownOpen7, setDropdownOpen7] = useState(false);
   const [isDropdownOpen8, setDropdownOpen8] = useState(false);
+  const [isDropdownOpen9, setDropdownOpen9] = useState(false);
 
   //menu bar vale dropdown hai ye 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -822,6 +823,25 @@ function Header2({ setCartAllProduct , cartCount }) {
           </li>
           {/* <li><Link to="/service">Service</Link></li> */}
 
+           <li className="relative" onMouseEnter={() => setDropdownOpen9(true)} onMouseLeave={() => setDropdownOpen9(false)}>
+            <Link to="/training">Support</Link>
+            <i className="ri-arrow-down-s-line"></i>
+            {isDropdownOpen9 && (
+              <ul className="absolute  z-50 left-[-90%] w-[1480%] mb-15 mt-1 w-52 mx-[-20px] bg-white grid grid-cols-3 text-gray-900 shadow-lg rounded-md overflow-hidden">
+                <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/research">Research Paper Writing</Link></li>
+                <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/review">Review paper Writing</Link></li>
+                <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/conference">Conference paper writing</Link></li>
+                <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/literature">Literature review writing</Link></li>
+                <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/Thesis">Thesis writing service</Link></li>
+                <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/synopsis">Synopsis writing service</Link></li>
+                <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/researchproposel">Research proposal writing</Link></li>
+                <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/internal">Internal report writing</Link></li>
+                <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/resume">Resume writing service</Link></li>
+                <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/training/seo">Internal Report writing</Link></li>
+              </ul>
+            )}
+          </li>
+
                <li className="relative" onMouseEnter={() => setDropdownOpen7(true)} onMouseLeave={() => setDropdownOpen7(false)}>
                <Link>Service</Link>
                <i className="ri-arrow-down-s-line"></i>
@@ -1075,7 +1095,7 @@ function Header2({ setCartAllProduct , cartCount }) {
           
        
           <li>
-          {userId?(<button onClick={handleLogout} className='border-2 border-[#2563EB] rounded-full px-5 py-2'>Log out</button> ):<Link className='border-2 border-[#2563EB] rounded-full px-5 py-2' to="/login">Log in</Link>}
+          {userId?(<button onClick={handleLogout} className=''></button> ):<Link className='border-2 border-[#2563EB] rounded-full px-5 py-2' to="/login">Log in</Link>}
 
              {/* <Link className='border-2 border-[#2563EB] rounded-full px-5 py-2' to="/login">Log in</Link> */}
           </li>

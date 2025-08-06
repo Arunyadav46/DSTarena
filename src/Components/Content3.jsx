@@ -66,7 +66,7 @@ function Content3() {
   }
 
   return (
-    <div ref={projectRef} className="xl:py-10 xl:px-32 bg-[#F8F8F8]">
+    <div id="projects" ref={projectRef} className="xl:py-10 xl:px-32 bg-[#F8F8F8]">
       <div className="px-4">
         <div className="text-center mb-20">
           <div className="flex items-center mb-5 justify-center gap-5">
