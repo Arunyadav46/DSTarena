@@ -1,6 +1,6 @@
 import React from 'react'
-import Banner from '../researchpaperdet/Banner'
-import Content from '../researchpaperdet/Content'
+import Banner from '../Researchpaperdet/Banner'
+import Content from '../Researchpaperdet/Content'
 import Footer from '../Footer'
 
 function Researchpaper() {
