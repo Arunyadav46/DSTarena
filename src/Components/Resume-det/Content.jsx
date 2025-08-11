@@ -32,10 +32,10 @@ function Content() {
   return (
      <div className="bg-white px-6 md:px-40 py-12 text-slate-800 text-center">
       {/* Title */}
-      <h2 className="text-2xl  font-extrabold mb-6 text-teal-900">
+      <h2 className="text-2xl  font-extrabold mb-6 ">
         INDIA’S NO:1 RESUME WRITING SERVICE- TAILORING EACH RESUME
       </h2>
-      <p className="mb-12 text-sm md:text-base text-gray-700">
+      <p className="mb-12 text-sm md:text-base text-justify text-gray-700">
         In today’s world, we have more free online resume builders, but one who writes their resume with the help of professional resume writers will have a lasting impression on their employers.
         You can make your resume online free anywhere, but HIGS – the best resume preparation service – will do the best quality resume with an affordable quote.
         Thoroughly analyze your job description. We identify your key skills and qualifications.
@@ -45,7 +45,7 @@ function Content() {
 
       {/* Free Discussion Section */}
       <div className="bg-white py-6 px-4 rounded-lg shadow-sm mb-12">
-        <h3 className="text-xl font-semibold text-teal-800">DO YOU WANT TO HAVE A FREE TECHNICAL DISCUSSION?</h3>
+        <h3 className="text-xl font-semibold">DO YOU WANT TO HAVE A FREE TECHNICAL DISCUSSION?</h3>
         <p className="text-sm mt-2">
           <strong>Our Team Is Here To Provide A Free Technical Discussion.</strong> You Can Avail Client Service From Our Team Through Calls, Email, And Chat.
           We Clarify All Your Doubts, Reveal Offer Details, And Price Details, Confirm Turnaround Time, And More.

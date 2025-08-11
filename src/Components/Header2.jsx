@@ -837,7 +837,7 @@ function Header2({ setCartAllProduct , cartCount }) {
                 <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/researchproposel">Research proposal writing</Link></li>
                 <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/internal">Internal report writing</Link></li>
                 <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/resume">Resume writing service</Link></li>
-                <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/training/seo">Internal Report writing</Link></li>
+                {/* <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/training/seo">Internal Report writing</Link></li> */}
               </ul>
             )}
           </li>

@@ -5,7 +5,7 @@ function Content() {
      <div className="px-6 md:px-40 py-12 bg-gray-50 text-gray-800">
       {/* Heading */}
       <h1 className="text-2xl md:text-4xl font-semibold text-center mb-6">
-        Format Of Synopsis <span className="text-orange-500 font-bold">For PhD</span>
+        Format Of Synopsis For PhD
       </h1>
 
       {/* Paragraphs */}
