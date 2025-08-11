@@ -58,7 +58,6 @@ import Expert from './Components/Expert/Expert'
 import Unlimited from './Components/Unlimited/Unlimited'
 import Customize from './Components/Customize/Customize'
 import Unrevision from './Components/Unrevision/Unrevision'
-import Researchpaper from './Components/researchpaper/researchpaper'
 import Review from './Components/Review/Review'
 import Conference from './Components/Conference/Conference'
 import Literature from './Components/Literature/Literature'
@@ -67,6 +66,7 @@ import Synopsis from './Components/Synopsis/Synopsis'
 import Researchpro from './Components/Researchpro/Researchpro'
 import Internal from './Components/Internal/Internal'
 import Resume from './Components/Resume/Resume'
+import Researchpaper from './Components/researchpaper/researchpaper'
 
 
 function App() {
