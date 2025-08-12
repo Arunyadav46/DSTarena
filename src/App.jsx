@@ -181,7 +181,7 @@ useEffect(() => {
   <Route path='/unlimited' element={<Unlimited/>}/>
   <Route path='/customize' element={<Customize/>}/>
   <Route path='/revision' element={<Unrevision/>}/>
-  <Route path='/research' element={<Researchpro/>}/>
+  <Route path='/research' element={<Researchpaper/>}/>
   <Route path='/review' element={<Review/>}/>
   <Route path='/conference' element={<Conference/>}/>
   <Route path='/literature' element={<Literature/>}/>
