@@ -66,7 +66,7 @@ import Synopsis from './Components/Synopsis/Synopsis'
 import Researchpro from './Components/Researchpro/Researchpro'
 import Internal from './Components/Internal/Internal'
 import Resume from './Components/Resume/Resume'
-import Researchpaper from './Components/Researchpap/researchpaper'
+
 
 
 function App() {
@@ -181,7 +181,7 @@ useEffect(() => {
   <Route path='/unlimited' element={<Unlimited/>}/>
   <Route path='/customize' element={<Customize/>}/>
   <Route path='/revision' element={<Unrevision/>}/>
-  <Route path='/research' element={<Researchpaper/>}/>
+  {/* <Route path='/research' element={<Researchpaper/>}/> */}
   <Route path='/review' element={<Review/>}/>
   <Route path='/conference' element={<Conference/>}/>
   <Route path='/literature' element={<Literature/>}/>
