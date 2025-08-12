@@ -24,7 +24,7 @@
 
 
 @font-face {
-  font-family: "Gilroy";
+  font-family:"Gilroy";
   src: url(../src/Font/Gilroy-Regular.ttf);
 }
 
@@ -33,10 +33,10 @@
   src: url(../src/Font/KFOmCnqEu92Fr1Mu4mxK.woff2);
 }
 
-body{
+/* body{
   font-family: "Fa";
   font-weight: bold;
-}
+} */
 
 #text9{
  font-family: "Poppins";
@@ -45,9 +45,9 @@ body{
 #pa{
   font-family: "Poppins";
 } 
-/* body{
+body{
   font-family: "inter";
-} */
+}
 #log{
   font-family: "Yellowtail-Regular";
 }
@@ -76,7 +76,6 @@ body{
       transform: translateX(calc(-300% - 20px));
   }
   }
-
   @font-face {
     font-family: "IrishGrover";
     src: url(../src/Font/IrishGrover-Regular.ttf);
