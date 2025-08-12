@@ -828,7 +828,7 @@ function Header2({ setCartAllProduct , cartCount }) {
             <i className="ri-arrow-down-s-line"></i>
             {isDropdownOpen9 && (
               <ul className="absolute  z-50 left-[-90%] w-[1480%] mb-15 mt-1 w-52 mx-[-20px] bg-white grid grid-cols-3 text-gray-900 shadow-lg rounded-md overflow-hidden">
-                <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/research">Research Paper Writing</Link></li>
+                {/* <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/research">Research Paper Writing</Link></li> */}
                 <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/review">Review paper Writing</Link></li>
                 <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/conference">Conference paper writing</Link></li>
                 <li className="px-4 py-2 text-gray-700 text-[14px] mb-2 hover:bg-gray-200"><Link to="/literature">Literature review writing</Link></li>
