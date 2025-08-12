@@ -50,10 +50,10 @@ function Content() {
           <strong>Our Team Is Here To Provide A Free Technical Discussion.</strong> You Can Avail Client Service From Our Team Through Calls, Email, And Chat.
           We Clarify All Your Doubts, Reveal Offer Details, And Price Details, Confirm Turnaround Time, And More.
         </p>
-        <button className="mt-4 inline-flex items-center gap-2 bg-slate-600 hover:bg-slate-700 text-white px-4 py-2 rounded">
-          <FaClipboard />
-          VIEW SAMPLE PROFILE PAGE HERE
-        </button>
+          {/* <button className="mt-4 inline-flex items-center gap-2 bg-slate-600 hover:bg-slate-700 text-white px-4 py-2 rounded">
+            <FaClipboard />
+            VIEW SAMPLE PROFILE PAGE HERE
+          </button> */}
       </div>
 
       {/* Dangerous Mistakes Section */}

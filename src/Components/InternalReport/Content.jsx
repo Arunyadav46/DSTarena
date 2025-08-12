@@ -24,9 +24,9 @@ function Content() {
             management decisions. It is mainly used between team members and departments to keep effective communication regarding goals
             and business objectives. Good internal reports should be readable, accurate, and timely.
           </p>
-          <button className="mt-4 bg-yellow-600 hover:bg-yellow-700 text-white px-5 py-2 rounded font-semibold shadow">
+          {/* <button className="mt-4 bg-yellow-600 hover:bg-yellow-700 text-white px-5 py-2 rounded font-semibold shadow">
             DOWNLOAD PRICE QUOTES
-          </button>
+          </button> */}
         </div>
       </div>
 

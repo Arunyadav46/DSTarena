@@ -32,11 +32,13 @@ function Content() {
       {/* WhatsApp Button */}
       <div className="flex justify-center mb-12">
         <a
-          href="#"
-          className="bg-lime-400 hover:bg-lime-500 text-black font-semibold px-8 py-3 rounded shadow-md transition duration-200"
-        >
-          GET VIA WHATSAPP <span className="ml-1">↗</span>
-        </a>
+  href="https://wa.me/9993897203"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-gradient-to-r from-lime-300 to-lime-500 px-6 py-3 rounded-md font-semibold text-gray-900 shadow hover:shadow-lg transition"
+>
+  GET VIA WHATSAPP ↗
+</a>
       </div>
 
       {/* Confused Section */}
