@@ -27,6 +27,11 @@
   font-family: "Gilroy";
   src: url(../src/Font/Gilroy-Regular.ttf);
 }
+
+body{
+  font-family: "SpicyRice";
+}
+
 #text9{
  font-family: "Poppins";
 }
