@@ -28,8 +28,14 @@
   src: url(../src/Font/Gilroy-Regular.ttf);
 }
 
+@font-face {
+  font-family: "Fa";
+  src: url(../src/Font/KFOmCnqEu92Fr1Mu4mxK.woff2);
+}
+
 body{
-  font-family: "SpicyRice";
+  font-family: "Fa";
+  font-weight: bold;
 }
 
 #text9{
@@ -39,9 +45,9 @@ body{
 #pa{
   font-family: "Poppins";
 } 
-body{
+/* body{
   font-family: "inter";
-}
+} */
 #log{
   font-family: "Yellowtail-Regular";
 }
@@ -93,6 +99,7 @@ body{
   }
   #line{
     line-height: 3.4vw;
+    font-family: "Inter";
   }
   #one1{
     line-height: 2vw;
