@@ -61,9 +61,11 @@ function Content() {
     <div className="mt-10 text-center">
       <h3 className="text-xl font-semibold mb-2">📩 Not satisfied yet? No worries.</h3>
       <p className="text-gray-700">We’re here until you are. Get started with revision support now.</p>
-      <button className="mt-4 px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow">
-        Contact Us
-      </button>
+      <a href="tel:9993897203">
+  <button className="mt-4 px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow">
+    Contact Us
+  </button>
+</a>
     </div>
   </div>
 </div>

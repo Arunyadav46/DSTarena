@@ -17,7 +17,7 @@ function Content() {
         />
 
         {/* Right Text */}
-        <div className="text-sm md:text-base leading-relaxed">
+        <div className="text-sm md:text-base text-justify leading-relaxed">
           <p className="mb-4">
             Internal report writing refers to the practice of creating a document that conveys information within an organization.
             It can be used by various organizations and departments. This is mainly involved in internal reporting to make various

@@ -103,7 +103,7 @@ function Content() {
       </h2>
 
       {/* Description */}
-      <p className="text-center text-gray-900  mb-10">
+      <p className="text-center text-gray-900 text-justify  mb-10">
         A literature review with specific research requires a critical discussion and 
         evaluation of up-to-date research details. So, HIGS will fulfill all these 
         research needs by meeting your highest level of satisfaction.
@@ -113,7 +113,7 @@ function Content() {
       <h3 className="text-center text-xl font-semibold mb-4">
         What Our Team Can Promise You?
       </h3>
-      <p className="text-center text-gray-800  mb-10">
+      <p className="text-center text-gray-800 text-justify  mb-10">
         Our team of well-experienced and skilled literature review writers will clearly 
         analyze the research background and expose the research gaps and limitations of your research.
       </p>
@@ -122,12 +122,12 @@ function Content() {
       <h3 className="text-lg font-semibold mb-3">
         What Gives A First-Class Literature Review?
       </h3>
-      <p className="text-gray-800 mb-8">
+      <p className="text-gray-800 text-justify mb-8">
         In our experience, we have handled thousands of literature review writing processes 
         under various research domains. So, we can guide you in an excellent way of doing your 
         PhD research. We work on providing clear structure and focus to your research work.
       </p>
-      <p className="text-gray-800 mb-10">
+      <p className="text-gray-800 mb-10 text-justify">
         A strong literature review of a research paper must have a clear explanation about 
         your research work, so HIGS will work on that way to provide original and most 
         innovative research work.
@@ -137,7 +137,7 @@ function Content() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
         <div>
           <h4 className="text-orange-500 font-semibold mb-2">What we will follow</h4>
-          <p className="text-gray-700 text-sm leading-relaxed">
+          <p className="text-gray-700 text-sm text-justify leading-relaxed">
             Our team is the best literature review writing service in India, we will 
             follow strict guidelines of your University, we overview the entire article, 
             clearly identify the research gaps, we analyze the literature, we also help 
@@ -146,14 +146,14 @@ function Content() {
         </div>
         <div>
           <h4 className="text-orange-500 font-semibold mb-2">Decide a research topic</h4>
-          <p className="text-gray-700 text-sm leading-relaxed">
+          <p className="text-gray-700 text-sm text-justify leading-relaxed">
             Our team will be with you from the beginning to the end of your PhD research. 
             You can pick out the scholarly PhD research topic under any research domain.
           </p>
         </div>
         <div>
           <h4 className="text-orange-500 font-semibold mb-2">Promises of HIGS</h4>
-          <p className="text-gray-700 text-sm leading-relaxed">
+          <p className="text-gray-700 text-sm text-justify leading-relaxed">
             Each and every research article must be categorized properly. We strictly maintain 
             on-time work delivery, high-quality filled research work, client support, unique 
             working strategy for your research work, affordable price with so many discounts 
